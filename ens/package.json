@@ -12,7 +12,7 @@
     "dev:tsc": "tsc --watch",
     "docker:up": ". ./deploy/env.sh docker && docker compose -f ./deploy/docker-compose.yml up --build",
     "docker:down": ". ./deploy/env.sh docker && docker compose -f ./deploy/docker-compose.yml down",
-    "deploy:fresh": ". ./deploy/env.sh prod && ./deploy/deploy.sh",
+    "deploy": ". ./deploy/env.sh prod && docker compose -f ./deploy/docker-compose.yml up --pull -d",
     "build": "tsc",
     "lint": "eslint .",
     "prettier": "prettier --check .",
