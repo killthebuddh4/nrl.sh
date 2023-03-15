@@ -41,10 +41,17 @@ droplet instance.
 
 ## Deploying to Production
 
+**v0 Requirements**
+
 - [ ] A GitHub Action to build and push Docker images.
 - [ ] A manaul deploy script that uses `docker-compose` to pull the latest
       images and restart the containers.
-- [ ] An as-simple-as-possible blue-green deployment strategy for zero-downtime deployments.
+- [ ] An as-simple-as-possible blue-green deployment strategy for zero-downtime
+      deployments.
+
+**v1 Requirements**
+
+- [ ] Multiple environments (staging, production, etc).
 
 # Monitoring (monitor/)
 
