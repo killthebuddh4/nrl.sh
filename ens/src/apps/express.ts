@@ -29,6 +29,10 @@ const server = express();
 
 server.use(express.json());
 
+server.get("/heartbeat", (req, res) => {
+  res.send("Not dead yet!");
+});
+
 server.post("/from/xmtp", async (req, res) => {
   const authResult = authenticateRequest({ req });
   if (!authResult.isAuthenticated) {

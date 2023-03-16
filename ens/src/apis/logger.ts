@@ -1,6 +1,7 @@
 import winston from "winston";
 import Transport, { TransportStreamOptions } from "winston-transport";
 import { z } from "zod";
+import { v4 as uuidv4 } from "uuid";
 import { createClient } from "@supabase/supabase-js";
 
 /* ****************************************************************************
@@ -119,6 +120,24 @@ export const ROBOT_RESPONSE_EVENT = z.object({
 
 export type RobotResponseEvent = z.infer<typeof ROBOT_RESPONSE_EVENT>;
 
+export const HEARTBEAT_EVENT = z.object({
+  id: z.string(),
+  created_at: z.coerce.date(),
+  type: z.literal("heartbeat_event"),
+  payload: z.object({}),
+});
+
+export const craeteHeartbeatEvent = () => {
+  return {
+    id: uuidv4(),
+    created_at: new Date(),
+    type: "heartbeat_event",
+    payload: {},
+  } as const;
+};
+
+export type HeartbeatEvent = z.infer<typeof HEARTBEAT_EVENT>;
+
 export const EVENT_LOG = z.union([
   INBOUND_XMTP_MESSAGE_EVENT,
   OUTBOUND_XMTP_MESSAGE_EVENT,
@@ -127,6 +146,7 @@ export const EVENT_LOG = z.union([
   FRONT_MESSAGE_EVENT,
   ROBOT_REQUEST_EVENT,
   ROBOT_RESPONSE_EVENT,
+  HEARTBEAT_EVENT,
 ]);
 
 export type EventLog = z.infer<typeof EVENT_LOG>;
@@ -150,8 +170,6 @@ const supabase = (() => {
   if (SK === undefined) {
     throw new Error("SUPABASE_KEY is not defined");
   }
-  /* eslint-disable-next-line no-console */
-  console.log("SUPABASE_URL", SU);
   return createClient(SU, SK);
 })();
 
@@ -228,4 +246,8 @@ export const logger = {
   warn,
   error,
   event,
+};
+
+export const getLog = (id: string) => {
+  return supabase.from("robot_events").select("*").eq("id", id);
 };

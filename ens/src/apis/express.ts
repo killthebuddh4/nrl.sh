@@ -23,6 +23,14 @@ export const EXPRESS_PORT = (() => {
   }
 })();
 
+export const ROBOT_DOMAIN = (() => {
+  if (process.env.ROBOT_DOMAIN === undefined) {
+    throw new Error("ROBOT_DOMAIN is not defined");
+  } else {
+    return process.env.ROBOT_DOMAIN;
+  }
+})();
+
 /* ****************************************************************************
  *
  * TYPES
@@ -123,4 +131,8 @@ export const postFromXmtp = async ({
       "Content-Type": "application/json",
     },
   });
+};
+
+export const getHeartbeat = async () => {
+  return fetch(`${ROBOT_DOMAIN}/heartbeat`);
 };

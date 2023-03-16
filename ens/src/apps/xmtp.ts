@@ -1,91 +1,24 @@
-import xmtp from "@xmtp/xmtp-js";
-const { Client } = xmtp;
-import { DecodedMessage } from "@xmtp/xmtp-js";
-import { Wallet } from "@ethersproject/wallet";
 import { v4 as uuidv4 } from "uuid";
-import { ENS_ROBOT_ID } from "../apis/openai.js";
 import { logger } from "../apis/logger.js";
+import { Xmtp } from "../apis/xmtp.js";
 import {
-  createRequestFromXmtp,
-  postFromXmtp,
   RESPONSE_TO_XMTP,
+  postFromXmtp,
+  createRequestFromXmtp,
 } from "../apis/express.js";
+import { ENS_ROBOT_ID } from "../apis/openai.js";
 
-/* ****************************************************************************
- *
- * listeners
- *
- * ************************************************************************** */
-
-const LISTENERS: Array<(msg: DecodedMessage) => void> = [];
-
-/* ****************************************************************************
- *
- * client
- *
- * ************************************************************************** */
-
-const wallet = (async () => {
-  const pk = process.env.XMTP_CLIENT_PK;
-  if (pk === undefined) {
+const XMTP_CLIENT_PK = (() => {
+  if (process.env.XMTP_CLIENT_PK === undefined) {
     throw new Error("XMTP_CLIENT_PK is not defined");
+  } else {
+    return process.env.XMTP_CLIENT_PK;
   }
-  return new Wallet(pk);
 })();
 
-const client = (async () => {
-  logger.info("XMTP :: initializing Client");
-  const internal = await Client.create(await wallet, { env: "production" });
-  logger.info("XMTP :: Client initialized");
-  return internal;
-})();
+const xmtp = new Xmtp({ pk: XMTP_CLIENT_PK });
 
-/* ****************************************************************************
- *
- * stream
- *
- * ************************************************************************** */
-
-export const stream = (async () => {
-  logger.info("XMTP :: initializing stream");
-  const internal = await (await client).conversations.streamAllMessages();
-  logger.info("XMTP :: stream is ready");
-  (async () => {
-    for await (const message of internal) {
-      for (const listener of LISTENERS) {
-        listener(message);
-      }
-    }
-  })();
-  return internal;
-})();
-
-/* ****************************************************************************
- *
- * sendMessage
- *
- * ************************************************************************** */
-
-export const sendMessage = async ({
-  peerAddress,
-  message,
-}: {
-  peerAddress: string;
-  message: string;
-}) => {
-  const conversation = await (
-    await client
-  ).conversations.newConversation(peerAddress);
-  return conversation.send(message);
-};
-
-/* ****************************************************************************
- *
- * handleMessage
- *
- * ************************************************************************** */
-
-const handleMessage = async (message: DecodedMessage) => {
+xmtp.addListener(async (message) => {
   logger.event({
     id: uuidv4(),
     created_at: new Date(),
@@ -95,7 +28,10 @@ const handleMessage = async (message: DecodedMessage) => {
       senderAddress: message.senderAddress,
     },
   });
-  if (message.senderAddress === (await wallet).address) {
+  const heartbeatRequest = xmtp.getHeartbeatRequest(message);
+  if (heartbeatRequest !== null) {
+    xmtp.sendHeartbeatResponse({ request: heartbeatRequest });
+  } else if (await xmtp.isSelfSentMessage(message)) {
     return;
   } else {
     const response = await postFromXmtp({
@@ -135,7 +71,7 @@ const handleMessage = async (message: DecodedMessage) => {
               peerAddress: message.conversation.peerAddress,
             },
           });
-          sendMessage({
+          xmtp.sendMessage({
             peerAddress: message.conversation.peerAddress,
             message: responseValidation.data.payload.response.message,
           });
@@ -145,14 +81,4 @@ const handleMessage = async (message: DecodedMessage) => {
       }
     }
   }
-};
-
-/* ****************************************************************************
- *
- * RUN APP
- *
- * ************************************************************************** */
-
-(async () => {
-  LISTENERS.push(handleMessage);
-})();
+});

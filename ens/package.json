@@ -9,6 +9,7 @@
   "scripts": {
     "dev:express": ". ./deploy/env.sh local && nodemon build/apps/express.js",
     "dev:xmtp": ". ./deploy/env.sh local && nodemon build/apps/xmtp.js",
+    "dev:monitor": ". ./deploy/env.sh monitor && nodemon build/apps/monitor.js",
     "dev:tsc": "tsc --watch",
     "docker:up": ". ./deploy/env.sh docker && docker compose -f ./deploy/docker-compose.yml up --build",
     "docker:down": ". ./deploy/env.sh docker && docker compose -f ./deploy/docker-compose.yml down",
@@ -47,6 +48,7 @@
     "@ethersproject/wallet": "^5.7.0",
     "@supabase/supabase-js": "^2.10.0",
     "@xmtp/xmtp-js": "^7.13.1",
+    "discord.js": "^14.8.0",
     "express": "^4.18.2",
     "uuid": "^9.0.0",
     "winston": "^3.8.2",
