@@ -2,6 +2,10 @@ import { v4 as uuidv4 } from "uuid";
 import { Client as DiscordClient, TextChannel } from "discord.js";
 import { Xmtp } from "../apis/xmtp.js";
 import { getHeartbeat } from "../apis/express.js";
+import {
+  HEARTBEAT_PROMPT,
+  getHeartbeat as getOpenAiHeartbeat,
+} from "../apis/openai.js";
 import { craeteHeartbeatEvent, getLog, logger } from "../apis/logger.js";
 
 /* ****************************************************************************
@@ -88,11 +92,16 @@ client.once("ready", function (this: DiscordClient) {
   });
 });
 
+// TODO tag seanwbren#0001 when a new alert is sent
 const alertFailedHeartbeat = async ({ type }: { type: string }) => {
   client.emit(
     "new-alert",
-    `<@${MONITOR_RESPONDER_ID}> Heartbeat failed! (${type})`
+    `**${type} Heartbeat Failed!**\n\n<@${MONITOR_RESPONDER_ID}>`
   );
+};
+
+const alertInfo = async ({ content }: { content: string }) => {
+  client.emit("new-alert", content);
 };
 
 client.login(MONITOR_DISCORD_TOKEN);
@@ -118,15 +127,15 @@ setInterval(() => {
       alertFailedHeartbeat({ type: "Express API" });
     }
   })();
-}, 4000);
+}, 90000);
 
 /* ****************************************************************************
  *
- * XMTP HEARTBEAT
+ * XMTP APP HEARTBEAT
  *
  * ************************************************************************** */
 
-const XMTP_TIMEOUTS: Record<string, NodeJS.Timeout | undefined> = {};
+const XMTP_APP_TIMEOUTS: Record<string, NodeJS.Timeout | undefined> = {};
 
 const xmtp = new Xmtp({ pk: MONITOR_XMTP_PK });
 
@@ -135,15 +144,16 @@ xmtp.addListener(async (message) => {
   if (heartbeatResponse === null) {
     return;
   } else {
-    clearTimeout(XMTP_TIMEOUTS[heartbeatResponse.timeout_id]);
+    clearTimeout(XMTP_APP_TIMEOUTS[heartbeatResponse.timeout_id]);
   }
 });
 
 setInterval(() => {
   (async () => {
     const timeout_id = uuidv4();
-    XMTP_TIMEOUTS[timeout_id] = setTimeout(() => {
-      alertFailedHeartbeat({ type: "XMTP" });
+
+    XMTP_APP_TIMEOUTS[timeout_id] = setTimeout(() => {
+      alertFailedHeartbeat({ type: "XMTP APP" });
     }, 7000);
 
     xmtp.sendHeartbeatRequest({
@@ -154,7 +164,38 @@ setInterval(() => {
       },
     });
   })();
-}, 30000);
+}, 90000);
+
+/* ****************************************************************************
+ *
+ * XMTP NETWORK HEARTBEAT
+ *
+ * ************************************************************************** */
+
+const XMTP_TIMEOUTS: Record<string, NodeJS.Timeout | undefined> = {};
+
+xmtp.addListener(async (message) => {
+  if (!xmtp.isSelfSentMessage(message)) {
+    return;
+  } else {
+    clearTimeout(XMTP_TIMEOUTS[message.content]);
+  }
+});
+
+setInterval(() => {
+  (async () => {
+    const timeout_id = uuidv4();
+
+    XMTP_TIMEOUTS[timeout_id] = setTimeout(() => {
+      alertFailedHeartbeat({ type: "XMTP" });
+    }, 7000);
+
+    await xmtp.sendMessage({
+      peerAddress: await xmtp.address(),
+      message: timeout_id,
+    });
+  })();
+}, 2000);
 
 /* ****************************************************************************
  *
@@ -188,4 +229,25 @@ setInterval(() => {
       }
     }, 3000);
   })();
-}, 3000);
+}, 90000);
+
+/* ****************************************************************************
+ *
+ * OPEN AI HEARTBEAT
+ *
+ * ************************************************************************** */
+
+setInterval(() => {
+  (async () => {
+    try {
+      const heartbeat = await getOpenAiHeartbeat({ opts: { timeout: 7000 } });
+      alertInfo({
+        content: `**OpenAI HeartBeat Success**\n\n${
+          HEARTBEAT_PROMPT + " " + heartbeat.data.choices.shift()?.text
+        }`,
+      });
+    } catch {
+      alertFailedHeartbeat({ type: "OpenAI" });
+    }
+  })();
+}, 90000);

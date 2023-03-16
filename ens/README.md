@@ -65,12 +65,12 @@ To start, for each component, the two questions we want to answer are:
 1. Is the component up?
 2. Is the component struggling?
 
-- [ ] supabase
-- [ ] open ai
-- [ ] xmtp
+- [x] supabase
+- [x] open ai
+- [x] xmtp
 - [ ] front
-- [ ] xmtp app
-- [ ] express app
+- [x] xmtp app
+- [x] express app
 - [ ] vps instance
 
 # Logging

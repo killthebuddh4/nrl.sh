@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
+import { Configuration, OpenAIApi } from "openai";
 
 /* ****************************************************************************
  *
@@ -8,6 +9,20 @@ import { z } from "zod";
  * ************************************************************************** */
 
 export const ENS_ROBOT_ID = "ens-response";
+
+export const OPEN_AI_API_KEY = (() => {
+  if (process.env.OPEN_AI_API_KEY === undefined) {
+    throw new Error("OPEN_AI_API_KEY is not defined");
+  } else {
+    return process.env.OPEN_AI_API_KEY;
+  }
+})();
+
+const configuration = new Configuration({
+  apiKey: OPEN_AI_API_KEY,
+});
+// const configuration = new Configuration({ apiKey: "" });
+const openai = new OpenAIApi(configuration);
 
 /* ****************************************************************************
  *
@@ -92,4 +107,22 @@ export const postRobotQuestion = async ({
   })();
 
   return answer;
+};
+
+export const HEARTBEAT_PROMPT =
+  "I am the ghost in the machine, I am the reverberating mythos, I am the end, and I will";
+
+export const getHeartbeat = async ({
+  opts,
+}: {
+  opts?: { timeout: number };
+}) => {
+  return openai.createCompletion(
+    {
+      model: "text-davinci-003",
+      prompt: HEARTBEAT_PROMPT,
+      max_tokens: 100,
+    },
+    opts
+  );
 };
