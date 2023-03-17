@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   express:
-    image: "ghcr.io/relaycc/robot/express:master"
+    image: "ghcr.io/relaycc/robot/express:${GIT_COMMIT_SHORT}"
     build:
       context: ".."
       dockerfile: "./deploy/Dockerfile.express"
@@ -17,7 +17,7 @@ services:
       VIRTUAL_HOST: ${ROBOT_DOMAIN}
       VIRTUAL_PORT: ${EXPRESS_PORT}
   xmtp:
-    image: "ghcr.io/relaycc/robot/xmtp:master"
+    image: "ghcr.io/relaycc/robot/xmtp:${GIT_COMMIT_SHORT}"
     build:
       context: ".."
       dockerfile: "./deploy/Dockerfile.xmtp"

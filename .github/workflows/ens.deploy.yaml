@@ -21,11 +21,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and Push
-        run: |
-          cd ens
-          npm run ci:release
-
       - name: Deploy
         env:
           ROBOT_ENS_PROD_DROPLET_PK: $${{ secrets.ROBOT_ENS_PROD_DROPLET_PK }}

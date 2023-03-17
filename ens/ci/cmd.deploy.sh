@@ -1,14 +1,9 @@
 #!/bin/sh
 
-if [ -z "$ROBOT_ENS_PROD_DROPLET_PK" ]; then
-  echo "ROBOT_ENS_PROD_DROPLET_PK is not set"
-  exit 1
-fi
+./deploy/cmd.deploy.smoke.sh
 
-if [ -z "$ROBOT_ENS_PROD_DROPLET_IP" ]; then
-  echo "ROBOT_ENS_PROD_DROPLET_IP is not set"
-  exit 1
-fi
+# WARNING - This script is not idempotent, it has side effects, and it should
+# only be ran in CI environments.
 
 mkdir -p ~/.ssh
 echo "${ROBOT_ENS_PROD_DROPLET_PK}" > ~/.ssh/robot-ens-prod-v0
