@@ -4,7 +4,7 @@ services:
     image: "ghcr.io/relaycc/robot/express:${GITHUB_SHA}"
     build:
       context: ".."
-      dockerfile: "./deploy/Dockerfile.express"
+      dockerfile: "./ci/Dockerfile.express"
     expose:
       - ${EXPRESS_PORT}
     environment:
@@ -20,7 +20,7 @@ services:
     image: "ghcr.io/relaycc/robot/xmtp:${GITHUB_SHA}"
     build:
       context: ".."
-      dockerfile: "./deploy/Dockerfile.xmtp"
+      dockerfile: "./ci/Dockerfile.xmtp"
     environment:
       FRONT_API_KEY: ${FRONT_API_KEY}
       XMTP_CLIENT_PK: ${XMTP_CLIENT_PK}
