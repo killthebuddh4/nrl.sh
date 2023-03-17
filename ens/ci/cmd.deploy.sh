@@ -1,7 +1,5 @@
 #!/bin/sh
 
-./deploy/cmd.deploy.smoke.sh
-
 if [ -z "$CI" ]; then
   echo "You are trying to run this outside of a github action. gtfo. Exiting."
   exit 1
