@@ -10,7 +10,6 @@ if [ -z "$ROBOT_ENS_PROD_DROPLET_IP" ]; then
   exit 1
 fi
 
-cd ens
 mkdir -p ~/.ssh
 echo "${ROBOT_ENS_PROD_DROPLET_PK}" > ~/.ssh/robot-ens-prod-v0
 chmod 400 ~/.ssh/robot-ens-prod-v0

@@ -39,4 +39,5 @@ jobs:
           EXPRESS_PORT: $${{ secrets.EXPRESS_PORT }}
           VIRTUAL_HOST: $${{ secrets.VIRTUAL_HOST }}
         run: |
+          cd ens
           npm run ci:deploy
