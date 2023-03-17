@@ -16,6 +16,8 @@ services:
       EXPRESS_PORT: ${EXPRESS_PORT}
       VIRTUAL_HOST: ${ROBOT_DOMAIN}
       VIRTUAL_PORT: ${EXPRESS_PORT}
+      ROBOT_DOMAIN: ${ROBOT_DOMAIN}
+      OPEN_AI_API_KEY: ${OPEN_AI_API_KEY}
   xmtp:
     image: "ghcr.io/relaycc/robot/xmtp:${GITHUB_SHA}"
     build:
@@ -29,6 +31,8 @@ services:
       EXPRESS_HOST: ${EXPRESS_HOST}
       EXPRESS_PORT: ${EXPRESS_PORT}
       VIRTUAL_PORT: ${EXPRESS_PORT}
+      ROBOT_DOMAIN: ${ROBOT_DOMAIN}
+      OPEN_AI_API_KEY: ${OPEN_AI_API_KEY}
   nginx-proxy:
     image: nginxproxy/nginx-proxy
     ports:
