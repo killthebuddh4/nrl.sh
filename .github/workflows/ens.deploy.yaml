@@ -1,0 +1,44 @@
+name: Deploy ENS
+
+on:
+  workflow_dispatch:
+    branches: [master]
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        env:
+          REGISTRY: ghcr.io
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Push
+        run: |
+          cd ens
+          npm run ci:build
+
+      - name: Deploy
+        env:
+          ROBOT_ENS_PROD_DROPLET_PK: $${{ secrets.ROBOT_ENS_PROD_DROPLET_PK }}
+          ROBOT_ENS_PROD_DROPLET_IP: $${{ secrets.ROBOT_ENS_PROD_DROPLET_IP }}
+          FRONT_API_KEY: $${{ secrets.FRONT_API_KEY }}
+          XMTP_CLIENT_PK: $${{ secrets.XMTP_CLIENT_PK }}
+          SUPABASE_KEY: $${{ secrets.SUPABASE_KEY }}
+          SUPABASE_URL: $${{ secrets.SUPABASE_URL }}
+          ROBOT_DOMAIN: $${{ secrets.ROBOT_DOMAIN }}
+          EXPRESS_HOST: $${{ secrets.EXPRESS_HOST }}
+          EXPRESS_PORT: $${{ secrets.EXPRESS_PORT }}
+          VIRTUAL_HOST: $${{ secrets.VIRTUAL_HOST }}
+        run: |
+          npm run ci:deploy
