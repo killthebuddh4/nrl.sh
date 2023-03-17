@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker compose -f ./deploy/docker-compose.yml build
+docker compose -f ./ci/docker-compose.yml build

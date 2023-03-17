@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker compose -f ./deploy/docker-compose.yml push
+docker compose -f ./ci/docker-compose.yml push
