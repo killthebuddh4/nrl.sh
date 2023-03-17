@@ -6,8 +6,6 @@ on:
 
 jobs:
   deploy:
-    if: github.event_name == 'workflow_dispatch'
-
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +24,7 @@ jobs:
       - name: Build and Push
         run: |
           cd ens
-          npm run ci:build
+          npm run ci:release
 
       - name: Deploy
         env:
