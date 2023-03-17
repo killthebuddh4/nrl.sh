@@ -17,11 +17,6 @@ if [ -z "$ROBOT_ENS_PROD_DROPLET_IP" ]; then
   exit 1
 fi
 
-if [ -z "$GIT_COMMIT_SHORT" ]; then
-  echo "GIT_COMMIT_SHORT is not set"
-  exit 1
-fi
-
 if [ -z "$FRONT_API_KEY" ]; then
   echo "FRONT_API_KEY is not set"
   exit 1
