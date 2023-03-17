@@ -23,16 +23,17 @@ jobs:
 
       - name: Deploy
         env:
-          ROBOT_ENS_PROD_DROPLET_PK: $${{ secrets.ROBOT_ENS_PROD_DROPLET_PK }}
-          ROBOT_ENS_PROD_DROPLET_IP: $${{ secrets.ROBOT_ENS_PROD_DROPLET_IP }}
-          FRONT_API_KEY: $${{ secrets.FRONT_API_KEY }}
-          XMTP_CLIENT_PK: $${{ secrets.XMTP_CLIENT_PK }}
-          SUPABASE_KEY: $${{ secrets.SUPABASE_KEY }}
-          SUPABASE_URL: $${{ secrets.SUPABASE_URL }}
-          ROBOT_DOMAIN: $${{ secrets.ROBOT_DOMAIN }}
-          EXPRESS_HOST: $${{ secrets.EXPRESS_HOST }}
-          EXPRESS_PORT: $${{ secrets.EXPRESS_PORT }}
-          VIRTUAL_HOST: $${{ secrets.VIRTUAL_HOST }}
+          ROBOT_ENS_PROD_DROPLET_PK: ${{ secrets.ROBOT_ENS_PROD_DROPLET_PK }}
+          ROBOT_ENS_PROD_DROPLET_IP: ${{ secrets.ROBOT_ENS_PROD_DROPLET_IP }}
+          FRONT_API_KEY: ${{ secrets.FRONT_API_KEY }}
+          XMTP_CLIENT_PK: ${{ secrets.XMTP_CLIENT_PK }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          ROBOT_DOMAIN: ${{ secrets.ROBOT_DOMAIN }}
+          EXPRESS_HOST: ${{ secrets.EXPRESS_HOST }}
+          EXPRESS_PORT: ${{ secrets.EXPRESS_PORT }}
+          VIRTUAL_HOST: ${{ secrets.VIRTUAL_HOST }}
         run: |
           cd ens
+          export GIT_COMMIT_SHORT=$(git rev-parse --short=12 HEAD)
           npm run ci:deploy
