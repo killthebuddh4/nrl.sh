@@ -70,4 +70,5 @@ Host robot-ens-prod-v0
   IdentityFile ~/.ssh/robot-ens-prod-v0
   StrictHostKeyChecking no
 END
-DOCKER_HOST=ssh://robot-ens-prod-v0 docker compose -f ./ci/docker-compose.yml up --pull -d
+DOCKER_HOST=ssh://robot-ens-prod-v0 docker compose -f ./ci/docker-compose.yml pull
+DOCKER_HOST=ssh://robot-ens-prod-v0 docker compose -f ./ci/docker-compose.yml up -d
