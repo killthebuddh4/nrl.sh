@@ -19,6 +19,7 @@ services:
       VIRTUAL_PORT: ${EXPRESS_PORT}
       ROBOT_DOMAIN: ${ROBOT_DOMAIN}
       OPEN_AI_API_KEY: ${OPEN_AI_API_KEY}
+      GITHUB_SHA: ${GITHUB_SHA}
   xmtp:
     image: "ghcr.io/relaycc/robot/xmtp:${GITHUB_SHA}"
     build:
