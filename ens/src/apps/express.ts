@@ -33,6 +33,10 @@ server.get("/heartbeat", (req, res) => {
   res.send("Not dead yet!");
 });
 
+server.get("/version", (req, res) => {
+  res.send(process.env.GITHUB_SHA);
+});
+
 server.post("/from/xmtp", async (req, res) => {
   const authResult = authenticateRequest({ req });
   if (!authResult.isAuthenticated) {
