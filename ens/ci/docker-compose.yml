@@ -15,6 +15,7 @@ services:
       EXPRESS_HOST: ${EXPRESS_HOST}
       EXPRESS_PORT: ${EXPRESS_PORT}
       VIRTUAL_HOST: ${ROBOT_DOMAIN}
+      LETSENCRYPT_HOST: ${ROBOT_DOMAIN}
       VIRTUAL_PORT: ${EXPRESS_PORT}
       ROBOT_DOMAIN: ${ROBOT_DOMAIN}
       OPEN_AI_API_KEY: ${OPEN_AI_API_KEY}
@@ -37,5 +38,28 @@ services:
     image: nginxproxy/nginx-proxy
     ports:
       - "80:80"
+      - "443:443"
     volumes:
+      - conf:/etc/nginx/conf.d
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - certs:/etc/nginx/certs:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    environment:
+      - DEFAULT_EMAIL=achilles@relay.cc
+      - DEBUG=1
+    volumes_from:
+      - nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - acme:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+volumes:
+  conf:
+  vhost:
+  html:
+  certs:
+  acme:
