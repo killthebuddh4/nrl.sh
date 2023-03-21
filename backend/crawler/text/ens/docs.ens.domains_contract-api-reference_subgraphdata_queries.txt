@@ -1,0 +1,21 @@
+
+
+
+
+
+
+Query Examples - ENS Documentation
+
+
+
+
+
+
+
+
+
+
+ENS DocumentationTechnical DocumentationHomeTechnical DocsGovernance DocsSearch…⌃KLinksTechnical DocumentationIntroductionTerminologyFrequently Asked QuestionsENS DeploymentsRegistrar Frequently Asked QuestionsDeploying ENS on a Private ChainDNS Registrar guideBug Bounty ProgramENS Improvement ProposalsDapp Developer GuideENS Enabling your DAppENS LibrariesWorking with ENSResolving NamesManaging NamesRegistering & Renewing NamesENS Front-End Design GuidelinesENS as NFTENS Layer2 and offchain data supportENS Data guideContract API ReferenceName ProcessingRegistryReverseRegistrarTestRegistrarPublicResolver.eth Permanent RegistrarDNS RegistrarSubgraphEntitiesQuery ExamplesContract Developer GuideResolving Names On-chainWriting a ResolverWriting a RegistrarENS Discussion ForumENS Support ChatENS Migration (February 2020)Guide for DApp DevelopersTechnical DescriptionPowered By GitBookQuery Examplessidebar_position: 3 title: Sample Queries​QueryingBelow are some sample queries you can use to gather information from the ENS contracts.You can build your own queries using a GraphQL Explorer and enter your endpoint to limit the data to exactly what you need.Get the top domain for an account based on the longest registry.query getDomainForAccount { account(id: "0xfee51ebbf276c1c3d91910a0b9a029e3ce731619") { registrations(first: 1, orderBy: expiryDate, orderDirection: desc) { domain { name } } id }}Search for subdomainquery getSubDomains($Account: String = "vitalik.eth") { domains(where: { name: "vitalik.eth" }) { name id subdomains(first: 10) { name } subdomainCount }}Get an expiration for an ENS domain{ query getDomainExp($Account: String = "vitalik.eth") { registrations( where: {domain_: {name: $Account}} first: 1 orderBy: expiryDate orderDirection: desc ) { expiryDate }}PreviousEntitiesNext - Contract Developer GuideResolving Names On-chainLast modified 6mo agoCopy linkEdit on GitHubOn this pageQueryingGet the top domain for an account based on the longest registry.Search for subdomainGet an expiration for an ENS domain
+
+
+

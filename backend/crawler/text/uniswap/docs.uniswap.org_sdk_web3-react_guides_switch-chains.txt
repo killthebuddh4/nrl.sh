@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Switching Chains | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceSwap Widgetweb3-reactOverviewGuidesConnecting to WalletsSupported ConnectorsSwitching ChainsCore SDKV2 SDKV1 SDK🏠web3-reactGuidesSwitching ChainsHelpful?On this pageSwitching ChainsIntroduction​This guide will cover how to prompt a wallet that has connected to our dApp to switch chains using web3-react. It is based on the web3-react example, found in the Uniswap code examples repository. To run this example, check out the examples's README and follow the setup instructions.infoFor help on setting up web3-react and interacting with a MetaMask wallet, please visit our connecting to wallets page!The input parameters to this guide are the chains that we want our dApp to be able to connect to and their RPC URLs.At the end of the guide, we should be able to switch chains on the connected wallet.For this guide, the following web3-react packages are used:@web3-react/coreinfoThis guide uses web3-react version 8, which is a beta version.The core code of this guide can be found in connections.Switching Chains​Having setup our application to use web3-react and having built out the ability to connect and disconnect wallets, we can now move on to switching chains.Switching chains requires two parameters, the chainId we want to switch to, and the current connectionType:Defining the functionloading...CopyView on GithubGiven the ConnectionType, we can retrieve the actual connector:Retrieving the connectorloading...CopyView on GithubThen, depending on the ConnectionType, we determine how to switch chains. For the Network or WalletConnect cases, we call web3-react's activate function with the supplied chainId:Switching chains for Network and WalletConnectloading...CopyView on GithubThe rest of the connectors require us to build an AddEthereumChainParameter object and pass it to the web3-react's activate function:Switching chains the other Connectorsloading...CopyView on GithubThe metadata required to build AddEthereumChainParameter  are defined in our constants file:Defining the chain parametersloading...CopyView on GithubNext steps​Know you know how to support web3-react's most common use cases! Stay tuned for follow up guides.Helpful?PreviousSupported ConnectorsNextOverviewIntroductionSwitching ChainsNext stepsDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

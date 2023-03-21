@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+BytesLib | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesBase64BytesLibCallbackValidationChainIdHexStringsLiquidityAmountsNFTDescriptorNFTSVGOracleLibraryPathPoolAddressPoolTicksCounterPositionKeyTokenRatioSortOrderTransferHelperWeightedOracleLibraryStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryLibrariesBytesLibHelpful?On this pageBytesLibFunctions​slice​  function slice(  ) internal returns (bytes)CopytoAddress​  function toAddress(  ) internal returns (address)CopytoUint24​  function toUint24(  ) internal returns (uint24)CopyEdit this pageHelpful?PreviousBase64NextCallbackValidationFunctionsslicetoAddresstoUint24DevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

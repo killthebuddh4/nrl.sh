@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+SafeTransferOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesSafeTransferOptionsHelpful?On this pageSafeTransferOptions@uniswap/v3-sdk / Exports / SafeTransferOptionsInterface: SafeTransferOptionsTable of contents​Properties​datarecipientsendertokenIdProperties​data​• Optional data: stringThe optional parameter that passes data to the onERC721Received call for the stakerDefined in​nonfungiblePositionManager.ts:97recipient​• recipient: stringThe account that should receive the NFT.Defined in​nonfungiblePositionManager.ts:88sender​• sender: stringThe account sending the NFT.Defined in​nonfungiblePositionManager.ts:83tokenId​• tokenId: BigintIshThe id of the token being sent.Defined in​nonfungiblePositionManager.ts:93Helpful?PreviousRemoveLiquidityOptionsNextStandardPermitArgumentsTable of contentsPropertiesPropertiesdatarecipientsendertokenIdDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+SafeCast | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesBitMathFixedPoint128FixedPoint96FullMathLiquidityMathLowGasSafeMathOraclePositionSafeCastSecondsOutsideSqrtPriceMathSwapMathTickTickBitmapTickMathTransferHelperUnsafeMathGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreLibrariesSafeCastHelpful?On this pageSafeCastContains methods for safely casting between typesFunctions​toUint160​  function toUint160(    uint256 y  ) internal pure returns (uint160 z)CopyCast a uint256 to a uint160, revert on overflowParameters:​NameTypeDescriptionyuint256The uint256 to be downcastedReturn Values:​NameTypeDescriptionzuint160The downcasted integer, now type uint160toInt128​  function toInt128(    int256 y  ) internal pure returns (int128 z)CopyCast a int256 to a int128, revert on overflow or underflowParameters:​NameTypeDescriptionyint256The int256 to be downcastedReturn Values:​NameTypeDescriptionzint128The downcasted integer, now type int128toInt256​  function toInt256(    uint256 y  ) internal pure returns (int256 z)CopyCast a uint256 to a int256, revert on overflowParameters:​NameTypeDescriptionyuint256The uint256 to be castedReturn Values:​NameTypeDescriptionzint256The casted integer, now type int256Edit this pageHelpful?PreviousPositionNextSecondsOutsideFunctionstoUint160toInt128toInt256DevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

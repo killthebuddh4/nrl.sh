@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+FeeOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesFeeOptionsHelpful?On this pageFeeOptions@uniswap/v3-sdk / Exports / FeeOptionsInterface: FeeOptionsTable of contents​Properties​feerecipientProperties​fee​• fee: PercentThe percent of the output that will be taken as a fee.Defined in​payments.ts:11recipient​• recipient: stringThe recipient of the fee.Defined in​payments.ts:16Helpful?PreviousCommonAddLiquidityOptionsNextIncentiveKeyTable of contentsPropertiesPropertiesfeerecipientDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

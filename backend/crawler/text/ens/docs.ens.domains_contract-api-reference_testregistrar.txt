@@ -1,0 +1,20 @@
+
+
+
+
+
+
+TestRegistrar - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationTechnical DocumentationHomeTechnical DocsGovernance DocsSearch…⌃KLinksTechnical DocumentationIntroductionTerminologyFrequently Asked QuestionsENS DeploymentsRegistrar Frequently Asked QuestionsDeploying ENS on a Private ChainDNS Registrar guideBug Bounty ProgramENS Improvement ProposalsDapp Developer GuideENS Enabling your DAppENS LibrariesWorking with ENSResolving NamesManaging NamesRegistering & Renewing NamesENS Front-End Design GuidelinesENS as NFTENS Layer2 and offchain data supportENS Data guideContract API ReferenceName ProcessingRegistryReverseRegistrarTestRegistrarPublicResolver.eth Permanent RegistrarDNS RegistrarSubgraphContract Developer GuideResolving Names On-chainWriting a ResolverWriting a RegistrarENS Discussion ForumENS Support ChatENS Migration (February 2020)Guide for DApp DevelopersTechnical DescriptionPowered By GitBookTestRegistrar​Source​The Test registrar facilitates easy testing of ENS on the Ethereum test networks. Typically deployed on the .test TLD, it provides functionality to instantly claim a domain for test purposes, which expires 28 days after it was claimed.Register a Domainfunction register(bytes32 label, address owner) public;Registers the subdomain whose keccak256 hash is provided in label, and assigns ownership to owner. For example, to register myname.test, call register with keccak256('myname') as the first argument.Registrations after 28 days.Get expiration timemapping (bytes32 => uint) public expiryTimes;Returns the unix timestamp at which the specified subdomain will expire. For example, to check the expiration time of myname.test, call expiryTimes(keccak256('myname')).Contract API Reference - PreviousReverseRegistrarNext - Contract API ReferencePublicResolverLast modified 1yr agoCopy linkEdit on GitHubOn this pageRegister a DomainGet expiration time
+
+
+

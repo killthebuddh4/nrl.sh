@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+RewardMath | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesStakerUniswap V3 Staker DesignUniswap V3 Staker ContractInterfacesLibrariesIncentiveIdNFTPositionInfoRewardMathTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryStakerLibrariesRewardMathHelpful?On this pageRewardMathAllows computing rewards given some parameters of stakes and incentivesFunctions​computeRewardAmount​  function computeRewardAmount(    uint256 totalRewardUnclaimed,    uint160 totalSecondsClaimedX128,    uint256 startTime,    uint256 endTime,    uint128 liquidity,    uint160 secondsPerLiquidityInsideInitialX128,    uint160 secondsPerLiquidityInsideX128,    uint256 currentTime  ) internal pure returns (uint256 reward, uint160 secondsInsideX128)CopyCompute the amount of rewards owed given parameters of the incentive and stakeParameters:​NameTypeDescriptiontotalRewardUnclaimeduint256The total amount of unclaimed rewards left for an incentivetotalSecondsClaimedX128uint160How many full liquidity-seconds have been already claimed for the incentivestartTimeuint256When the incentive rewards began in epoch secondsendTimeuint256When rewards are no longer being dripped out in epoch secondsliquidityuint128The amount of liquidity, assumed to be constant over the period over which the snapshots are measuredsecondsPerLiquidityInsideInitialX128uint160The seconds per liquidity of the liquidity tick range as of the beginning of the periodsecondsPerLiquidityInsideX128uint160The seconds per liquidity of the liquidity tick range as of the current block timestampcurrentTimeuint256The current block timestamp, which must be greater than or equal to the start timeReturn Values:​NameTypeDescriptionrewarduint256The amount of rewards owedsecondsInsideX128uint160The total liquidity seconds inside the position's range for the duration of the stakeEdit this pageHelpful?PreviousNFTPositionInfoNextBase64TestFunctionscomputeRewardAmountDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

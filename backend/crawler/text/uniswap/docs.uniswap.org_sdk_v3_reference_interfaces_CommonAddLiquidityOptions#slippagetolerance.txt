@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+CommonAddLiquidityOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesCommonAddLiquidityOptionsHelpful?On this pageCommonAddLiquidityOptions@uniswap/v3-sdk / Exports / CommonAddLiquidityOptionsInterface: CommonAddLiquidityOptionsOptions for producing the calldata to add liquidity.Table of contents​Properties​deadlineslippageTolerancetoken0Permittoken1PermituseNativeProperties​deadline​• deadline: BigintIshWhen the transaction expires, in epoch seconds.Defined in​nonfungiblePositionManager.ts:56slippageTolerance​• slippageTolerance: PercentHow much the pool price is allowed to move.Defined in​nonfungiblePositionManager.ts:51token0Permit​• Optional token0Permit: PermitOptionsThe optional permit parameters for spending token0Defined in​nonfungiblePositionManager.ts:66token1Permit​• Optional token1Permit: PermitOptionsThe optional permit parameters for spending token1Defined in​nonfungiblePositionManager.ts:71useNative​• Optional useNative: NativeCurrencyWhether to spend ether. If true, one of the pool tokens must be WETH, by default falseDefined in​nonfungiblePositionManager.ts:61Helpful?PreviousCollectOptionsNextFeeOptionsTable of contentsPropertiesPropertiesdeadlineslippageTolerancetoken0Permittoken1PermituseNativeDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

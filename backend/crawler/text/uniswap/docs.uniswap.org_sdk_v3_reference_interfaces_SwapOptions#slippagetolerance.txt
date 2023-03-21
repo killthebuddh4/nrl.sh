@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+SwapOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesSwapOptionsHelpful?On this pageSwapOptions@uniswap/v3-sdk / Exports / SwapOptionsInterface: SwapOptionsOptions for producing the arguments to send calls to the router.Table of contents​Properties​deadlinefeeinputTokenPermitrecipientslippageTolerancesqrtPriceLimitX96Properties​deadline​• deadline: BigintIshWhen the transaction expires, in epoch seconds.Defined in​swapRouter.ts:30fee​• Optional fee: FeeOptionsOptional information for taking a fee on output.Defined in​swapRouter.ts:45inputTokenPermit​• Optional inputTokenPermit: PermitOptionsThe optional permit parameters for spending the input.Defined in​swapRouter.ts:35recipient​• recipient: stringThe account that should receive the output.Defined in​swapRouter.ts:25slippageTolerance​• slippageTolerance: PercentHow much the execution price is allowed to move unfavorably from the trade execution price.Defined in​swapRouter.ts:20sqrtPriceLimitX96​• Optional sqrtPriceLimitX96: BigintIshThe optional price limit for the trade.Defined in​swapRouter.ts:40Helpful?PreviousStandardPermitArgumentsNextTickConstructorArgsTable of contentsPropertiesPropertiesdeadlinefeeinputTokenPermitrecipientslippageTolerancesqrtPriceLimitX96DevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

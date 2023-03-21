@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Pair Addresses | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceUniversal RouterPermit2V2 ProtocolOverviewConceptsProtocol OverviewCore ConceptsAdvanced TopicsGuidesInterface IntegrationSmart Contract IntegrationSmart Contract Quick startImplement a SwapProviding LiquidityBuilding an OracleFlash SwapsPair AddressesSupporting meta transactionsTechnical ReferenceAPIGovernanceSmart ContractsV1 Protocol🏠V2 ProtocolGuidesSmart Contract IntegrationPair AddressesHelpful?On this pagegetPairThe most obvious way to get the address for a pair is to call getPair on the factory. If the pair exists, this function will return its address, else address(0) (0x0000000000000000000000000000000000000000).The "canonical" way to determine whether or not a pair exists.Requires an on-chain lookup.CREATE2Thanks to some fancy footwork in the factory, we can also compute pair addresses without any on-chain lookups because of CREATE2. The following values are required for this technique:addressThe factory addresssaltkeccak256(abi.encodePacked(token0, token1))keccak256(init_code)0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845ftoken0 must be strictly less than token1 by sort order.Can be computed offline.Requires the ability to perform keccak256.Examples​Solidity​address factory = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f;address token0 = 0xCAFE000000000000000000000000000000000000; // change me!address token1 = 0xF00D000000000000000000000000000000000000; // change me!address pair = address(uint(keccak256(abi.encodePacked(  hex'ff',  factory,  keccak256(abi.encodePacked(token0, token1)),  hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'))));CopyEdit this pageHelpful?PreviousFlash SwapsNextSupporting meta transactionsExamplesSolidityDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

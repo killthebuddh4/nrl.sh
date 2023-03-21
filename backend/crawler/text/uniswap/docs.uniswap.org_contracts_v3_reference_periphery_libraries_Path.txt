@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Path | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesBase64BytesLibCallbackValidationChainIdHexStringsLiquidityAmountsNFTDescriptorNFTSVGOracleLibraryPathPoolAddressPoolTicksCounterPositionKeyTokenRatioSortOrderTransferHelperWeightedOracleLibraryStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryLibrariesPathHelpful?On this pagePathFunctions​hasMultiplePools​  function hasMultiplePools(    bytes path  ) internal returns (bool)CopyReturns true iff the path contains two or more poolsParameters:​NameTypeDescriptionpathbytesThe encoded swap pathReturn Values:​TypeDescriptionboolif path contains two or more pools, otherwise falsedecodeFirstPool​  function decodeFirstPool(    bytes path  ) internal returns (address tokenA, address tokenB, uint24 fee)CopyDecodes the first pool in pathParameters:​NameTypeDescriptionpathbytesThe bytes encoded swap pathReturn Values:​NameTypeDescriptiontokenAaddressThe first token of the given pooltokenBaddressThe second token of the given poolfeeuint24The fee level of the poolgetFirstPool​  function getFirstPool(    bytes path  ) internal returns (bytes)CopyGets the segment corresponding to the first pool in the pathParameters:​NameTypeDescriptionpathbytesThe bytes encoded swap pathReturn Values:​TypeDescriptionbytessegment containing all data necessary to target the first pool in the pathskipToken​  function skipToken(    bytes path  ) internal returns (bytes)CopySkips a token + fee element from the buffer and returns the remainderParameters:​NameTypeDescriptionpathbytesThe swap pathReturn Values:​TypeDescriptionbytesremaining token + fee elements in the pathEdit this pageHelpful?PreviousOracleLibraryNextPoolAddressFunctionshasMultiplePoolsdecodeFirstPoolgetFirstPoolskipTokenDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

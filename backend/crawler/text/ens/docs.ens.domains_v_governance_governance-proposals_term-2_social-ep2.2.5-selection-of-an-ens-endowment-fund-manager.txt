@@ -1,0 +1,20 @@
+
+
+
+
+
+
+[EP2.2.5] [Social] Selection of an ENS endowment fund manager - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationDAO Governance DocsHomeTechnical DocsGovernance DocsSearch…⌃KLinksDAO Governance DocsWelcome to ENS DAOGovernance ProcessENS DAO ConstitutionThe ENS FoundationGovernance ProposalsTerm 0Term 1Term 2[EP2.1] [Executable] Funding True Names Ltd[EP2.2.1] [Executable] Q3 & Q4 2022 Meta-Governance WG Budget[EP2.2.2] [Executable] Q3 & Q4 2022 Ecosystem WG Budget[EP2.2.3] [Executable] Q3 & Q4 2022 Public Goods WG Budget[EP2.2.4] [Social] ENS Endaoment RFP[EP2.2.5] [Social] Selection of an ENS endowment fund managerTerm 3Powered By GitBook[EP2.2.5] [Social] Selection of an ENS endowment fund manager​StatusPassed (winner: Karpatkey)Discussion Thread​Discuss​Votes​Snapshot​AbstractFollowing the RFP process approved in EP2.2.4, the Meta-Governance Working Group stewards have selected a short list of potential fund managers for the DAO to elect to manage the ENS Endowment.SpecificationEP2.2.4 set out a process for fund managers to submit proposals to the Meta-Governance Working Group for consideration as fund managers over an ENS Endowment. The Endowment's goal is to ensure the long-term viability of ENS by ensuring it can meet its ongoing financial obligations even in the face of reduced ETH price and registration/renewal revenue.Eight submissions were made as a result of the RFP process, and the stewards have narrowed this down to three finalists. All three finalists are established actors with track records of fund management, and their proposals reflect an understanding of the low-risk, long-term sustainability approach that an endowment should take.Rather than select a winner themselves, the Meta-Governance Working Group Stewards believe that the selection of a fund manager should be put to the DAO. This EP implements a Snapshot vote using Ranked Choice voting with the following options:1.Avantgarde2.Karpatkey3.Llama4.None of the aboveSubmissions for the vote are listed in alphabetical order.Following the conclusion of the vote, the Meta-Governance Stewards will work with the winning team to develop an initial treasury allocation strategy, resulting in a separate executable proposal to enact the initial setup of the endowment.Submission SummaryThe table below summarizes the final submissions made by each candidate.SubmissionInitial SizeTarget SizePerformance FeeAdmin FeeBreakeven Return​Avantgarde​25,000 ETH$100,000,000 USD12.5%0.5%0.57%​Karpatkey​$52,000,000 USD$69,000,000 USD10%0.5%0.56%​Llama​30,000 ETH$80,000,000 USD0%1% min. $500k USD1% - 1.28%Breakeven return is calculated as admin_fee / (1 - performance_fee).Previous[EP2.2.4] [Social] ENS Endaoment RFPNextTerm 3Last modified 1mo agoCopy linkEdit on GitHubOn this pageAbstractSpecificationSubmission Summary
+
+
+

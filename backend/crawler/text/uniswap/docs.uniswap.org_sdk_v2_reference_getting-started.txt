@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+Getting Started | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceSwap Widgetweb3-reactCore SDKV2 SDKOverviewGuidesSDK Quick startFetching DataPricingTradingPair AddressesTechnical ReferenceGetting StartedTokenPairRouteTradeFractionsFetcherOther ExportsV1 SDK🏠V2 SDKTechnical ReferenceGetting StartedHelpful?On this pageGetting StartedThe pages that follow contain technical reference information on the Uniswap SDK.
+Looking for a quick start instead?
+You may also want to jump into a guide,
+which offers a friendlier introduction to the SDK!The SDK is written in TypeScript, has a robust test suite, performs arbitrary precision arithmetic,
+and supports rounding to significant digits or fixed decimal places.
+The principal exports of the SDK are entities: classes that contain initialization and validation checks,
+necessary data fields, and helper functions.An important concept in the SDK is fractions. Because Solidity performs integer math, care must be taken in
+non-EVM environments to faithfully replicate the actual computation carried out on-chain.
+The first concern here is to ensure that an overflow-safe integer implementation is used.
+Ideally, the SDK would be able to use native BigInts.
+However, until support becomes more widespread, JSBI objects are used instead,
+with the idea that once BigInts proliferate, this dependency can be compiled away.
+The second concern is precision loss due to, for example, chained price ratio calculations.
+To address this issue, all math operations are performed as fraction operations, ensuring arbitrary precision up
+until the point that values are rounded for display purposes, or truncated to fit inside a fixed bit width.The SDK works for all chains on which the factory is deployed.Code​The source code is available on GitHub.Dependencies​The SDK declares its dependencies as peer dependencies.
+This is for two reasons:prevent installation of unused dependencies (e.g. @ethersproject/providers and @ethersproject/contracts, only used in Fetcher)prevent duplicate @ethersproject dependencies with conflicting versionsHowever, this means you must install these dependencies alongside the SDK, if you do not already have them installed.Helpful?PreviousPair AddressesNextTokenCodeDependenciesDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

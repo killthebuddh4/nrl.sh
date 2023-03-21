@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+INonfungibleTokenPositionDescriptor | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesIERC20MetadataIERC721PermitIMulticallINonfungiblePositionManagerINonfungibleTokenPositionDescriptorIPeripheryImmutableStateIPeripheryPaymentsIPeripheryPaymentsWithFeeIPoolInitializerIQuoterIQuoterV2ISelfPermitISwapRouterITickLensIV3MigratorexternalLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryInterfacesINonfungibleTokenPositionDescriptorHelpful?On this pageINonfungibleTokenPositionDescriptorFunctions​tokenURI​  function tokenURI(    contract INonfungiblePositionManager positionManager,    uint256 tokenId  ) external returns (string)CopyProduces the URI describing a particular token ID for a position managerNote this URI may be a data: URI with the JSON contents directly inlinedParameters:​NameTypeDescriptionpositionManagercontract INonfungiblePositionManagerThe position manager for which to describe the tokentokenIduint256The ID of the token for which to produce a description, which may not be validReturn Values:​TypeDescriptionstringURI of the ERC721-compliant metadataEvents​UpdateTokenRatioPriority​  event UpdateTokenRatioPriority(    address token,    int256 priority  )CopyEmitted when a token is given a new priority order in the displayed price ratioParameters:​NameTypeDescriptiontokenaddressThe token being given priority orderpriorityint256Represents priority in ratio - higher integers get numerator priorityEdit this pageHelpful?PreviousINonfungiblePositionManagerNextIPeripheryImmutableStateFunctionstokenURIEventsUpdateTokenRatioPriorityDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

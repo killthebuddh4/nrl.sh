@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Other Exports | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceSwap Widgetweb3-reactCore SDKV2 SDKOverviewGuidesSDK Quick startFetching DataPricingTradingPair AddressesTechnical ReferenceGetting StartedTokenPairRouteTradeFractionsFetcherOther ExportsV1 SDK🏠V2 SDKTechnical ReferenceOther ExportsHelpful?JSBIimport { JSBI } from '@uniswap/sdk'// import JSBI from 'jsbi'CopyThe default export from jsbi.BigintIshimport { BigintIsh } from '@uniswap/sdk'// type BigintIsh = JSBI | bigint | stringCopyA union type comprised of all types that can be cast to a JSBI instance.ChainIdimport { ChainId } from '@uniswap/sdk'// enum ChainId {//   MAINNET = 1,//   ROPSTEN = 3,//   RINKEBY = 4,//   GÖRLI = 5,//   KOVAN = 42// }CopyA enum denominating supported chain IDs.TradeTypeimport { TradeType } from '@uniswap/sdk'// enum TradeType {//   EXACT_INPUT,//   EXACT_OUTPUT// }CopyA enum denominating supported trade types.Roundingimport { Rounding } from '@uniswap/sdk'// enum Rounding {//   ROUND_DOWN,//   ROUND_HALF_UP,//   ROUND_UP// }CopyA enum denominating supported rounding options.FACTORY_ADDRESSimport { FACTORY_ADDRESS } from '@uniswap/sdk'CopyThe factory address.INIT_CODE_HASHimport { INIT_CODE_HASH } from '@uniswap/sdk'CopySee pair addresses.MINIMUM_LIQUIDITYimport { MINIMUM_LIQUIDITY } from '@uniswap/sdk'CopySee minimum liquidity.InsufficientReservesErrorimport { InsufficientReservesError } from '@uniswap/sdk'CopyInsufficientInputAmountErrorimport { InsufficientInputAmountError } from '@uniswap/sdk'CopyWETHimport { WETH } from '@uniswap/sdk'CopyAn object whose values are WETH Token instances, indexed by ChainId.Helpful?PreviousFetcherNextOverviewDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

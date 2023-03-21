@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+IPeripheryPayments | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesIERC20MetadataIERC721PermitIMulticallINonfungiblePositionManagerINonfungibleTokenPositionDescriptorIPeripheryImmutableStateIPeripheryPaymentsIPeripheryPaymentsWithFeeIPoolInitializerIQuoterIQuoterV2ISelfPermitISwapRouterITickLensIV3MigratorexternalLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryInterfacesIPeripheryPaymentsHelpful?On this pageIPeripheryPaymentsFunctions to ease deposits and withdrawals of ETHFunctions​unwrapWETH9​  function unwrapWETH9(    uint256 amountMinimum,    address recipient  ) externalCopyUnwraps the contract's WETH9 balance and sends it to recipient as ETH.The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.Parameters:​NameTypeDescriptionamountMinimumuint256The minimum amount of WETH9 to unwraprecipientaddressThe address receiving ETHrefundETH​  function refundETH(  ) externalCopyRefunds any ETH balance held by this contract to the msg.senderUseful for bundling with mint or increase liquidity that uses ether, or exact output swaps
+that use ether for the input amountsweepToken​  function sweepToken(    address token,    uint256 amountMinimum,    address recipient  ) externalCopyTransfers the full amount of a token held by this contract to recipientThe amountMinimum parameter prevents malicious contracts from stealing the token from usersParameters:​NameTypeDescriptiontokenaddressThe contract address of the token which will be transferred to recipientamountMinimumuint256The minimum amount of token required for a transferrecipientaddressThe destination address of the tokenEdit this pageHelpful?PreviousIPeripheryImmutableStateNextIPeripheryPaymentsWithFeeFunctionsunwrapWETH9refundETHsweepTokenDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

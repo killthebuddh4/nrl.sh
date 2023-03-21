@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Library | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceUniversal RouterPermit2V2 ProtocolOverviewConceptsProtocol OverviewCore ConceptsAdvanced TopicsGuidesInterface IntegrationSmart Contract IntegrationTechnical ReferenceAPIGovernanceSmart ContractsFactoryPairPair (ERC-20)LibraryRouter01Router02Common ErrorsV1 Protocol🏠V2 ProtocolTechnical ReferenceSmart ContractsLibraryHelpful?On this pageLibraryCode​UniswapV2Library.solInternal FunctionssortTokens​function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1);CopySorts token addresses.pairFor​function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair);CopyCalculates the address for a pair without making any external calls via the v2 SDK.getReserves​function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB);CopyCalls getReserves on the pair for the passed tokens, and returns the results sorted in the order that the parameters were passed in.quote​function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB);CopyGiven some asset amount and reserves, returns an amount of the other asset representing equivalent value.Useful for calculating optimal token amounts before calling mint.getAmountOut​function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut);CopyGiven an input asset amount, returns the maximum output amount of the other asset (accounting for fees) given reserves.Used in getAmountsOut.getAmountIn​function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn);CopyReturns the minimum input asset amount required to buy the given output asset amount (accounting for fees) given reserves.Used in getAmountsIn.getAmountsOut​function getAmountsOut(uint amountIn, address[] memory path) internal view returns (uint[] memory amounts);CopyGiven an input asset amount and an array of token addresses, calculates all subsequent maximum output token amounts by calling getReserves for each pair of token addresses in the path in turn, and using these to call getAmountOut.Useful for calculating optimal token amounts before calling swap.getAmountsIn​function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts);CopyGiven an output asset amount and an array of token addresses, calculates all preceding minimum input token amounts by calling getReserves for each pair of token addresses in the path in turn, and using these to call getAmountIn.Useful for calculating optimal token amounts before calling swap.Edit this pageHelpful?PreviousPair (ERC-20)NextRouter01CodesortTokenspairForgetReservesquotegetAmountOutgetAmountIngetAmountsOutgetAmountsInDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

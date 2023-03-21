@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+NFTDescriptorTest | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesStakerTestBase64TestLiquidityAmountsTestMockTimeNonfungiblePositionManagerMockTimeSwapRouterNFTDescriptorTestPathTestPeripheryImmutableStateTestPoolAddressTestSelfPermitTestTestCallbackValidationTestERC20TestERC20MetadataTestERC20PermitAllowedTestMulticallTestPositionNFTOwnerTestUniswapV3CalleeTickLensTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryTestNFTDescriptorTestHelpful?On this pageNFTDescriptorTestFunctions​constructTokenURI​  function constructTokenURI(  ) public returns (string)CopygetGasCostOfConstructTokenURI​  function getGasCostOfConstructTokenURI(  ) public returns (uint256)CopytickToDecimalString​  function tickToDecimalString(  ) public returns (string)CopyfixedPointToDecimalString​  function fixedPointToDecimalString(  ) public returns (string)CopyfeeToPercentString​  function feeToPercentString(  ) public returns (string)CopyaddressToString​  function addressToString(  ) public returns (string)CopygenerateSVGImage​  function generateSVGImage(  ) public returns (string)CopytokenToColorHex​  function tokenToColorHex(  ) public returns (string)CopysliceTokenHex​  function sliceTokenHex(  ) public returns (uint256)CopyrangeLocation​  function rangeLocation(  ) public returns (string, string)CopyisRare​  function isRare(  ) public returns (bool)CopyEdit this pageHelpful?PreviousMockTimeSwapRouterNextPathTestFunctionsconstructTokenURIgetGasCostOfConstructTokenURItickToDecimalStringfixedPointToDecimalStringfeeToPercentStringaddressToStringgenerateSVGImagetokenToColorHexsliceTokenHexrangeLocationisRareDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+
