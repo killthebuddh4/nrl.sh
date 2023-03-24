@@ -1,0 +1,20 @@
+
+
+
+
+
+
+[EP2.2.1] [Executable] Q3 & Q4 2022 Meta-Governance WG Budget - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationDAO Governance DocsHomeTechnical DocsGovernance DocsSearch…⌃KLinksDAO Governance DocsWelcome to ENS DAOGovernance ProcessENS DAO ConstitutionThe ENS FoundationGovernance ProposalsTerm 0Term 1Term 2[EP2.1] [Executable] Funding True Names Ltd[EP2.2.1] [Executable] Q3 & Q4 2022 Meta-Governance WG Budget[EP2.2.2] [Executable] Q3 & Q4 2022 Ecosystem WG Budget[EP2.2.3] [Executable] Q3 & Q4 2022 Public Goods WG Budget[EP2.2.4] [Social] ENS Endaoment RFP[EP2.2.5] [Social] Selection of an ENS endowment fund managerTerm 3Powered By GitBook[EP2.2.1] [Executable] Q3 & Q4 2022 Meta-Governance WG BudgetStatusExecutedDiscussion Thread​Discourse​Votes​Snapshot - Passed​Onchain - ExecutedNote: This was previously numbered EP16.1.SummaryThe Meta-Governance Working Group is requesting funding of 632k USD equivalent for the Q3/Q4 of 2022. The budget has three categories. All figures are presented in USD equivalent.Multisigs / Subgroups: $371k USD ValueFunding in this category is related to the two Meta-Governance subgroup multi-sigs. These have been reviewed and approved by the Meta-Gov Stewards.BudgetDescriptionCompensation: $190k USD ValueFunding in this category relates to compensation for DAO stewards and secretary.BudgetDescriptionThe Working Group Rules passed in EP12 state compensation is permitted for stewards and secretary as set out in Rules 11.1 and 9.4 respectively.Unallocated: $71k USD ValueThe funds in this category are reserved for unforeseen grants and unexpected expenses for the term. Stewards will distribute unallocated funds on a discretionary basis.Previous[EP2.1] [Executable] Funding True Names LtdNext[EP2.2.2] [Executable] Q3 & Q4 2022 Ecosystem WG BudgetLast modified 6mo agoCopy linkEdit on GitHubOn this pageSummaryMultisigs / Subgroups: $371k USD ValueCompensation: $190k USD ValueUnallocated: $71k USD Value
+
+
+

@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Error Codes | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceError CodesHelpful?Error CodesLiquidityMath.solLS: Liquidity SubLA: Liquidity AddOracle.solOLD: The target must be chronologically after the oldest observationI: The pool has not been initializedPosition.solNP: Burn cannot be called for a position with 0 liquidityTick.solLO: LiquidityGrossAfter must be less than MaxLiquidityTickMath.solT: The given tick must be less than, or equal to, the maximum tickR: second inequality must be < because the price can never reach the price at the max tickTransferHelper.solTF: Transfer Failed : errors with TF if transfer failsUniswapV3Pool.solLOK: The reentrancy guard. A transaction cannot re-enter the pool mid-swapTLU: The lower tick must be below the upper tickTLM: The lower tick must be greater, or equal to, the minimum tickTUM: The upper tick must be lesser than, or equal to, the maximum tickAI: The pool is already initializedM0: Mint 0, The balance of token0 in the given pool before minting must be less than, or equal to, the balance after mintingM1: Mint 1, The balance of token1 in the given pool before minting must be less than, or equal to, the balance after mintingAS: amountSpecified cannot be zeroSPL: Square root price limitIIA: Insufficient input amount, an insufficient amount of input token was sent during the callbackL: Liquidity in the pool must be greater than zero for a flash to be executedF0: The balance of token0 in the given pool before the flash transaction must be less than, or equal to, the balance of token0 after the flash plus the feeF1: The balance of token1 in the given pool before the flash transaction must be less than, or equal to, the balance of token1 after the flash plus the feeEdit this pageHelpful?PreviousDeployment AddressesNextOverviewDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

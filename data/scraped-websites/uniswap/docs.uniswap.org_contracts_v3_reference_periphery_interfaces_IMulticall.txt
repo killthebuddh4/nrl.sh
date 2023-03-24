@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+IMulticall | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesIERC20MetadataIERC721PermitIMulticallINonfungiblePositionManagerINonfungibleTokenPositionDescriptorIPeripheryImmutableStateIPeripheryPaymentsIPeripheryPaymentsWithFeeIPoolInitializerIQuoterIQuoterV2ISelfPermitISwapRouterITickLensIV3MigratorexternalLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryInterfacesIMulticallHelpful?On this pageIMulticallEnables calling multiple methods in a single call to the contractFunctions​multicall​  function multicall(    bytes[] data  ) external returns (bytes[] results)CopyCall multiple functions in the current contract and return the data from all of them if they all succeedThe msg.value should not be trusted for any method callable from multicall.Parameters:​NameTypeDescriptiondatabytes[]The encoded function data for each of the calls to make to this contractReturn Values:​NameTypeDescriptionresultsbytes[]The results from each of the calls passed in via dataEdit this pageHelpful?PreviousIERC721PermitNextINonfungiblePositionManagerFunctionsmulticallDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+SDK Quick start | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceSwap Widgetweb3-reactCore SDKV2 SDKOverviewGuidesSDK Quick startFetching DataPricingTradingPair AddressesTechnical ReferenceGetting StartedTokenPairRouteTradeFractionsFetcherOther ExportsV1 SDK🏠V2 SDKGuidesSDK Quick startHelpful?On this pageSDK Quick startThe Uniswap SDK exists to help developers build on top of Uniswap. It's designed to run in any environment that can execute JavaScript (think websites, node scripts, etc.). While simple enough to use in a hackathon project, it's also robust enough to power production applications.InstallationThe easiest way to consume the SDK is via npm. To install it in your project, simply run yarn add @uniswap/sdk (or npm install @uniswap/sdk).UsageTo run code from the SDK in your application, use an import or require statement, depending on which your environment supports. Note that the guides following this page will use ES6 syntax.ES6 (import)​import { ChainId } from '@uniswap/sdk'console.log(`The chainId of mainnet is ${ChainId.MAINNET}.`)CopyCommonJS (require)​const UNISWAP = require('@uniswap/sdk')console.log(`The chainId of mainnet is ${UNISWAP.ChainId.MAINNET}.`)CopyReferenceComprehensive reference material for the SDK is publicly available on the Uniswap Labs Github.Helpful?PreviousOverviewNextFetching DataES6 (import)CommonJS (require)DevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

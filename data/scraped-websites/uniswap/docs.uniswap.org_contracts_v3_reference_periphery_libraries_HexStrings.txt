@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+HexStrings | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesBase64BytesLibCallbackValidationChainIdHexStringsLiquidityAmountsNFTDescriptorNFTSVGOracleLibraryPathPoolAddressPoolTicksCounterPositionKeyTokenRatioSortOrderTransferHelperWeightedOracleLibraryStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryLibrariesHexStringsHelpful?On this pageHexStringsFunctions​toHexString​  function toHexString(  ) internal returns (string)CopyConverts a uint256 to its ASCII string hexadecimal representation with fixed length.Credit to Open Zeppelin under MIT license https://github.com/OpenZeppelin/openzeppelin-contracts/blob/243adff49ce1700e0ecb99fe522fb16cff1d1ddc/contracts/utils/Strings.sol#L55toHexStringNoPrefix​  function toHexStringNoPrefix(  ) internal returns (string)CopyEdit this pageHelpful?PreviousChainIdNextLiquidityAmountsFunctionstoHexStringtoHexStringNoPrefixDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

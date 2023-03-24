@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+ClaimOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesClaimOptionsHelpful?On this pageClaimOptions@uniswap/v3-sdk / Exports / ClaimOptionsInterface: ClaimOptionsOptions to specify when claiming rewards.Table of contents​Properties​amountrecipienttokenIdProperties​amount​• Optional amount: BigintIshThe amount of rewardToken to claim. 0 claims all.Defined in​staker.ts:52recipient​• recipient: stringAddress to send rewards to.Defined in​staker.ts:47tokenId​• tokenId: BigintIshThe id of the NFTDefined in​staker.ts:42Helpful?PreviousBestTradeOptionsNextCollectOptionsTable of contentsPropertiesPropertiesamountrecipienttokenIdDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

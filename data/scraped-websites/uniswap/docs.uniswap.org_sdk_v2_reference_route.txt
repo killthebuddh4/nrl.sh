@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Route | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceSwap Widgetweb3-reactCore SDKV2 SDKOverviewGuidesSDK Quick startFetching DataPricingTradingPair AddressesTechnical ReferenceGetting StartedTokenPairRouteTradeFractionsFetcherOther ExportsV1 SDK🏠V2 SDKTechnical ReferenceRouteHelpful?On this pageRouteconstructor(pairs: Pair[], input: Token)CopyThe Route entity represents one or more ordered Uniswap pairs with a fully specified path from input token to output token.Exampleimport { ChainId, Token, TokenAmount, Pair, Route } from '@uniswap/sdk'const HOT = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')const NOT = new Token(ChainId.MAINNET, '0xDeCAf00000000000000000000000000000000000', 18, 'NOT', 'Caffeine')const HOT_NOT = new Pair(new TokenAmount(HOT, '2000000000000000000'), new TokenAmount(NOT, '1000000000000000000'))const route = new Route([HOT_NOT], NOT)CopyPropertiespairs​pairs: Pair[]CopyThe ordered pairs that the route is comprised of.path​path: Token[]CopyThe full path from input token to output token.input​input: stringCopyThe input token.output​output: stringCopyThe output token.midPrice​midPrice: PriceCopyReturns the current mid price along the route.Helpful?PreviousPairNextTradepairspathinputoutputmidPriceDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+SignedPublicKeyBundle | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchConcepts for xmtp-jsIntro to the XMTP JavaScript SDKTutorials for xmtp-jsStart messaging with XMTPQuickstartBuild key XMTP chat features in a Lens appBuild an XMTP "GM" appFilter conversationsLabel conversationsUse content typesUse a persistent conversation cacheReference for xmtp-jsClassesClientCompositeCodecContentTypeIdConversationsDecodedMessagePrivateKeyPublicKeyPublicKeyBundleSignedPublicKeyBundleStreamTextCodecInterfacesContentCodecEncodedContentOther types and variablesReference for xmtp-jsClassesSignedPublicKeyBundleOn this pageSignedPublicKeyBundleClass: SignedPublicKeyBundleImplements​SignedPublicKeyBundleConstructors​constructor​new SignedPublicKeyBundle(bundle)Parameters​NameTypebundleSignedPublicKeyBundleDefined in​crypto/PublicKeyBundle.ts:11Properties​identityKey​ identityKey: SignedPublicKeyImplementation of​publicKey.SignedPublicKeyBundle.identityKeyDefined in​crypto/PublicKeyBundle.ts:8preKey​ preKey: SignedPublicKeyImplementation of​publicKey.SignedPublicKeyBundle.preKeyDefined in​crypto/PublicKeyBundle.ts:9Methods​equals​equals(other): booleanParameters​NameTypeotherSignedPublicKeyBundleReturns​booleanDefined in​crypto/PublicKeyBundle.ts:26toBytes​toBytes(): Uint8ArrayReturns​Uint8ArrayDefined in​crypto/PublicKeyBundle.ts:33walletSignatureAddress​walletSignatureAddress(): Promise<string>Returns​Promise<string>Defined in​crypto/PublicKeyBundle.ts:22fromBytes​Static fromBytes(bytes): SignedPublicKeyBundleParameters​NameTypebytesUint8ArrayReturns​SignedPublicKeyBundleDefined in​crypto/PublicKeyBundle.ts:37fromLegacyBundle​Static fromLegacyBundle(bundle): SignedPublicKeyBundleParameters​NameTypebundlePublicKeyBundleReturns​SignedPublicKeyBundleDefined in​crypto/PublicKeyBundle.ts:42Edit this pageLast updated on Mar 10, 2023 by Jennifer HasegawaPreviousPublicKeyBundleNextStreamOn this pageImplementsConstructorsconstructorPropertiesidentityKeypreKeyMethodsequalstoByteswalletSignatureAddressfromBytesfromLegacyBundleQuestions? Give us feedbackClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

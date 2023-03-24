@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+NoTickDataProvider | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesFullMathLiquidityMathMulticallNoTickDataProviderNonfungiblePositionManagerPaymentsPoolPositionPositionLibraryRouteSelfPermitSqrtPriceMathStakerSwapMathSwapQuoterSwapRouterTickTickLibraryTickListTickListDataProviderTickMathTradeenumsinterfacesSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceclassesNoTickDataProviderHelpful?On this pageNoTickDataProvider@uniswap/v3-sdk / Exports / NoTickDataProviderClass: NoTickDataProviderThis tick data provider does not know how to fetch any tick data. It throws whenever it is required. Useful if you
+do not need to load tick data for your use case.Implements​TickDataProviderTable of contents​Constructors​constructorProperties​ERROR_MESSAGEMethods​getTicknextInitializedTickWithinOneWordConstructors​constructor​• new NoTickDataProvider()Properties​ERROR_MESSAGE​▪ Static Private ERROR_MESSAGE: string = 'No tick data provider was given'Defined in​entities/tickDataProvider.ts:27Methods​getTick​▸ getTick(_tick): Promise<{ liquidityNet: BigintIsh  }>Return information corresponding to a specific tickParameters​NameTypeDescription_ticknumberthe tick to loadReturns​Promise<{ liquidityNet: BigintIsh  }>Implementation of​TickDataProvider.getTickDefined in​entities/tickDataProvider.ts:28nextInitializedTickWithinOneWord​▸ nextInitializedTickWithinOneWord(_tick, _lte, _tickSpacing): Promise<[number, boolean]>Return the next tick that is initialized within a single wordParameters​NameTypeDescription_ticknumberThe current tick_ltebooleanWhether the next tick should be lte the current tick_tickSpacingnumberThe tick spacing of the poolReturns​Promise<[number, boolean]>Implementation of​TickDataProvider.nextInitializedTickWithinOneWordDefined in​entities/tickDataProvider.ts:32Helpful?PreviousMulticallNextNonfungiblePositionManagerImplementsTable of contentsConstructorsPropertiesMethodsConstructorsconstructorPropertiesERROR_MESSAGEMethodsgetTicknextInitializedTickWithinOneWordDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

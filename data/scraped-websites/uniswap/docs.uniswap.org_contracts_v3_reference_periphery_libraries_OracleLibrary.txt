@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+OracleLibrary | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesBase64BytesLibCallbackValidationChainIdHexStringsLiquidityAmountsNFTDescriptorNFTSVGOracleLibraryPathPoolAddressPoolTicksCounterPositionKeyTokenRatioSortOrderTransferHelperWeightedOracleLibraryStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryLibrariesOracleLibraryHelpful?On this pageOracleLibraryProvides functions to integrate with V3 pool oracleFunctions​consult​  function consult(    address pool,    uint32 period  ) internal view returns (int24 arithmeticMeanTick, uint128 harmonicMeanLiquidity)CopyCalculates time-weighted means of tick and liquidity for a given Uniswap V3 poolParameters:​NameTypeDescriptionpooladdressAddress of Uniswap V3 pool that we want to observeperioduint32Number of seconds in the past to start calculating time-weighted averageReturn Values:​NameTypeDescriptionarithmeticMeanTickint24The arithmetic mean tick from (block.timestamp - secondsAgo) to block.timestampharmonicMeanLiquidityuint128The harmonic mean liquidity from (block.timestamp - secondsAgo) to block.timestampgetQuoteAtTick​  function getQuoteAtTick(    int24 tick,    uint128 baseAmount,    address baseToken,    address quoteToken  ) internal pure returns (uint256 quoteAmount)CopyGiven a tick and a token amount, calculates the amount of token received in exchangeParameters:​NameTypeDescriptiontickint24Tick value used to calculate the quotebaseAmountuint128Amount of token to be convertedbaseTokenaddressAddress of an ERC20 token contract used as the baseAmount denominationquoteTokenaddressAddress of an ERC20 token contract used as the quoteAmount denominationReturn Values:​NameTypeDescriptionquoteAmountuint256Amount of quoteToken received for baseAmount of baseTokenEdit this pageHelpful?PreviousNFTSVGNextPathFunctionsconsultgetQuoteAtTickDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

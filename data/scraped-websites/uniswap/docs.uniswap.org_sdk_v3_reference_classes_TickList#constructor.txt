@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+TickList | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesFullMathLiquidityMathMulticallNoTickDataProviderNonfungiblePositionManagerPaymentsPoolPositionPositionLibraryRouteSelfPermitSqrtPriceMathStakerSwapMathSwapQuoterSwapRouterTickTickLibraryTickListTickListDataProviderTickMathTradeenumsinterfacesSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceclassesTickListHelpful?On this pageTickList@uniswap/v3-sdk / Exports / TickListClass: TickListUtility methods for interacting with sorted lists of ticksTable of contents​Constructors​constructorMethods​binarySearchgetTickisAtOrAboveLargestisBelowSmallestnextInitializedTicknextInitializedTickWithinOneWordvalidateListConstructors​constructor​• Private new TickList()Cannot be constructedDefined in​utils/tickList.ts:18Methods​binarySearch​▸ Static Private binarySearch(ticks, tick): numberFinds the largest tick in the list of ticks that is less than or equal to tickParameters​NameTypeDescriptionticksreadonly Tick[]list of ticksticknumbertick to find the largest tick that is less than or equal to tickReturns​numberDefined in​utils/tickList.ts:62getTick​▸ Static getTick(ticks, index): TickParameters​NameTypeticksreadonly Tick[]indexnumberReturns​TickDefined in​utils/tickList.ts:50isAtOrAboveLargest​▸ Static isAtOrAboveLargest(ticks, tick): booleanParameters​NameTypeticksreadonly Tick[]ticknumberReturns​booleanDefined in​utils/tickList.ts:45isBelowSmallest​▸ Static isBelowSmallest(ticks, tick): booleanParameters​NameTypeticksreadonly Tick[]ticknumberReturns​booleanDefined in​utils/tickList.ts:40nextInitializedTick​▸ Static nextInitializedTick(ticks, tick, lte): TickParameters​NameTypeticksreadonly Tick[]ticknumberltebooleanReturns​TickDefined in​utils/tickList.ts:83nextInitializedTickWithinOneWord​▸ Static nextInitializedTickWithinOneWord(ticks, tick, lte, tickSpacing): [number, boolean]Parameters​NameTypeticksreadonly Tick[]ticknumberltebooleantickSpacingnumberReturns​[number, boolean]Defined in​utils/tickList.ts:101validateList​▸ Static validateList(ticks, tickSpacing): voidParameters​NameTypeticksTick[]tickSpacingnumberReturns​voidDefined in​utils/tickList.ts:20Helpful?PreviousTickLibraryNextTickListDataProviderTable of contentsConstructorsMethodsConstructorsconstructorMethodsbinarySearchgetTickisAtOrAboveLargestisBelowSmallestnextInitializedTicknextInitializedTickWithinOneWordvalidateListDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

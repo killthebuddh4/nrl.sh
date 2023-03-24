@@ -1,0 +1,21 @@
+
+
+
+
+
+
+[EP1.5][Executable] Change to Exponential Premium Price Oracle - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationDAO Governance DocsHomeTechnical DocsGovernance DocsSearch…⌃KLinksDAO Governance DocsWelcome to ENS DAOGovernance ProcessENS DAO ConstitutionThe ENS FoundationGovernance ProposalsTerm 0Term 1[EP1.1] [Executable] Set the temporary premium start price to $100,000[EP1.2.1] [Social] Removal of Brantly Millegan as Director of the ENS Foundation[EP1.2.2] [Social] Election of a new Director of The ENS Foundation[EP1.3.1] [Executable] Q1 & Q2 2022 Meta-Governance WG Budget[EP1.3.2] [Executable] Q1 & Q2 2022 ENS Ecosystem WG Budget[EP1.3.3] [Executable] Q1 & Q2 2022 Community WG Budget[EP1.3.4] [Executable] Q1 & Q2 2022 Public Goods WG Budget[EP1.4] [Executable] Reimburse True Names for expenses and tax obligations incurred for the DAO[EP1.5][Executable] Change to Exponential Premium Price Oracle[EP1.6] [Executable] A DAO-Governed Identity Server[EP1.7] [Executable] End the $ENS and EP2 airdrops[EP1.8] [Social] Working Group Rules[EP1.9] [Executable] Fund the Protocol Guild pilot with 200,000 $ENSTerm 2Term 3Powered By GitBook[EP1.5][Executable] Change to Exponential Premium Price OracleProposes to deploy Exponential Price Oracle Contract to replace the current Linear Price Oracle Contract.StatusExecutedVotes​Snapshot, passed March 21, 2022
+Tally, passed April 26, 2022AuthorsJeff LauNote: This was previously numbered EP9.AbstractIn the past we deployed the Linear Premium Oracle as a way to create a distribution mechanism that did not involve gas auctions and bots. This was largely successful and those who wanted a recently expired name could participate in the dutch auction and not have to compete on gas or with bots. Recently with the popularity of ENS increasing, the demand and the price people are willing to pay for these premium names has increased. In response to this TNL quickly drafted a short-term solution to raise the premium to 100k, which we felt was the upper limit for what a linear price decay curve could handle.There are a couple reasons for this:1.On a linear curve, if the price is too high the price decreases too fast and the UX is bad for a user who wants an exact price (especially at the lower end of the curve)2.If you extend the time period out, the premium lasts for too long. E.g. If we made it 1 million USD and we wanted a similar price decay speed as 100k, we would need to run it for 10 months, which seems unreasonable.We can see from the data below, even with the new 100k premium, we have already had a 5-7 domains go for maximum, or close to maximum premium. If a domain sells for the actual premium, it means the dutch auction is not doing its job and so we need to deploy a long-term solution for dealing with premium pricing.Row	label	event_timestamp	premium	1	bbc 2022-01-30 17:46:03 UTC 100230.753218372792	mets 2022-02-04 17:16:22 UTC 100082.498473193993	fbi 2022-02-05 06:02:31 UTC 99894.006324724854	fly 2022-02-04 18:49:00 UTC 99747.226402476215	ups 2022-02-05 07:46:24 UTC 98822.147478085396	dog 2022-02-06 16:19:05 UTC 92950.092087527717	ubs 2022-02-01 15:31:35 UTC 89633.150810633678	ubi 2022-02-19 17:06:17 UTC 72161.563287716539	punks 2022-02-16 00:15:44 UTC 59153.16614633610	omg 2022-02-24 16:05:57 UTC 33214.42499419019The long-term solution would be to change the actual curve to something that could start at a very high price, would decrease rapidly at the beginning and slow down at the end so you have better UX for users. And therefore this proposal is to deploy an exponential price curve, that does exactly this. This would allow fairer bidding on both high and low priced names.Contract Codehttps://github.com/ensdomains/ens-contracts/blob/master/contracts/ethregistrar/ExponentialPremiumPriceOracle.solSpecificationCall setPriceOracle on controller.ens.eth, passing in the address of the deployed ExponentialPremiumPriceOracle (TBD).​Previous[EP1.4] [Executable] Reimburse True Names for expenses and tax obligations incurred for the DAONext[EP1.6] [Executable] A DAO-Governed Identity ServerLast modified 6mo agoCopy linkEdit on GitHubOn this pageAbstractContract CodeSpecification
+
+
+

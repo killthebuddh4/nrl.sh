@@ -1,0 +1,20 @@
+
+
+
+
+
+
+[EP3.1.3] [Social] Q1/Q2 2023 Funding Request: Public Goods Working Group - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationDAO Governance DocsHomeTechnical DocsGovernance DocsSearch…⌃KLinksDAO Governance DocsWelcome to ENS DAOGovernance ProcessENS DAO ConstitutionThe ENS FoundationGovernance ProposalsTerm 0Term 1Term 2Term 3[EP3.1.1] [Social] Q1/Q2 2023 Funding Request: ENS Ecosystem Working Group[EP3.1.2] [Social] Q1/Q2 2023 Funding Request: Meta-Governance Working Group[EP3.1.3] [Social] Q1/Q2 2023 Funding Request: Public Goods Working Group[EP3.2] [Executable] Q1/Q2 2023 Working Group Funding[EP3.3] [Executable] Sell ETH to USDC[EP3.4] [Executable] Fund the Endowment (first tranche)Powered By GitBook[EP3.1.3] [Social] Q1/Q2 2023 Funding Request: Public Goods Working GroupThis is a proposal to request funding for the Public Goods Working Group for Q1/Q2 2023.StatusPassedDiscussion Thread​Discuss​Votes​Snapshot​Author​Coltron.eth​AbstractThe Public Goods Working Group requests funding of 250,000 USDC and 50 ETH from the ENS DAO for Q1/Q2 2023.This funding will be used to support projects and builders as provisioned by Article III of the ENS DAO Constitution, which provides for the funding of public goods in web3.This social proposal is submitted to satisfy the requirements set out in Rule 10.1.1 of the Working Group Rules (EP 1.8). If this proposal is passed the funding request will be included in a collective executable proposal put forward by all three Working Groups.SpecificationTextUSDCETH$ENSPublic Goods Multisig250,00050-DescriptionPublic Goods Multisig BalanceThe Public Goods Working Group is requesting 250,000 USDC, 50 ETH, and 0 $ENS.The Public Goods Working Group currently has 146,548 USDC, 75 ETH, and 200 $ENS in its multisigs.If this funding request is approved, the Public Goods Working Group multisigs will have a total of 396,548 USDC, 125 ETH, and 200 $ENS. USDCETH$ENSCarried Forward (from Q3/Q4 2022)146,54875200Requested (for Q1/Q2 2023)250,000500Total Balance396,548125200Public Goods Multisig Allocations for Q1/Q2 2023 (with funding request approved)The table below shows the total allocations for the Public Goods Working Group multisig, and related pods, with funds carried forward from last term (Q3/Q4 2022) along with funds requested in this proposal for this term (Q1/Q2 2023). USDCETH$ENSSmall Grants-50-Gitcoin Grants100,000--Rapid Grants50,00010-Large Grants200,00050-Discretionary46,54815200Total Balance396,548125200Allocation of Requested FundsThe 250,000 USDC and 50 ETH will be allocated to the following initiatives/outcomes.TextUSDCETH$ENSSmall Grants-40-Gitcoin Grants50,000--Rapid Grants50,00010-Large Grants150,000--Discretionary---Total Requested Funds250,00050-Description of Initiatives/PodsInitiative/PodDescriptionMultisig SignerSmall GrantsETH for the top Public Goods proposals submitted to ensgrants.xyzPublic Goods stewardsGitcoin GrantsSupport for Open Source and Ethereum Infrastructure rounds by Gitcoin through their grants protocolPublic Goods stewardsRapid GrantsGrants up to $10k each for web3 public goodsPublic Goods stewardsLarge GrantsGrants up to $100k each for web3 public goodsPublic Goods stewardsDiscretionaryFunds distributed at the discretion of stewards towards new initiatives + public goods experimentsPublic Goods stewardsThis proposal was prepared by Coltron.eth, lead steward of the Public Goods Working Group.Previous[EP3.1.2] [Social] Q1/Q2 2023 Funding Request: Meta-Governance Working GroupNext[EP3.2] [Executable] Q1/Q2 2023 Working Group FundingLast modified 1mo agoCopy linkEdit on GitHubOn this pageAbstractSpecificationDescription
+
+
+

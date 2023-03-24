@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Rounding | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceSwap Widgetweb3-reactCore SDKOverviewTechnical ReferenceOverviewclassesenumsRoundingSupportedChainIdTradeTypeV2 SDKV1 SDK🏠Core SDKTechnical ReferenceenumsRoundingHelpful?On this pageRounding@uniswap/sdk-core / Exports / RoundingEnumeration: RoundingTable of contents​Enumeration Members​ROUND_DOWNROUND_HALF_UPROUND_UPEnumeration Members​ROUND_DOWN​• ROUND_DOWN = 0Defined in​constants.ts:32ROUND_HALF_UP​• ROUND_HALF_UP = 1Defined in​constants.ts:33ROUND_UP​• ROUND_UP = 2Defined in​constants.ts:34Helpful?PreviousTokenNextSupportedChainIdTable of contentsEnumeration MembersEnumeration MembersROUND_DOWNROUND_HALF_UPROUND_UPDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -98,12 +98,8 @@ def crawl(url):
     # Create a set to store the URLs that have already been seen (no duplicates)
     seen = set([url])
 
-    # Create a directory to store the text files
-    if not os.path.exists("text/"):
-            os.mkdir("text/")
-
-    if not os.path.exists("text/" + company_name +"/"):
-            os.mkdir("text/" + company_name + "/")
+    if not os.path.exists("../../data/scraped-websites/" + company_name +"/"):
+            os.mkdir("../../data/scraped-websites/" + company_name + "/")
     else:
         print("Company already crawled")
         return
@@ -120,7 +116,7 @@ def crawl(url):
         print(url) # for debugging and to see the progress
 
         # Save text from the url to a <url>.txt file
-        with open('text/'+company_name+'/'+url[8:].replace("/", "_") + ".txt", "w", encoding="UTF-8") as f:
+        with open('../../data/scraped-websites/'+company_name+'/'+url[8:].replace("/", "_") + ".txt", "w", encoding="UTF-8") as f:
 
             req = Request(url , headers={'User-Agent': 'Mozilla/5.0'})
             

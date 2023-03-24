@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+LiquidityMath | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesBitMathFixedPoint128FixedPoint96FullMathLiquidityMathLowGasSafeMathOraclePositionSafeCastSecondsOutsideSqrtPriceMathSwapMathTickTickBitmapTickMathTransferHelperUnsafeMathGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreLibrariesLiquidityMathHelpful?On this pageLiquidityMathFunctions​addDelta​  function addDelta(    uint128 x,    int128 y  ) internal pure returns (uint128 z)CopyAdd a signed liquidity delta to liquidity and revert if it overflows or underflowsParameters:​NameTypeDescriptionxuint128The liquidity before changeyint128The delta by which liquidity should be changedReturn Values:​NameTypeDescriptionzuint128The liquidity deltaEdit this pageHelpful?PreviousFullMathNextLowGasSafeMathFunctionsaddDeltaDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

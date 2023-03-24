@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Payments | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesFullMathLiquidityMathMulticallNoTickDataProviderNonfungiblePositionManagerPaymentsPoolPositionPositionLibraryRouteSelfPermitSqrtPriceMathStakerSwapMathSwapQuoterSwapRouterTickTickLibraryTickListTickListDataProviderTickMathTradeenumsinterfacesSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceclassesPaymentsHelpful?On this pagePayments@uniswap/v3-sdk / Exports / PaymentsClass: PaymentsTable of contents​Constructors​constructorProperties​INTERFACEMethods​encodeFeeBipsencodeRefundETHencodeSweepTokenencodeUnwrapWETH9Constructors​constructor​• Private new Payments()Cannot be constructed.Defined in​payments.ts:25Properties​INTERFACE​▪ Static INTERFACE: InterfaceDefined in​payments.ts:20Methods​encodeFeeBips​▸ Static Private encodeFeeBips(fee): stringParameters​NameTypefeePercentReturns​stringDefined in​payments.ts:27encodeRefundETH​▸ Static encodeRefundETH(): stringReturns​stringDefined in​payments.ts:73encodeSweepToken​▸ Static encodeSweepToken(token, amountMinimum, recipient, feeOptions?): stringParameters​NameTypetokenTokenamountMinimumdefaultrecipientstringfeeOptions?FeeOptionsReturns​stringDefined in​payments.ts:49encodeUnwrapWETH9​▸ Static encodeUnwrapWETH9(amountMinimum, recipient, feeOptions?): stringParameters​NameTypeamountMinimumdefaultrecipientstringfeeOptions?FeeOptionsReturns​stringDefined in​payments.ts:31Helpful?PreviousNonfungiblePositionManagerNextPoolTable of contentsConstructorsPropertiesMethodsConstructorsconstructorPropertiesINTERFACEMethodsencodeFeeBipsencodeRefundETHencodeSweepTokenencodeUnwrapWETH9DevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

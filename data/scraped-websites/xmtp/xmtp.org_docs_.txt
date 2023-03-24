@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+Introduction to XMTP | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchIntroductionArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionAlgorithms in useWallet app and chain supportAccount signaturesContributeReleasesXMTP Improvement ProposalsIntroductionOn this pageIntroduction to XMTPXMTP (Extensible Message Transport Protocol) is an open protocol, network, and standards for secure, private web3 messaging.XMTP's extensible design enables a diverse set of use cases for sending message data between web3 identities. For example, building with the XMTP client SDK, developers can enhance their apps with:User-to-user direct messagesApp-to-user notificationsCreator-to-community announcementsBecause the XMTP network persists messages, and those messages are tied to web3 identities as opposed to a specific client app, each web3 identity has a portable inbox of that it can access using any client app built with XMTP.Developers can also build tools for decentralized apps (dapps), decentralized autonomous organizations (DAOs), creators, and protocols to re-engage users with web3 messaging.XMTP has been implemented to work with Ethereum Virtual Machine (EVM)-compatible wallet apps and blockchain accounts (wallets), though XMTP itself does not use EVMs. XMTP also works with other web3 identities that apps built with XMTP can derive from Ethereum accounts, such as ENS names and Lens profiles.To learn more, see Wallet apps and blockchains supported by XMTP.Blockchain account versus wallet appIn web3, people commonly use wallet as shorthand to refer to a blockchain account, crypto account, or wallet address. This documentation uses blockchain account to refer to this concept of a unique identifier for a blockchain wallet held by a user. This documentation uses wallet app to refer to a tool for managing blockchain accounts.XMTP’s primary contributor, XMTP Labs, is funded by some of the industry’s top venture capital funds, including a16z Crypto and Coinbase Ventures.XMTP at a glance​Here are some key considerations as you explore building with XMTP for secure web3 messaging:ConsiderationDescriptionMessage directionBidirectionalParticipant identitiesAny EVM blockchain EOA (externally owned account) can send a message to any other EVM blockchain EOA that has advertised its XMTP identity on the network.Chain focusChain-agnostic, but currently requires an EVM blockchain account.Wallet app compatibilityEVM-compatible wallets capable of signing with private keys, such as MetaMask, Coinbase Wallet, and Rainbow Wallet.AuthenticationAn XMTP-specific key bundle derived from a blockchain account address signature is used to authenticate a user identity.  To learn more about these key bundles, see Key generation and usage.Message encryptionMessages are encrypted individually by default and are readable by message participants only.  To learn more about message encryption, see Invitation and message encryption.Message deliveryMessages are immediately relayed by XMTP nodes, using the Waku protocol. Message storageMessages are stored off-chain in the XMTP network, with all nodes currently hosted by XMTP Labs.  XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.Supported content typesPlaintext messages as a standard content type, but custom content types are supported as well.  To learn more, see Content types.Adoption of standard content typesOpen, extensible, and community-governed via XIP-5 (XMTP Improvement Proposal-5).  To learn more, see XIP-5 Message Content Types.ImplementationAny app built with the XMTP client SDK can send or receive messages.  To learn more, see Client SDK.Receiving messagesAny frontend built with the XMTP client SDK can receive messages.  To learn more, see Client SDK.EnvironmentsJavaScript. Swift and React Native are on the roadmap.Message costMost messaging incurs no fee. As XMTP decentralizes, messaging between participants that opt-in will remain free, while unsolicited messages will often incur fees or see token staking requirements. DecentralizationXMTP network nodes are run by XMTP Labs at this time. In the future, network node software will be open sourced and anyone will be welcome to operate a node.  Client implementation is permissionless, nor is permission required to access and develop with the SDK. Permission isn't required to connect to the XMTP network to send/receive messages on behalf of users.  XMTP Labs is working toward a phased decentralization of the network and will share a roadmap in the coming months.Protocol overview​A user can send and receive encrypted XMTP messages using an app with an embedded XMTP client, authenticating using a wallet signature. XMTP network nodes persist the user's messagesClients and nodes are implemented as Waku2 peers but with XMTP-specific functions and capabilities.To learn more about clients, see Client layer.To learn more about nodes, see Network layer.XMTP client SDK​The XMTP JavaScript SDK is a TypeScript implementation of an XMTP client for use with JavaScript and React apps.Explore the XMTP JavaScript SDK on GitHub.Have questions? Get help from the XMTP Discord community.To learn more about how you can contribute to XMTP, see Contribute.Example apps​Check out these app repos you can use for guidance and inspiration when building with XMTP:The xmtp-quickstart-react repo provides the XMTP Quickstart React chat app, which demonstrates core capabilities of the XMTP client SDK. You can use the code in this repo to learn to build a basic messaging app.Try the app connected to the XMTP dev networkThe xmtp-inbox-web repo provides the XMTP Inbox chat app, which demonstrates core and advanced capabilities of the XMTP client SDK and showcases innovative ways of building with XMTP.Try the app connected to the XMTP dev networkTry the app connected to the XMTP production networkFor even more examples of apps built with XMTP, see:Awesome-xtmpBuilt with XMTPNextArchitectural overviewOn this pageXMTP at a glanceProtocol overviewXMTP client SDKExample appsQuestions? Give us feedbackClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

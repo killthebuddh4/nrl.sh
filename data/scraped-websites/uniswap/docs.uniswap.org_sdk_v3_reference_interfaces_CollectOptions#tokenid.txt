@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+CollectOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesCollectOptionsHelpful?On this pageCollectOptions@uniswap/v3-sdk / Exports / CollectOptionsInterface: CollectOptionsTable of contents​Properties​expectedCurrencyOwed0expectedCurrencyOwed1recipienttokenIdProperties​expectedCurrencyOwed0​• expectedCurrencyOwed0: CurrencyAmount<Currency>Expected value of tokensOwed0, including as-of-yet-unaccounted-for fees/liquidity value to be burnedDefined in​nonfungiblePositionManager.ts:114expectedCurrencyOwed1​• expectedCurrencyOwed1: CurrencyAmount<Currency>Expected value of tokensOwed1, including as-of-yet-unaccounted-for fees/liquidity value to be burnedDefined in​nonfungiblePositionManager.ts:119recipient​• recipient: stringThe account that should receive the tokens.Defined in​nonfungiblePositionManager.ts:124tokenId​• tokenId: BigintIshIndicates the ID of the position to collect for.Defined in​nonfungiblePositionManager.ts:109Helpful?PreviousClaimOptionsNextCommonAddLiquidityOptionsTable of contentsPropertiesPropertiesexpectedCurrencyOwed0expectedCurrencyOwed1recipienttokenIdDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

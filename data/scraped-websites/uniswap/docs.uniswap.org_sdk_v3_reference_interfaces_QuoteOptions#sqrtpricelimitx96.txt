@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+QuoteOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesQuoteOptionsHelpful?On this pageQuoteOptions@uniswap/v3-sdk / Exports / QuoteOptionsInterface: QuoteOptionsOptional arguments to send to the quoter.Table of contents​Properties​sqrtPriceLimitX96useQuoterV2Properties​sqrtPriceLimitX96​• Optional sqrtPriceLimitX96: BigintIshThe optional price limit for the trade.Defined in​quoter.ts:17useQuoterV2​• Optional useQuoterV2: booleanThe optional quoter interface to useDefined in​quoter.ts:22Helpful?PreviousNFTPermitOptionsNextRemoveLiquidityOptionsTable of contentsPropertiesPropertiessqrtPriceLimitX96useQuoterV2DevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

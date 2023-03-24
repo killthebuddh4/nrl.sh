@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+TickMath | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesFullMathLiquidityMathMulticallNoTickDataProviderNonfungiblePositionManagerPaymentsPoolPositionPositionLibraryRouteSelfPermitSqrtPriceMathStakerSwapMathSwapQuoterSwapRouterTickTickLibraryTickListTickListDataProviderTickMathTradeenumsinterfacesSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceclassesTickMathHelpful?On this pageTickMath@uniswap/v3-sdk / Exports / TickMathClass: TickMathTable of contents​Constructors​constructorProperties​MAX_SQRT_RATIOMAX_TICKMIN_SQRT_RATIOMIN_TICKMethods​getSqrtRatioAtTickgetTickAtSqrtRatioConstructors​constructor​• Private new TickMath()Cannot be constructed.Defined in​utils/tickMath.ts:17Properties​MAX_SQRT_RATIO​▪ Static MAX_SQRT_RATIO: defaultThe sqrt ratio corresponding to the maximum tick that could be used on any pool.Defined in​utils/tickMath.ts:35MAX_TICK​▪ Static MAX_TICK: number = -TickMath.MIN_TICKThe maximum tick that can be used on any pool.Defined in​utils/tickMath.ts:26MIN_SQRT_RATIO​▪ Static MIN_SQRT_RATIO: defaultThe sqrt ratio corresponding to the minimum tick that could be used on any pool.Defined in​utils/tickMath.ts:31MIN_TICK​▪ Static MIN_TICK: number = -887272The minimum tick that can be used on any pool.Defined in​utils/tickMath.ts:22Methods​getSqrtRatioAtTick​▸ Static getSqrtRatioAtTick(tick): defaultReturns the sqrt ratio as a Q64.96 for the given tick. The sqrt ratio is computed as sqrt(1.0001)^tickParameters​NameTypeDescriptionticknumberthe tick for which to compute the sqrt ratioReturns​defaultDefined in​utils/tickMath.ts:41getTickAtSqrtRatio​▸ Static getTickAtSqrtRatio(sqrtRatioX96): numberReturns the tick corresponding to a given sqrt ratio, s.t. #getSqrtRatioAtTick(tick) <= sqrtRatioX96
+and #getSqrtRatioAtTick(tick + 1) > sqrtRatioX96Parameters​NameTypeDescriptionsqrtRatioX96defaultthe sqrt ratio as a Q64.96 for which to compute the tickReturns​numberDefined in​utils/tickMath.ts:82Helpful?PreviousTickListDataProviderNextTradeTable of contentsConstructorsPropertiesMethodsConstructorsconstructorPropertiesMAX_SQRT_RATIOMAX_TICKMIN_SQRT_RATIOMIN_TICKMethodsgetSqrtRatioAtTickgetTickAtSqrtRatioDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

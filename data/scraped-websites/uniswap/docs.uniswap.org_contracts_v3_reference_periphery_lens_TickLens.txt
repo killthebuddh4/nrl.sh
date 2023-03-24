@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+TickLens | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensQuoterQuoterV2TickLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryLensTickLensHelpful?On this pageTickLensFunctions​getPopulatedTicksInWord​  function getPopulatedTicksInWord(    address pool,    int16 tickBitmapIndex  ) public returns (struct ITickLens.PopulatedTick[] populatedTicks)CopyGet all the tick data for the populated ticks from a word of the tick bitmap of a poolParameters:​NameTypeDescriptionpooladdressThe address of the pool for which to fetch populated tick datatickBitmapIndexint16The index of the word in the tick bitmap for which to parse the bitmap and fetch all the populated ticksReturn Values:​NameTypeDescriptionpopulatedTicksITickLens.PopulatedTick[]An array of tick data for the given word in the tick bitmapEdit this pageHelpful?PreviousQuoterV2NextBase64FunctionsgetPopulatedTicksInWordDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+
