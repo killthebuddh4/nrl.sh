@@ -1,0 +1,26 @@
+
+
+
+
+
+
+Working with ENS - ENS Documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ENS DocumentationTechnical DocumentationHomeTechnical DocsGovernance DocsSearch…⌃KLinksTechnical DocumentationIntroductionTerminologyFrequently Asked QuestionsENS DeploymentsRegistrar Frequently Asked QuestionsDeploying ENS on a Private ChainDNS Registrar guideBug Bounty ProgramENS Improvement ProposalsDapp Developer GuideENS Enabling your DAppENS LibrariesWorking with ENSResolving NamesManaging NamesRegistering & Renewing NamesENS Front-End Design GuidelinesENS as NFTENS Layer2 and offchain data supportENS Data guideContract API ReferenceName ProcessingRegistryReverseRegistrarTestRegistrarPublicResolver.eth Permanent RegistrarDNS RegistrarSubgraphContract Developer GuideResolving Names On-chainWriting a ResolverWriting a RegistrarENS Discussion ForumENS Support ChatENS Migration (February 2020)Guide for DApp DevelopersTechnical DescriptionPowered By GitBookWorking with ENSBefore you can begin interacting with ENS, you will need to obtain a reference to the ENS registry. How you do this depends on the library you are using.Example code for the Javascript-based APIs (ensjs, web3.js, ethjs-ens, and ethers.js) here expect that they are being run inside a DApp browser, such as Chrome with metamask installed, which exposes the ethereum object.ensjsweb3.jsethjs-ensethers.jsgo-ensweb3.pyweb3jimport ENS, { getEnsAddress } from '@ensdomains/ensjs'​const ens = new ENS({ provider, ensAddress: getEnsAddress('1') })var Web3 = require("web3")​var accounts = ethereum.enable();var web3 = new Web3(ethereum);var ens = web3.eth.ens;const ENS = require('ethjs-ens');// Currently requires both provider and// either a network or registryAddress paramvar accounts = ethereum.enable();const ens = new ENS({ ethereum, network: '1' });var ethers = require('ethers');var provider = new ethers.providers.Web3Provider(ethereum);// ENS functionality is provided directly on the core provider object.import (  ens "github.com/wealdtech/go-ens/v2"  ethereum "github.com/ethereum/go-ethereum")​// Can dial up a connection through either IPC or HTTP/HTTPSclient, err := ethereum.Dial("/home/ethereum/.ethereum/geth.ipc")registry, err := ens.Registry(client)from ens.auto import nsEnsResolver ens = new EnsResolver(web3j, 300 /* sync threshold, seconds */);Some web3 libraries - e.g., ethers.js, web3j, and web3.py - have integrated support for name resolution. In these libraries, you can pass in an ENS name anywhere you can supply an address, meaning you do not need to interact directly with their ENS APIs unless you want to manually resolve names or do other ENS operations.If no library is available for your platform, you can instantiate the ENS registry contract directly using the interface definition here. Addresses for the ENS registry on each supported network are available in the ENS Deployments page.Dapp Developer Guide - PreviousENS LibrariesNext - Dapp Developer GuideResolving NamesLast modified 1yr agoCopy linkEdit on GitHub
+
+
+

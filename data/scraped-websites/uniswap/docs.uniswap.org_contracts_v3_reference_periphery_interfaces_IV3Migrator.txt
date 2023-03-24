@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+IV3Migrator | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesIERC20MetadataIERC721PermitIMulticallINonfungiblePositionManagerINonfungibleTokenPositionDescriptorIPeripheryImmutableStateIPeripheryPaymentsIPeripheryPaymentsWithFeeIPoolInitializerIQuoterIQuoterV2ISelfPermitISwapRouterITickLensIV3MigratorexternalLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryInterfacesIV3MigratorHelpful?On this pageIV3MigratorEnables migration of liqudity from Uniswap v2-compatible pairs into Uniswap v3 poolsFunctions​migrate​  function migrate(    struct IV3Migrator.MigrateParams params  ) externalCopyMigrates liquidity to v3 by burning v2 liquidity and minting a new position for v3Slippage protection is enforced via amount{0,1}Min, which should be a discount of the expected values of
+the maximum amount of v3 liquidity that the v2 liquidity can get. For the special case of migrating to an
+out-of-range position, amount{0,1}Min may be set to 0, enforcing that the position remains out of rangeParameters:​NameTypeDescriptionparamsstruct IV3Migrator.MigrateParamsThe params necessary to migrate v2 liquidity, encoded as MigrateParams in calldataEdit this pageHelpful?PreviousITickLensNextIERC1271FunctionsmigrateDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

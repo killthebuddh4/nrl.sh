@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+XMTP v2 is here | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchAll postsSome new content typesSecure web3 customer service and support with XMTP and ENSTuned In: Developers show the power of video + messaging with XMTP and LivepeerXMTP Grants: Every big idea starts smallXMTP mobile SDKs now available in Developer PreviewXMTP v2 is heremeTokens integrates with XMTPETHSanFrancisco wrap-upXMTP / Lens Twitter Spaces replayHow insights from Linkin Park's Mike Shinoda helped inspire the creation of XMTPXMTP is delivering secure direct messages with the Lens APIETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top HonorsSecure web3 messaging for wallet apps with XMTPIntroducing the XMTP Litepaper public draftProject Spotlight: Relay Receiver, a no-code wallet chat for websitesTruths not spoofsHackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharingOTC Swap: Building a message-based bartering system with OpenSea's Seaport and XMTPETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked walletsWhy can't I leave a message for any wallet address in web3? Introducing "You've Got Mail"XMTP v2 is hereDecember 6, 2022 · 4 min readMatt GalliganCo-founder of XMTP LabsThe latest version brings conversation filtering and improvements to privacy.Over the past 12 months, we’ve met with hundreds of development teams using the XMTP protocol to build native web3 messaging.Whether it has been 2-person teams at a hackathon or the largest companies in web3, the feedback was unanimous: deliver the highest standard in messaging security, while allowing me to build powerful end-user experiences in my app.After 12 months of work, we are excited to announce XMTP Protocol v2.“With XMTP v2, we’ve doubled down on our commitment to building the most secure, privacy-preserving communications protocol,” said Matt Galligan, CEO of XMTP Labs. “These enhancements deliver on XMTP’s promise of interoperability and help to ensure users fully own and control their communications.”But building an interoperable messaging network has its own set of challenges for app developers. Users like to be able to access messages from anywhere across the network, but want messaging experiences tailored to the app they are currently using.Introducing conversation and metadata filtering​With XMTP v2, app developers now have protocol-native support to filter messages using conversation IDs and metadata. This opens up scenarios such as:Displaying only conversations created by a specific appFiltering for a message type, such as notifications or alerts for exampleSearching for conversations with a specific subject line, as in emailScoping the conversation to a specific NFT, such as price negotiationsConversation filtering not only makes message retrieval dramatically more efficient, but also greatly reduces the complexity for developers in handling messaging payloads."Before conversation IDs, developers were "hacking" content types to create a way to filter messages that necessitated filtering ALL messages within a conversation. Now, with support for multiple conversations, a dev can create a conversation between two addresses for messages created in their app and assign an app-specific conversation ID to the conversation." said Nicholas Molnar, Staff Software Engineer for XMTP Labs.Conversation IDs are embedded within the encrypted payload of an XMTP envelope, meaning that adding a conversation ID does not affect privacy at the network layer at all—and is only visible to clients that can decrypt the messages.Increased participant privacy​By embedding conversation IDs within the encrypted payload and anonymizing wallet addresses, XMTP v2 strips messages of any public metadata that might identify the participants in a conversation.“This important change protects users by preventing third parties from using public data to observe who is talking to whom in the network and mapping out a graph of conversations taking place over XMTP,” said Saul Carlin, Head of Product at XMTP Labs.You can go deep in the supporting documentation for more technical details about the XMTP V2 negotiated topics that enable this improvement.Improved developer transparency​Beyond the features that XMTP protocol v2 introduces, we have also improved the transparency of how the XMTP protocol, SDKs and applications work together.XMTP Protocol & Network Overview​We have published a Protocol and Network Overview document on GitHub to help developers understand the core architecture of XMTP v2.Platform Roadmap​We have published our platform roadmap to give developers more transparency on upcoming SDK support and features like push notifications and decentralization milestones.Deprecation date for pre-v7 versions of the SDK​Update your app to use >=v7.0.0 of the XMTP client SDK for JavaScript by Jan 8, 2023 to start exploring the new XMTP v2 use cases for your app. v7.0.0 clients are fully compatible with pre-v7.0.0 clients. Conversations established using XMTP v1 can continue as before. However, conversations using XMTP v2 will not be visible to pre-v7.0.0 clients. To learn more, see Determining whether to use XMTP v2 or v1 topics.To learn more about and discuss important deprecation details, see this GitHub discussion.Building web3 messaging together​XMTP v2 came together after thousands of interactions with developers. It is incredibly inspiring to meet so many developers who share our values and vision for web3. As we continue to work hand in hand, we’re looking forward to learning from you, testing ideas, and challenging ourselves.Come build with XMTP at:XMTP documentationGitHub repo: https://github.com/xmtpDiscord: https://discord.gg/xmtpCareers at XMTP Labs: https://blog.xmtp.com/careers/Tags:AnnouncementsPrivacy & SecurityProtocolNewer PostXMTP mobile SDKs now available in Developer PreviewOlder PostmeTokens integrates with XMTPClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

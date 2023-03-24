@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+UniswapV3Factory | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreUniswapV3FactoryHelpful?On this pageUniswapV3FactoryDeploys Uniswap V3 pools and manages ownership and control over pool protocol feesFunctions​createPool​  function createPool(    address tokenA,    address tokenB,    uint24 fee  ) external returns (address pool)CopyCreates a pool for the given two tokens and feetokenA and tokenB may be passed in either order: token0/token1 or token1/token0. tickSpacing is retrieved
+from the fee. The call will revert if the pool already exists, the fee is invalid, or the token arguments
+are invalid.Parameters:​NameTypeDescriptiontokenAaddressOne of the two tokens in the desired pooltokenBaddressThe other of the two tokens in the desired poolfeeuint24The desired fee for the poolReturn Values:​NameTypeDescriptionpooladdressThe address of the newly created poolsetOwner​  function setOwner(    address _owner  ) externalCopyUpdates the owner of the factoryMust be called by the current ownerParameters:​NameTypeDescription_owneraddressThe new owner of the factoryenableFeeAmount​  function enableFeeAmount(    uint24 fee,    int24 tickSpacing  ) publicCopyEnables a fee amount with the given tickSpacingFee amounts may never be removed once enabledParameters:​NameTypeDescriptionfeeuint24The fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)tickSpacingint24The spacing between ticks to be enforced for all pools created with the given fee amountEdit this pageHelpful?PreviousOverviewNextUniswapV3PoolFunctionscreatePoolsetOwnerenableFeeAmountDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+SwapRouter | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripherySwapRouterHelpful?On this pageSwapRouterRouter for stateless execution of swaps against Uniswap V3Input parameters are viewable on the Swap Router InterfaceFunctions​constructor​  function constructor(  ) publicCopyuniswapV3SwapCallback​  function uniswapV3SwapCallback(    int256 amount0Delta,    int256 amount1Delta,    bytes data  ) externalCopyCalled to msg.sender after executing a swap via IUniswapV3Pool#swap.In the implementation you must pay the pool tokens owed for the swap.
+The caller of this method must be checked to be a UniswapV3Pool deployed by the canonical UniswapV3Factory.
+amount0Delta and amount1Delta can both be 0 if no tokens were swapped.Parameters:​NameTypeDescriptionamount0Deltaint256The amount of token0 that was sent (negative) or must be received (positive) by the pool by the end of the swap. If positive, the callback must send that amount of token0 to the pool.amount1Deltaint256The amount of token1 that was sent (negative) or must be received (positive) by the pool by the end of the swap. If positive, the callback must send that amount of token1 to the pool.databytesAny data passed through by the caller via the IUniswapV3PoolActions#swap callexactInputSingle​  function exactInputSingle(    struct ISwapRouter.ExactInputSingleParams params  ) external returns (uint256 amountOut)CopySwaps amountIn of one token for as much as possible of another tokenParameters:​NameTypeDescriptionparamsstruct ISwapRouter.ExactInputSingleParamsThe parameters necessary for the swap, encoded as ExactInputSingleParams in calldataReturn Values:​NameTypeDescriptionamountOutuint256The amount of the received tokenexactInput​  function exactInput(    struct ISwapRouter.ExactInputParams params  ) external returns (uint256 amountOut)CopySwaps amountIn of one token for as much as possible of another along the specified pathParameters:​NameTypeDescriptionparamsstruct ISwapRouter.ExactInputParamsThe parameters necessary for the multi-hop swap, encoded as ExactInputParams in calldataReturn Values:​NameTypeDescriptionamountOutuint256The amount of the received tokenexactOutputSingle​  function exactOutputSingle(    struct ISwapRouter.ExactOutputSingleParams params  ) external returns (uint256 amountIn)CopySwaps as little as possible of one token for amountOut of another tokenParameters:​NameTypeDescriptionparamsstruct ISwapRouter.ExactOutputSingleParamsThe parameters necessary for the swap, encoded as ExactOutputSingleParams in calldataReturn Values:​NameTypeDescriptionamountInuint256The amount of the input tokenexactOutput​  function exactOutput(    struct ISwapRouter.ExactOutputParams params  ) external returns (uint256 amountIn)CopySwaps as little as possible of one token for amountOut of another along the specified path (reversed)Parameters:​NameTypeDescriptionparamsstruct ISwapRouter.ExactOutputParamsThe parameters necessary for the multi-hop swap, encoded as ExactOutputParams in calldataReturn Values:​NameTypeDescriptionamountInuint256The amount of the input tokenEdit this pageHelpful?PreviousNonfungibleTokenPositionDescriptorNextV3MigratorFunctionsconstructoruniswapV3SwapCallbackexactInputSingleexactInputexactOutputSingleexactOutputDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

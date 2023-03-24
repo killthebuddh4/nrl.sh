@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+IUniswapV3MintCallback | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesIERC20MinimalIUniswapV3FactoryIUniswapV3PoolIUniswapV3PoolDeployercallbackIUniswapV3FlashCallbackIUniswapV3MintCallbackIUniswapV3SwapCallbackPoolLibrariesGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreInterfacescallbackIUniswapV3MintCallbackHelpful?On this pageIUniswapV3MintCallbackAny contract that calls IUniswapV3PoolActions#mint must implement this interfaceFunctions​uniswapV3MintCallback​  function uniswapV3MintCallback(    uint256 amount0Owed,    uint256 amount1Owed,    bytes data  ) externalCopyCalled to msg.sender after minting liquidity to a position from IUniswapV3Pool#mint.In the implementation you must pay the pool tokens owed for the minted liquidity.
+The caller of this method must be checked to be a UniswapV3Pool deployed by the canonical UniswapV3Factory.Parameters:​NameTypeDescriptionamount0Oweduint256The amount of token0 due to the pool for the minted liquidityamount1Oweduint256The amount of token1 due to the pool for the minted liquiditydatabytesAny data passed through by the caller via the IUniswapV3PoolActions#mint callEdit this pageHelpful?PreviousIUniswapV3FlashCallbackNextIUniswapV3SwapCallbackFunctionsuniswapV3MintCallbackDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

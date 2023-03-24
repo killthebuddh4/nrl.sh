@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+TransferHelper | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesBitMathFixedPoint128FixedPoint96FullMathLiquidityMathLowGasSafeMathOraclePositionSafeCastSecondsOutsideSqrtPriceMathSwapMathTickTickBitmapTickMathTransferHelperUnsafeMathGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreLibrariesTransferHelperHelpful?On this pageTransferHelperContains helper methods for interacting with ERC20 tokens that do not consistently return true/falseFunctions​safeTransfer​  function safeTransfer(    address token,    address to,    uint256 value  ) internalCopyTransfers tokens from msg.sender to a recipientCalls transfer on token contract, errors with TF if transfer failsParameters:​NameTypeDescriptiontokenaddressThe contract address of the token which will be transferredtoaddressThe recipient of the transfervalueuint256The value of the transferEdit this pageHelpful?PreviousTickMathNextUnsafeMathFunctionssafeTransferDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

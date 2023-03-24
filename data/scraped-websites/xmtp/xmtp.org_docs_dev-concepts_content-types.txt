@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+Content types with XMTP | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchIntroductionArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionAlgorithms in useWallet app and chain supportAccount signaturesContributeReleasesXMTP Improvement ProposalsContent typesOn this pageContent types with XMTPWhen you build an app with XMTP, all messages are encoded with a content type to ensure that an XMTP message API client knows how to encode and decode messages, ensuring interoperability and consistent display of messages across apps.In addition, message payloads are transported as a set of bytes. This means that payloads can carry any content type that a client supports, such as plain text, JSON, or even non-text binary or media content.At a high level, there are two categories of content types with XMTP:StandardCustomStandard content types​A standard content type is one that has undergone the XMTP Request for Comment (XRC) process and has been adopted as an XMTP Improvement Proposal (XIP).To learn more about the XRC and XIP processes that enable a framework for community members to propose standards and achieve consensus about their adoption, see XMTP Improvement Proposals (XIPs).Once adopted, a standard content type is bundled in XMTP client SDKs. A developer can then import the standard content type from an SDK for use in their app.Currently, two standard content types are bundled in XMTP client SDKs:Text: Handles plain textComposite: Handles multiple content types in a single messageTo learn how to use standard content types when developing a client app, see Use content types.Custom content types​Any developer building with XMTP can create a custom content type and immediately start using it in their app. Unlike a standard content type, use of a custom content type doesn't require prerequisite formal adoption through the XRC and XIP processes.For example, if you need a content type that isn't covered by a standard content type, you can create a custom content type and begin using it immediately in your app.infoYour custom content type WILL NOT automatically be supported by other apps and will display fallback text in them instead.If another app wants to display your custom content type, they must implement your custom content type in their code exactly as it's defined in your code.Fallback plain text is "alt text"-like description text that you can associate with a custom content type if you are concerned that a receiving app might not be able to handle the content. If the receiving app is unable to handle the custom content, it displays the fallback plain text instead.To learn how to use custom content types when developing a client app, see Use content types.PreviousInteroperable inboxNextUX best practicesOn this pageStandard content typesCustom content typesQuestions? Give us feedbackClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

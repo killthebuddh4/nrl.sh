@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+IERC20PermitAllowed | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesIERC20MetadataIERC721PermitIMulticallINonfungiblePositionManagerINonfungibleTokenPositionDescriptorIPeripheryImmutableStateIPeripheryPaymentsIPeripheryPaymentsWithFeeIPoolInitializerIQuoterIQuoterV2ISelfPermitISwapRouterITickLensIV3MigratorexternalIERC1271IERC20PermitAllowedIWETH9LensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryInterfacesexternalIERC20PermitAllowedHelpful?On this pageIERC20PermitAllowedInterface used by DAI/CHAI for permitFunctions​permit​  function permit(    address holder,    address spender,    uint256 nonce,    uint256 expiry,    bool allowed,    uint8 v,    bytes32 r,    bytes32 s  ) externalCopyApprove the spender to spend some tokens via the holder signatureThis is the permit interface used by DAI and CHAIParameters:​NameTypeDescriptionholderaddressThe address of the token holder, the token ownerspenderaddressThe address of the token spendernonceuint256The holder's nonce, increases at each call to permitexpiryuint256The timestamp at which the permit is no longer validallowedboolBoolean that sets approval amount, true for type(uint256).max and false for 0vuint8Must produce valid secp256k1 signature from the holder along with r and srbytes32Must produce valid secp256k1 signature from the holder along with v and ssbytes32Must produce valid secp256k1 signature from the holder along with r and vEdit this pageHelpful?PreviousIERC1271NextIWETH9FunctionspermitDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Token Listing | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceUniversal RouterPermit2V2 ProtocolV1 ProtocolOverviewGuidesConnect to UniswapPool LiquidityTrade TokensCustom LinkingIframe IntegrationToken ListingTechnical ReferenceFactoryExchangeInterfaces🏠V1 ProtocolGuidesToken ListingHelpful?On this pageToken ListingIt is possible that a token you are interested in is not included in the token dropdown on https://app.uniswap.org/#/swap?use=v1, however, all tokens that have a deployed uniswap exchange are supported on the front-end.There are three ways to interact with tokens that are not yet included on the default list.1. Paste the token address into the search box.​If a token is not included in the list, try pasting the token address into the search box. It will populate the dropdown with the token you are looking for.2. Custom Linking​https://app.uniswap.org/#/swap?use=v1 supports custom linking to all tokens that have a Uniswap exchange. See Custom Linking for details on how to link.For example, to populate the output token field with an unlisted token, we can specify the outputCurrency in the URL and pass in the token's address like this:https://app.uniswap.org/#/swap?use=v1?outputCurrency=0xfA3E941D1F6B7b10eD84A0C211bfA8aeE907965eToken Details and Assets​Token information (including decimals, symbol, name, etc.) is pulled from token contracts directly. Logo images are pulled from TrustWallet. If you'd like your token logo updated make a pull request into the TrustWallet assets repo https://github.com/trustwallet/assets.Edit this pageHelpful?PreviousIframe IntegrationNextFactory1. Paste the token address into the search box.2. Custom LinkingToken Details and AssetsDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

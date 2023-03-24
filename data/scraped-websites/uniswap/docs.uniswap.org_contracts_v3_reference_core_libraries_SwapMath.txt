@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+SwapMath | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesBitMathFixedPoint128FixedPoint96FullMathLiquidityMathLowGasSafeMathOraclePositionSafeCastSecondsOutsideSqrtPriceMathSwapMathTickTickBitmapTickMathTransferHelperUnsafeMathGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreLibrariesSwapMathHelpful?On this pageSwapMathContains methods for computing the result of a swap within a single tick price range, i.e., a single tick.Functions​computeSwapStep​  function computeSwapStep(    uint160 sqrtRatioCurrentX96,    uint160 sqrtRatioTargetX96,    uint128 liquidity,    int256 amountRemaining,    uint24 feePips  ) internal pure returns (uint160 sqrtRatioNextX96, uint256 amountIn, uint256 amountOut, uint256 feeAmount)CopyComputes the result of swapping some amount in, or amount out, given the parameters of the swapThe fee, plus the amount in, will never exceed the amount remaining if the swap's amountSpecified is positiveParameters:​NameTypeDescriptionsqrtRatioCurrentX96uint160The current sqrt price of the poolsqrtRatioTargetX96uint160The price that cannot be exceeded, from which the direction of the swap is inferredliquidityuint128The usable liquidityamountRemainingint256How much input or output amount is remaining to be swapped in/outfeePipsuint24The fee taken from the input amount, expressed in hundredths of a bipReturn Values:​NameTypeDescriptionsqrtRatioNextX96uint160The price after swapping the amount in/out, not to exceed the price targetamountInuint256The amount to be swapped in, of either token0 or token1, based on the direction of the swapamountOutuint256The amount to be received, of either token0 or token1, based on the direction of the swapfeeAmountuint256The amount of input that will be taken as a feeEdit this pageHelpful?PreviousSqrtPriceMathNextTickFunctionscomputeSwapStepDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

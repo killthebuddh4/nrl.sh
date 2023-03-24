@@ -1,0 +1,20 @@
+
+
+
+
+
+
+ENS Libraries - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationTechnical DocumentationHomeTechnical DocsGovernance DocsSearch…⌃KLinksTechnical DocumentationIntroductionTerminologyFrequently Asked QuestionsENS DeploymentsRegistrar Frequently Asked QuestionsDeploying ENS on a Private ChainDNS Registrar guideBug Bounty ProgramENS Improvement ProposalsDapp Developer GuideENS Enabling your DAppENS LibrariesWorking with ENSResolving NamesManaging NamesRegistering & Renewing NamesENS Front-End Design GuidelinesENS as NFTENS Layer2 and offchain data supportENS Data guideContract API ReferenceName ProcessingRegistryReverseRegistrarTestRegistrarPublicResolver.eth Permanent RegistrarDNS RegistrarSubgraphContract Developer GuideResolving Names On-chainWriting a ResolverWriting a RegistrarENS Discussion ForumENS Support ChatENS Migration (February 2020)Guide for DApp DevelopersTechnical DescriptionPowered By GitBookENS LibrariesENS support is available in many popular languages. If you know of a library that is not listed here, please send us a PR.Javascript​ensjs, maintained by the ENS developers​ethereum-ens (deprecated)​react-ens-address​​ethers.js​​web3.js​​embark.io​​waffle.io​Which Javascript library should I use?If you are already using web3.js or ethers.js, and do not require functionality such as creating subdomains, transferring ownership, or updating resolvers, use built in ENS features of these libraries.If you are using React and only need to do forward and reverse resolution of ENS names with built in UI, use react-ens-address.If you want to have ENS instance deployed into your dev environment, you may want to use embark.io or waffle.io which allows you to configure/deploy ENS registry in your Ethereum test instance.Otherwise, use ensjs.Accessing smart contracts directlyAll the ENS smart contracts are published as @ensdomains/ens-contracts npm module.​This is how you include abi into your frontend code.import {  ENS,  PublicResolver} from '@ensdomains/ens-contracts'`This is how you import our smartcontract within Solidity.import '@ensdomains/ens-contracts/contracts/registry/ENS.sol';Java​web3j​Kotlin​KEthereum​Python​web3.py - also see web3.py ENS docs​Go​go-ens​Command-line​ethereal​Delphi​delphereum​Next StepsOnce you've chosen a library, read Working with ENS to learn how to use your chosen ENS library in your application.Dapp Developer Guide - PreviousENS Enabling your DAppNext - Dapp Developer GuideWorking with ENSLast modified 1yr agoCopy linkEdit on GitHubOn this pageJavascriptJavaKotlinPythonGoCommand-lineDelphiNext Steps
+
+
+

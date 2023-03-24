@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+Built with XMTP | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchJoin in and contributeGrantsBuilt with XMTPCode of conductBuilt with XMTPBuilt with XMTPHundreds of awesome projects, people, and partners rely on XMTP. Come build with us!XMTP InboxXMTP Inbox chat app demonstrates core and advanced capabilities of the XMTP client SDK.GitHub|TwitterLensterLenster is a composable, decentralized, and permissionless social media webapp built with Lens Protocol.GitHub|TwitterBeep3rBringing back the joy of owning a 90s pager device and the original vision of twttr - text networks.GitHub|TwittermeTokensmeTokens is a protocol built on Ethereum that allows creators and builders to issue their own personal token.GitHub|TwitterRelay ReceiverRelay’s goal is to provide open-source tools and products on top of XMTP, and create the best place for web3 identities.GitHub|TwitterLensportDiscover, collect, and sell Lens Posts to invest in creators you support. Built on Lens Protocol.|TwitterGameJutsuA gaming app that uses end-to-end encrypted messages as signed game moves between players.GitHub|TwitterButtrflyDecentralized social media app built for a mobile first experience on iOS. Built on Lens Protocol.|TwitterBoson AppTokenize, transfer, and trade any physical asset as an NFT.GitHub|TwitterWallet RoulleteGet matched with random web3 users and chat.|TwitterPlexPlex allows brands to query relevant audiences and understand who they are based on on- and off-chain attributes.|TwitterAtticcWeb3 social app helping communities to launch and grow by leveraging the power of NFTs.GitHub|TwitterMintifyMintify is a multi-chain aggregator, analytics platform and terminal for trading NFT based economies.|TwitterSubmit requestHave a project building on XMTP? Want your profile updated? Share your details and we'll follow up.Check out more projects →PreviousGrantsNextCode of conductClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+SwapQuoter | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesFullMathLiquidityMathMulticallNoTickDataProviderNonfungiblePositionManagerPaymentsPoolPositionPositionLibraryRouteSelfPermitSqrtPriceMathStakerSwapMathSwapQuoterSwapRouterTickTickLibraryTickListTickListDataProviderTickMathTradeenumsinterfacesSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceclassesSwapQuoterHelpful?On this pageSwapQuoter@uniswap/v3-sdk / Exports / SwapQuoterClass: SwapQuoterRepresents the Uniswap V3 QuoterV1 contract with a method for returning the formatted
+calldata needed to call the quoter contract.Table of contents​Constructors​constructorProperties​V1INTERFACEV2INTERFACEMethods​quoteCallParametersConstructors​constructor​• new SwapQuoter()Properties​V1INTERFACE​▪ Static V1INTERFACE: InterfaceDefined in​quoter.ts:37V2INTERFACE​▪ Static V2INTERFACE: InterfaceDefined in​quoter.ts:38Methods​quoteCallParameters​▸ Static quoteCallParameters<TInput, TOutput>(route, amount, tradeType, options?): MethodParametersProduces the on-chain method name of the appropriate function within QuoterV2,
+and the relevant hex encoded parameters.Type parameters​NameTypeDescriptionTInputextends CurrencyThe input token, either Ether or an ERC-20TOutputextends CurrencyThe output token, either Ether or an ERC-20Parameters​NameTypeDescriptionrouteRoute<TInput, TOutput>The swap route, a list of pools through which a swap can occuramountCurrencyAmount<TInput | TOutput>The amount of the quote, either an amount in, or an amount outtradeTypeTradeTypeThe trade type, either exact input or exact outputoptionsQuoteOptionsThe optional params including price limit and Quoter contract switchReturns​MethodParametersThe formatted calldataDefined in​quoter.ts:51Helpful?PreviousSwapMathNextSwapRouterTable of contentsConstructorsPropertiesMethodsConstructorsconstructorPropertiesV1INTERFACEV2INTERFACEMethodsquoteCallParametersDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

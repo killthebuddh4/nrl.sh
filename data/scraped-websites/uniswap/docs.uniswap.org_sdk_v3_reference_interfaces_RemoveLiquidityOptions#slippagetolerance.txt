@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+RemoveLiquidityOptions | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 SDKOverviewGuidesBackgroundGetting a QuoteExecuting a TradeRouting a SwapPooling LiquidityTechnical ReferenceOverviewclassesenumsinterfacesAllowedPermitArgumentsBestTradeOptionsClaimOptionsCollectOptionsCommonAddLiquidityOptionsFeeOptionsIncentiveKeyIncreaseSpecificOptionsMethodParametersMintSpecificOptionsNFTPermitOptionsQuoteOptionsRemoveLiquidityOptionsSafeTransferOptionsStandardPermitArgumentsSwapOptionsTickConstructorArgsTickDataProviderWithdrawOptionsSwap Widgetweb3-reactCore SDKV2 SDKV1 SDK🏠V3 SDKTechnical ReferenceinterfacesRemoveLiquidityOptionsHelpful?On this pageRemoveLiquidityOptions@uniswap/v3-sdk / Exports / RemoveLiquidityOptionsInterface: RemoveLiquidityOptionsOptions for producing the calldata to exit a position.Table of contents​Properties​burnTokencollectOptionsdeadlineliquidityPercentagepermitslippageTolerancetokenIdProperties​burnToken​• Optional burnToken: booleanWhether the NFT should be burned if the entire position is being exited, by default false.Defined in​nonfungiblePositionManager.ts:162collectOptions​• collectOptions: Omit<CollectOptions, "tokenId">Parameters to be passed on to collectDefined in​nonfungiblePositionManager.ts:172deadline​• deadline: BigintIshWhen the transaction expires, in epoch seconds.Defined in​nonfungiblePositionManager.ts:157liquidityPercentage​• liquidityPercentage: PercentThe percentage of position liquidity to exit.Defined in​nonfungiblePositionManager.ts:147permit​• Optional permit: NFTPermitOptionsThe optional permit of the token ID being exited, in case the exit transaction is being sent by an account that does not own the NFTDefined in​nonfungiblePositionManager.ts:167slippageTolerance​• slippageTolerance: PercentHow much the pool price is allowed to move.Defined in​nonfungiblePositionManager.ts:152tokenId​• tokenId: BigintIshThe ID of the token to exitDefined in​nonfungiblePositionManager.ts:142Helpful?PreviousQuoteOptionsNextSafeTransferOptionsTable of contentsPropertiesPropertiesburnTokencollectOptionsdeadlineliquidityPercentagepermitslippageTolerancetokenIdDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

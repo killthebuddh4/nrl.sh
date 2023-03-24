@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+IUniswapV3FlashCallback | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesIERC20MinimalIUniswapV3FactoryIUniswapV3PoolIUniswapV3PoolDeployercallbackIUniswapV3FlashCallbackIUniswapV3MintCallbackIUniswapV3SwapCallbackPoolLibrariesGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreInterfacescallbackIUniswapV3FlashCallbackHelpful?On this pageIUniswapV3FlashCallbackAny contract that calls IUniswapV3PoolActions#flash must implement this interfaceFunctions​uniswapV3FlashCallback​  function uniswapV3FlashCallback(    uint256 fee0,    uint256 fee1,    bytes data  ) externalCopyCalled to msg.sender after transferring to the recipient from IUniswapV3Pool#flash.In the implementation you must repay the pool the tokens sent by flash plus the computed fee amounts.
+The caller of this method must be checked to be a UniswapV3Pool deployed by the canonical UniswapV3Factory.Parameters:​NameTypeDescriptionfee0uint256The fee amount in token0 due to the pool by the end of the flashfee1uint256The fee amount in token1 due to the pool by the end of the flashdatabytesAny data passed through by the caller via the IUniswapV3PoolActions#flash callEdit this pageHelpful?PreviousIUniswapV3PoolDeployerNextIUniswapV3MintCallbackFunctionsuniswapV3FlashCallbackDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

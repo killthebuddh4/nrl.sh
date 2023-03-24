@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+LowGasSafeMath | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesBitMathFixedPoint128FixedPoint96FullMathLiquidityMathLowGasSafeMathOraclePositionSafeCastSecondsOutsideSqrtPriceMathSwapMathTickTickBitmapTickMathTransferHelperUnsafeMathGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreLibrariesLowGasSafeMathHelpful?On this pageLowGasSafeMathContains methods for doing math operations that revert on overflow or underflow for minimal gas costFunctions​add​  function add(    uint256 x,    uint256 y  ) internal pure returns (uint256 z)CopyReturns x + y, reverts if sum overflows uint256Parameters:​NameTypeDescriptionxuint256The augendyuint256The addendReturn Values:​NameTypeDescriptionzuint256The sum of x and ysub​  function sub(    uint256 x,    uint256 y  ) internal pure returns (uint256 z)CopyReturns x - y, reverts if underflowsParameters:​NameTypeDescriptionxuint256The minuendyuint256The subtrahendReturn Values:​NameTypeDescriptionzuint256The difference of x and ymul​  function mul(    uint256 x,    uint256 y  ) internal pure returns (uint256 z)CopyReturns x * y, reverts if overflowsParameters:​NameTypeDescriptionxuint256The multiplicandyuint256The multiplierReturn Values:​NameTypeDescriptionzuint256The product of x and yadd​  function add(    int256 x,    int256 y  ) internal pure returns (int256 z)CopyReturns x + y, reverts if overflows or underflowsParameters:​NameTypeDescriptionxint256The augendyint256The addendReturn Values:​NameTypeDescriptionzint256The sum of x and ysub​  function sub(    int256 x,    int256 y  ) internal pure returns (int256 z)CopyReturns x - y, reverts if overflows or underflowsParameters:​NameTypeDescriptionxint256The minuendyint256The subtrahendReturn Values:​NameTypeDescriptionzint256The difference of x and yEdit this pageHelpful?PreviousLiquidityMathNextOracleFunctionsaddsubmuladdsubDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

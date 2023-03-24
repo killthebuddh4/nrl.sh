@@ -1,0 +1,20 @@
+
+
+
+
+
+
+Resolving Names On-chain - ENS Documentation
+
+
+
+
+
+
+
+
+
+ENS DocumentationTechnical DocumentationHomeTechnical DocsGovernance DocsSearch…⌃KLinksTechnical DocumentationIntroductionTerminologyFrequently Asked QuestionsENS DeploymentsRegistrar Frequently Asked QuestionsDeploying ENS on a Private ChainDNS Registrar guideBug Bounty ProgramENS Improvement ProposalsDapp Developer GuideENS Enabling your DAppENS LibrariesWorking with ENSResolving NamesManaging NamesRegistering & Renewing NamesENS Front-End Design GuidelinesENS as NFTENS Layer2 and offchain data supportENS Data guideContract API ReferenceName ProcessingRegistryReverseRegistrarTestRegistrarPublicResolver.eth Permanent RegistrarDNS RegistrarSubgraphContract Developer GuideResolving Names On-chainWriting a ResolverWriting a RegistrarENS Discussion ForumENS Support ChatENS Migration (February 2020)Guide for DApp DevelopersTechnical DescriptionPowered By GitBookResolving Names On-chainSolidity libraries for on-chain resolution are not yet available, but ENS resolution is straightforward enough it can be done trivially without a library. First, we define some pared-down interfaces containing only the methods we need:abstract contract ENS {    function resolver(bytes32 node) public virtual view returns (Resolver);}​abstract contract Resolver {    function addr(bytes32 node) public virtual view returns (address);}For resolution, only the resolver function in the ENS contract is required; other methods permit looking up owners and updating ENS from within a contract that owns a name.With these definitions, looking up a name given its node hash is straightforward:contract MyContract {    // Same address for Mainet, Ropsten, Rinkerby, Gorli and other networks;    ENS ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);​    function resolve(bytes32 node) public view returns(address) {        Resolver resolver = ens.resolver(node);        return resolver.addr(node);    }}While it is possible for a contract to process a human-readable name into a node hash, we highly recommend working with node hashes instead, as they are easier and more efficient to work with, and allow contracts to leave the complex work of normalizing the name to their callers outside the blockchain. Where a contract always resolves the same names, those names may be converted to a node hash and stored in the contract as a constant.PreviousQuery ExamplesNext - Contract Developer GuideWriting a ResolverLast modified 1yr agoCopy linkEdit on GitHub
+
+
+

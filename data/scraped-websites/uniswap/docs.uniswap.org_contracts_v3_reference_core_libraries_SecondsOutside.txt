@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+
+
+SecondsOutside | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreUniswapV3FactoryUniswapV3PoolUniswapV3PoolDeployerInterfacesLibrariesBitMathFixedPoint128FixedPoint96FullMathLiquidityMathLowGasSafeMathOraclePositionSafeCastSecondsOutsideSqrtPriceMathSwapMathTickTickBitmapTickMathTransferHelperUnsafeMathGovernancePeripheryDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferenceCoreLibrariesSecondsOutsideHelpful?On this pageSecondsOutsideContains methods for working with a mapping from tick to 32 bit timestamp values, specifically seconds
+spent outside the tick.The mapping uses int24 for keys since ticks are represented as int24 and there are 8 (2^3) values per word.
+Note "seconds outside" is always a relative measurement, only consistent for as long as a the lower tick and upper tick
+have gross liquidity greater than 0.Functions​initialize​  function initialize(    mapping(int24 => uint256) self,    int24 tick,    int24 tickCurrent,    int24 tickSpacing,    uint32 time  ) internalCopyCalled the first time a tick is used to set the seconds outside value. Assumes the tick is not
+initialized.Parameters:​NameTypeDescriptionselfmapping(int24 => uint256)the packed mapping of tick to seconds outsidetickint24the tick to be initializedtickCurrentint24the current ticktickSpacingint24the spacing between usable tickstimeuint32the current timestampclear​  function clear(    mapping(int24 => uint256) self,    int24 tick,    int24 tickSpacing  ) internalCopyCalled when a tick is no longer used, to clear the seconds outside value of the tickParameters:​NameTypeDescriptionselfmapping(int24 => uint256)the packed mapping of tick to seconds outsidetickint24the tick to be clearedtickSpacingint24the spacing between usable tickscross​  function cross(    mapping(int24 => uint256) self,    int24 tick,    int24 tickSpacing,    uint32 time  ) internalCopyCalled when an initialized tick is crossed to update the seconds outside for that tick. Must be called
+every time an initialized tick is crossedParameters:​NameTypeDescriptionselfmapping(int24 => uint256)the packed mapping of tick to seconds outsidetickint24the tick to be crossedtickSpacingint24the spacing between usable tickstimeuint32the current block timestamp truncated to 32 bitsget​  function get(    mapping(int24 => uint256) self,    int24 tick,    int24 tickSpacing  ) internal view returns (uint32)CopyGet the seconds outside for an initialized tick. Should be called only on initialized ticks.Parameters:​NameTypeDescriptionselfmapping(int24 => uint256)the packed mapping of tick to seconds outsidetickint24the tick to get the seconds outside value fortickSpacingint24the spacing between usable ticksReturn Values:​TypeDescriptionuint32seconds outside value for that ticksecondsInside​  function secondsInside(    mapping(int24 => uint256) self,    int24 tickLower,    int24 tickUpper,    int24 tickCurrent,    int24 tickSpacing  ) internal view returns (uint32)CopyGet the seconds inside a tick range, assuming both tickLower and tickUpper are initializedParameters:​NameTypeDescriptionselfmapping(int24 => uint256)the packed mapping of tick to seconds outsidetickLowerint24the lower tick for which to get seconds insidetickUpperint24the upper tick for which to get seconds insidetickCurrentint24the current ticktickSpacingint24the spacing between usable ticksReturn Values:​NameTypeDescriptionauint32relative seconds inside value that can be snapshotted and compared to a later snapshot to computetime spent between tickLower and tickUpper, i.e. time that a position's liquidity was in use.Edit this pageHelpful?PreviousSafeCastNextSqrtPriceMathFunctionsinitializeclearcrossgetsecondsInsideDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

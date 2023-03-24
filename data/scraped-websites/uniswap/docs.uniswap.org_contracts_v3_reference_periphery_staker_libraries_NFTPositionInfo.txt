@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+NFTPositionInfo | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensLibrariesStakerUniswap V3 Staker DesignUniswap V3 Staker ContractInterfacesLibrariesIncentiveIdNFTPositionInfoRewardMathTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryStakerLibrariesNFTPositionInfoHelpful?On this pageNFTPositionInfoEncapsulates the logic for getting info about a NFT token IDFunctions​getPositionInfo​  function getPositionInfo(    contract IUniswapV3Factory factory,    contract INonfungiblePositionManager nonfungiblePositionManager,    uint256 tokenId  ) internal view returns (contract IUniswapV3Pool pool, int24 tickLower, int24 tickUpper, uint128 liquidity)CopyParameters:​NameTypeDescriptionfactorycontract IUniswapV3FactoryThe address of the Uniswap V3 Factory used in computing the pool addressnonfungiblePositionManagercontract INonfungiblePositionManagerThe address of the nonfungible position manager to querytokenIduint256The unique identifier of an Uniswap V3 LP tokenReturn Values:​NameTypeDescriptionpoolIUniswapV3PoolThe address of the Uniswap V3 pooltickLowerint24The lower tick of the Uniswap V3 positiontickUpperint24The upper tick of the Uniswap V3 positionliquidityuint128The amount of liquidity stakedEdit this pageHelpful?PreviousIncentiveIdNextRewardMathFunctionsgetPositionInfoDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

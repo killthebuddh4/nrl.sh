@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+Math | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceUniversal RouterPermit2V2 ProtocolOverviewConceptsProtocol OverviewCore ConceptsAdvanced TopicsFeesPricingUnderstanding ReturnsSecurityMathResearchGuidesInterface IntegrationSmart Contract IntegrationTechnical ReferenceAPIGovernanceSmart ContractsV1 Protocol🏠V2 ProtocolConceptsAdvanced TopicsMathHelpful?MathThis section will be expanded in the future. In the mean time, the Uniswap V2 whitepaper has most relevant math for Uniswap V2.Edit this pageHelpful?PreviousSecurityNextResearchDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+

@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+
+Quoter | Uniswap
+
+
+
+
+
+Skip to main contentUniswap DocsConceptsContractsSDKsAPIsGive FeedbackWhitepaperGitHubGrantsSearchV3 ProtocolOverviewGuidesSet Up Your Local EnvironmentImplement A SwapProviding LiquidityLiquidity MiningImplement Flash SwapsGovernance ProposalsTechnical ReferenceOverviewCoreGovernancePeripheryBaseInterfacesLensQuoterQuoterV2TickLensLibrariesStakerTestNonfungiblePositionManagerNonfungibleTokenPositionDescriptorSwapRouterV3MigratorDeployment AddressesError CodesUniversal RouterPermit2V2 ProtocolV1 Protocol🏠V3 ProtocolTechnical ReferencePeripheryLensQuoterHelpful?On this pageQuoterAllows getting the expected amount out or amount in for a given swap without executing the swapThese functions are not gas efficient and should not be called on chain. Instead, optimistically execute
+the swap and check the amounts in the callback.Functions​constructor​  function constructor(  ) publicCopyuniswapV3SwapCallback​  function uniswapV3SwapCallback(    int256 amount0Delta,    int256 amount1Delta,    bytes data  ) externalCopyCalled to msg.sender after executing a swap via IUniswapV3Pool#swap.In the implementation you must pay the pool tokens owed for the swap.
+The caller of this method must be checked to be a UniswapV3Pool deployed by the canonical UniswapV3Factory.
+amount0Delta and amount1Delta can both be 0 if no tokens were swapped.Parameters:​NameTypeDescriptionamount0Deltaint256The amount of token0 that was sent (negative) or must be received (positive) by the pool bythe end of the swap. If positive, the callback must send that amount of token0 to the pool.
+|amount1Delta | int256 | The amount of token1 that was sent (negative) or must be received (positive) by the pool by
+the end of the swap. If positive, the callback must send that amount of token1 to the pool.
+|data | bytes | Any data passed through by the caller via the IUniswapV3PoolActions#swap callquoteExactInputSingle​  function quoteExactInputSingle(    address tokenIn,    address tokenOut,    uint24 fee,    uint256 amountIn,    uint160 sqrtPriceLimitX96  ) public returns (uint256 amountOut)CopyReturns the amount out received for a given exact input but for a swap of a single poolParameters:​NameTypeDescriptiontokenInaddressThe token being swapped intokenOutaddressThe token being swapped outfeeuint24The fee of the token pool to consider for the pairamountInuint256The desired input amountsqrtPriceLimitX96uint160The price limit of the pool that cannot be exceeded by the swapReturn Values:​NameTypeDescriptionamountOutuint256The amount of tokenOut that would be receivedquoteExactInput​  function quoteExactInput(    bytes path,    uint256 amountIn  ) external returns (uint256 amountOut)CopyReturns the amount out received for a given exact input swap without executing the swapParameters:​NameTypeDescriptionpathbytesThe path of the swap, i.e. each token pair and the pool feeamountInuint256The amount of the first token to swapReturn Values:​NameTypeDescriptionamountOutuint256The amount of the last token that would be receivedquoteExactOutputSingle​  function quoteExactOutputSingle(    address tokenIn,    address tokenOut,    uint24 fee,    uint256 amountOut,    uint160 sqrtPriceLimitX96  ) public returns (uint256 amountIn)CopyReturns the amount in required to receive the given exact output amount but for a swap of a single poolParameters:​NameTypeDescriptiontokenInaddressThe token being swapped intokenOutaddressThe token being swapped outfeeuint24The fee of the token pool to consider for the pairamountOutuint256The desired output amountsqrtPriceLimitX96uint160The price limit of the pool that cannot be exceeded by the swapReturn Values:​NameTypeDescriptionamountInuint256The amount required as the input for the swap in order to receive amountOutquoteExactOutput​  function quoteExactOutput(    bytes path,    uint256 amountOut  ) external returns (uint256 amountIn)CopyReturns the amount in required for a given exact output swap without executing the swapParameters:​NameTypeDescriptionpathbytesThe path of the swap, i.e. each token pair and the pool feeamountOutuint256The amount of the last token to receiveReturn Values:​NameTypeDescriptionamountInuint256The amount of first token required to be paidEdit this pageHelpful?PreviousIWETH9NextQuoterV2FunctionsconstructoruniswapV3SwapCallbackquoteExactInputSinglequoteExactInputquoteExactOutputSinglequoteExactOutputDevelopersFeedbackBug Bounty#dev-chatWhitepaperGithubuniswap-v3-coreuniswap-v3-sdkuniswap-v3-peripheryDeployment addressesEcosystemHomeAppAnalyticsToken ListsBrand AssetsCommunityGovernanceDiscordTwitterBlog
+
+
+
