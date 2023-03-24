@@ -35,5 +35,4 @@ jobs:
           EXPRESS_PORT: ${{ secrets.ROBOT_ENS_PROD_EXPRESS_PORT }}
           VIRTUAL_HOST: ${{ secrets.ROBOT_ENS_PROD_VIRTUAL_HOST }}
         run: |
-          cd ens
-          npm run ci:deploy
+          ./shell/app.deploy.sh

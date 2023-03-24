@@ -3,8 +3,8 @@ services:
   monitor:
     image: "robot-monitor"
     build:
-      context: ".."
-      dockerfile: "./monitor/Dockerfile"
+      context: "./typescript"
+      dockerfile: "./docker/monitor.Dockerfile"
     expose:
       - ${EXPRESS_PORT}
     environment:

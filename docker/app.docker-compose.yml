@@ -3,8 +3,8 @@ services:
   express:
     image: "ghcr.io/relaycc/robot/express:${GITHUB_SHA}"
     build:
-      context: ".."
-      dockerfile: "./ci/Dockerfile.express"
+      context: "./typescript"
+      dockerfile: "./docker/app.express.Dockerfile"
     expose:
       - ${EXPRESS_PORT}
     environment:
@@ -23,8 +23,8 @@ services:
   xmtp:
     image: "ghcr.io/relaycc/robot/xmtp:${GITHUB_SHA}"
     build:
-      context: ".."
-      dockerfile: "./ci/Dockerfile.xmtp"
+      context: "./typescript"
+      dockerfile: "./docker/app.xmtp.Dockerfile"
     environment:
       FRONT_API_KEY: ${FRONT_API_KEY}
       XMTP_CLIENT_PK: ${XMTP_CLIENT_PK}

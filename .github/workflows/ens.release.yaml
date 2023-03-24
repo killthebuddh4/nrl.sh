@@ -31,6 +31,5 @@ jobs:
 
       - name: Build and Push
         run: |
-          cd ens
-          npm run ci:build
-          npm run ci:push
+          ./shell/app.build.sh
+          ./shell/app.push.sh

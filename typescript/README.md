@@ -43,8 +43,8 @@ droplet instance.
 
 **v0 Requirements**
 
-- [ ] A GitHub Action to build and push Docker images.
-- [ ] A manaul deploy script that uses `docker-compose` to pull the latest
+- [x] A GitHub Action to build and push Docker images.
+- [x] A manaul deploy script that uses `docker-compose` to pull the latest
       images and restart the containers.
 - [ ] An as-simple-as-possible blue-green deployment strategy for zero-downtime
       deployments.
@@ -106,3 +106,29 @@ To start, for each component, the two questions we want to answer are:
 
 - [ ] error monitoring service
 - [ ] multiple supabase environments
+
+# Technical BOM
+
+For an end-to-end understanding of how this project works, you need to have a
+working familiarity with the following technologies:
+
+- Digital Ocean Droplets
+- Docker and Docker Compose
+- GitHub and GitHub Actions
+- Nginx
+- LetsEncrypt
+- Express
+- XMTP
+- Open AI
+- Supabase
+- Pinecone
+- Front
+- Discord
+- TypeScript
+- Express
+- Zod
+- Winston
+
+# ETL
+
+- What are the links we want to scrape?
