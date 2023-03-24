@@ -14,14 +14,11 @@ load_dotenv()
 # Regex pattern to match a URL
 HTTP_URL_PATTERN = r'^http[s]*://.+'
 
-full_url = os.getenv("FULL_URL")
-if not full_url:
-    print("Please provide FULL_URL to crawl")
-    sys.exit(1)
-
-domain = urlparse(full_url).netloc
-company_name = domain.split(".")
-company_name = company_name[len(company_name) - 2]
+urls = [
+    "https://docs.uniswap.org/",
+    "https://xmtp.org/docs/",
+    "https://docs.ens.domains/",
+]
 
 # Create a class to parse the HTML and get the hyperlinks
 class HyperlinkParser(HTMLParser):
@@ -107,6 +104,9 @@ def crawl(url):
 
     if not os.path.exists("text/" + company_name +"/"):
             os.mkdir("text/" + company_name + "/")
+    else:
+        print("Company already crawled")
+        return
 
     # Create a directory to store the csv files
     if not os.path.exists("processed"):
@@ -149,4 +149,12 @@ def crawl(url):
                 queue.append(link)
                 seen.add(link)
 
-crawl(full_url)
+
+for full_url in urls:
+    global domain
+    global company_name
+
+    domain = urlparse(full_url).netloc
+    company_name = domain.split(".")
+    company_name = company_name[len(company_name) - 2]
+    crawl(full_url)

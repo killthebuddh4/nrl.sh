@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+XMTP Litepaper - public draft | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchLitepaperRoadmapLitepaperXMTP Litepaper - public draftRead the public draft of the XMTP Litepaper to get a primer on how XMTP works and learn about the motivations and vision informing its development.This document is still very much a draft, with some sections in an incomplete state to be filled in as research continues, but it's time to take the project to the public for discussion.Have questions or feedback? Join in the discussion about the XMTP Litepaper on the following platforms:DiscordGitHub DiscussionsTwitterNextRoadmapClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

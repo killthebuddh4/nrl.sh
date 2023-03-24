@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+5 posts tagged with "Spotlight" | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearchAll postsSome new content typesSecure web3 customer service and support with XMTP and ENSTuned In: Developers show the power of video + messaging with XMTP and LivepeerXMTP Grants: Every big idea starts smallXMTP mobile SDKs now available in Developer PreviewXMTP v2 is heremeTokens integrates with XMTPETHSanFrancisco wrap-upXMTP / Lens Twitter Spaces replayHow insights from Linkin Park's Mike Shinoda helped inspire the creation of XMTPXMTP is delivering secure direct messages with the Lens APIETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top HonorsSecure web3 messaging for wallet apps with XMTPIntroducing the XMTP Litepaper public draftProject Spotlight: Relay Receiver, a no-code wallet chat for websitesTruths not spoofsHackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharingOTC Swap: Building a message-based bartering system with OpenSea's Seaport and XMTPETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked walletsWhy can't I leave a message for any wallet address in web3? Introducing "You've Got Mail"5 posts tagged with "Spotlight"View All TagsmeTokens integrates with XMTPNovember 29, 2022 · 3 min readPeter DentonHead of Growth at XMTP LabsWith XMTP, meTokens enables all creators to coordinate in a privacy-based manner that is simple enough to create widespread adoption.Tags:DevelopersMessagingSpotlightRead MoreETHSanFrancisco wrap-upNovember 22, 2022 · 3 min readPeter DentonHead of Growth at XMTP Labs"Wow" is just about the best way we could sum up @ETHGlobal's #ETHSanFrancisco.Tags:DevelopersHackathonSpotlightRead MoreHow insights from Linkin Park's Mike Shinoda helped inspire the creation of XMTPNovember 3, 2022 · One min readPeter DentonHead of Growth at XMTP LabsInspiration comes from everywhere in web3. Check out XMTP co-founder Shane Mac as he shares how Linkin Park’s Mike Shinoda was a key inspiration for XMTP’s approach to web3 messaging.Tags:AnnouncementsCompanySpotlightRead MoreXMTP is delivering secure direct messages with the Lens APINovember 3, 2022 · 3 min readMatt GalliganCo-founder of XMTP LabsToday XMTP reaches a big milestone in our journey to build protocol for secure web3 messaging:Lens Protocol has adopted XMTP to provide a secure and private direct messaging layer for the entire Lens ecosystem.Tags:AnnouncementsDevelopersLensSpotlightRead MoreProject Spotlight: Relay Receiver, a no-code wallet chat for websitesAugust 16, 2022 · 4 min readPeter DentonHead of Growth at XMTP LabsFacilitating user communication and overcoming one of web3’s biggest challenges. NFT sales, POAP events, DAO activities, etc all have very meaningful reasons why users would want to message each other, but sometimes the website has no chat function and there’s no way to find the user elsewhere.Tags:DevelopersSpotlightRead MoreClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

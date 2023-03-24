@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+XMTP: The open protocol and network for secure web3 messaging | XMTP: The open protocol and network for secure web3 messaging
+
+
+
+
+
+Skip to main contentDocumentation
+JavaScript XMTP client SDK
+Tutorials and reference for building apps in JavaScript
+Kotlin XMTP client SDK
+Tutorial for building apps in Kotlin
+Swift XMTP client SDK
+Tutorial for building apps in Swift
+Dart XMTP client SDK
+Tutorial and reference for building apps in Dart
+Development concepts
+Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+Join in and contribute
+Join in and contribute to the XMTP community
+Grants
+Apply for a grant for a project that fosters ecosystem growth
+Built with XMTP
+Explore a showcase of apps built with XMTP
+Code of conduct
+Foster a safe and positive XMTP community experienceVision
+Litepaper
+Read the public draft of the XMTP Litepaper
+Roadmap
+Learn about what's in store for XMTP in the months aheadBlogSearch📄 Read the XMTP Litepaper - public draft »XMTP: The open protocol and network for secure web3 messagingBuild with XMTP to send messages between blockchain accounts, including DMs, alerts, announcements, and moreStart messaging with XMTPUse an app built with XMTP to start learning how to build one→Start building with XMTP client SDKsBuild web3 messaging apps in JavaScript, Kotlin, Swift, & Dart→Build Lens DMs with XMTPBuild key XMTP chat features to provide DMs in a Lens app→Build with XMTPDeliver apps and tools that enable messaging between blockchain accounts. Want to talk about a use case?Join the discussionAlertsEnable apps to keep users informed with timely event-based notificationsAnnouncementsEnable apps to engage users with meaningful one-to-many messagingDirect messagingEnable users to connect and build community with one-to-one messagingStart buildingSDKs and toolsBuild with XMTP using the SDK and dev toolsYour browser does not support HTML video.Messages meet users where they areBuilding with XMTP gives users an interoperable inbox that follows them across web3, providing access to their messages using any app built with XMTP.Learn moreLatest from XMTPContent TypesDevelopersSDKsSome new content typesLet's talk about some new content types for XMTP. What's a content type? A content type is a way to describe the type of content a message contains on XMTP.EngineeringEngineering06 Mar 2023 · 7 min readDevelopersMessagingSecure web3 customer service and support with XMTP and ENSIf you've been in the web3/crypto community for longer than an hour, you've probably seen a strange message that seems to accompany every Discord server.Matt GalliganMatt Galligan22 Feb 2023 · 8 min readAwardsDevelopersHackathonDevelopers show the power of video + messaging with XMTP and LivepeerLivepeer x XMTP awards wrap-up: DeUniversity's education platform, Polyfans Messenger token-gated livestream, and Livopedia's creator tools take top honors.Rich BustosRich Bustos02 Feb 2023 · 3 min readJoin a community of buildersFrom hackathons to startups, developers are building with XMTP to address use cases for secure messaging for blockchain accounts.View app showcaseHave a question or idea?Start or join a discussion in the XMTP forumGitHub Discussions →Chat with the communitySay 👋, join a dev hangout, or get helpDiscord →Follow XMTP on TwitterKeep up with the latest updatesTwitter →Client SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+
