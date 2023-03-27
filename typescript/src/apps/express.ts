@@ -10,13 +10,13 @@ import {
   createRobotRequest,
   postRobotQuestion,
   RobotRequest,
-} from "../apis/openai.js";
+} from "../apis/question-answering.js";
 import {
   logger,
   RobotRequestEvent,
   UserRequestEvent,
   UserResponseEvent,
-} from "../apis/logger.js";
+} from "../apis/logging.js";
 import {
   createResponseToXmtp,
   RequestFromXmtp,

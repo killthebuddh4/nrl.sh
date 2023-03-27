@@ -5,8 +5,8 @@ import { getHeartbeat } from "../apis/express.js";
 import {
   HEARTBEAT_PROMPT,
   getHeartbeat as getOpenAiHeartbeat,
-} from "../apis/openai.js";
-import { craeteHeartbeatEvent, getLog, logger } from "../apis/logger.js";
+} from "../apis/question-answering.js";
+import { craeteHeartbeatEvent, getLog, logger } from "../apis/logging.js";
 
 /* ****************************************************************************
  *

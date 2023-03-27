@@ -11,7 +11,7 @@
     "dev:express": ". ../shell/env.sh local && nodemon build/apps/express.js",
     "dev:xmtp": ". ../shell/env.sh local && nodemon build/apps/xmtp.js",
     "dev:monitor": ". ../shell/env.sh monitor && nodemon build/apps/monitor.js",
-    "dev:etl": ". ../shell/env.sh local && nodemon build/apps/etl/etl.js",
+    "dev:etl": ". ../shell/env.sh local && nodemon build/apps/etl.js",
     "build": "tsc",
     "lint": "eslint .",
     "prettier": "prettier --check .",
