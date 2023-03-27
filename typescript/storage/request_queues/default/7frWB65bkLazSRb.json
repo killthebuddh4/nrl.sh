@@ -1,0 +1,9 @@
+{
+	"id": "7frWB65bkLazSRb",
+	"json": "{\"id\":\"7frWB65bkLazSRb\",\"url\":\"https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/glossary#constant-product-formula\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/glossary#constant-product-formula\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/glossary\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:18.878Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/glossary",
+	"url": "https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/glossary#constant-product-formula"
+}

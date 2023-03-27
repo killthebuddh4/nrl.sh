@@ -1,0 +1,9 @@
+{
+	"id": "UeGVIf42iZeDecx",
+	"json": "{\"id\":\"UeGVIf42iZeDecx\",\"url\":\"https://docs.uniswap.org/contracts/V2/concepts/core-concepts/oracles\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/concepts/core-concepts/oracles\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/concepts/core-concepts/oracles\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:50.095Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/V2/concepts/core-concepts/oracles",
+	"url": "https://docs.uniswap.org/contracts/V2/concepts/core-concepts/oracles"
+}

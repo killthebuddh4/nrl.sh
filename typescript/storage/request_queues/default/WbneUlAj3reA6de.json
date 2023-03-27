@@ -1,0 +1,9 @@
+{
+	"id": "WbneUlAj3reA6de",
+	"json": "{\"id\":\"WbneUlAj3reA6de\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/NFTPermitOptions\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/NFTPermitOptions\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/NFTPermitOptions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:09.858Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/interfaces/NFTPermitOptions",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/interfaces/NFTPermitOptions"
+}

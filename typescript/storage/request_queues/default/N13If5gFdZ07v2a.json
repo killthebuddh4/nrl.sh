@@ -1,0 +1,9 @@
+{
+	"id": "N13If5gFdZ07v2a",
+	"json": "{\"id\":\"N13If5gFdZ07v2a\",\"url\":\"https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/using-flash-swaps\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/using-flash-swaps\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/using-flash-swaps\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:48.503Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/using-flash-swaps",
+	"url": "https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/using-flash-swaps"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "S5pJ8sbxf7mPp4v",
+	"json": "{\"id\":\"S5pJ8sbxf7mPp4v\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/classes/TickLibrary\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/classes/TickLibrary\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/classes/TickLibrary\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:08.195Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/classes/TickLibrary",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/classes/TickLibrary"
+}

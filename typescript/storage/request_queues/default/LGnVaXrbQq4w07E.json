@@ -1,0 +1,9 @@
+{
+	"id": "LGnVaXrbQq4w07E",
+	"json": "{\"id\":\"LGnVaXrbQq4w07E\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PoolInitializer\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PoolInitializer\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PoolInitializer\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:17.623Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/base/PoolInitializer",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/base/PoolInitializer"
+}

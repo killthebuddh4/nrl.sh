@@ -1,0 +1,9 @@
+{
+	"id": "QsVDbQIIt3vTBts",
+	"json": "{\"id\":\"QsVDbQIIt3vTBts\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/pricing\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/pricing\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/pricing\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.543Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/pricing",
+	"url": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/pricing"
+}

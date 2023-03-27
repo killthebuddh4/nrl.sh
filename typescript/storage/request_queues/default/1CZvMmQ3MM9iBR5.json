@@ -1,0 +1,9 @@
+{
+	"id": "1CZvMmQ3MM9iBR5",
+	"json": "{\"id\":\"1CZvMmQ3MM9iBR5\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:20.064Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees",
+	"url": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees"
+}

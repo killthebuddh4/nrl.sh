@@ -1,0 +1,9 @@
+{
+	"id": "GbZ2hf5QiZnKS4m",
+	"json": "{\"id\":\"GbZ2hf5QiZnKS4m\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/staker/UniswapV3Staker\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/staker/UniswapV3Staker\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/staker/UniswapV3Staker\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:09.171Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/staker/UniswapV3Staker",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/staker/UniswapV3Staker"
+}

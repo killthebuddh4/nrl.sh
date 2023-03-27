@@ -1,0 +1,9 @@
+{
+	"id": "gTWaz2tlzkJAd8f",
+	"json": "{\"id\":\"gTWaz2tlzkJAd8f\",\"url\":\"https://docs.uniswap.org/sdk/v1/reference/types\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v1/reference/types\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v1/reference/types\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:22.672Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v1/reference/types",
+	"url": "https://docs.uniswap.org/sdk/v1/reference/types"
+}

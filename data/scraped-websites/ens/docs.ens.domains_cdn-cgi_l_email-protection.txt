@@ -47,12 +47,12 @@ Can I sign up for Cloudflare?
 
 
 
-Cloudflare Ray ID: 7a4541e2cefa7e77
+Cloudflare Ray ID: 7ad2ce36feea7e8e
 •
 
       Your IP:
       Click to reveal
-72.197.148.96
+68.101.172.199
 •
 
 Performance & security by Cloudflare

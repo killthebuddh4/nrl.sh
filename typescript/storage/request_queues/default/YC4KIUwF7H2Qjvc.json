@@ -1,0 +1,9 @@
+{
+	"id": "YC4KIUwF7H2Qjvc",
+	"json": "{\"id\":\"YC4KIUwF7H2Qjvc\",\"url\":\"https://docs.uniswap.org/contracts/universal-router/technical-reference\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/universal-router/technical-reference\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/universal-router/technical-reference\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:26.689Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/universal-router/technical-reference",
+	"url": "https://docs.uniswap.org/contracts/universal-router/technical-reference"
+}

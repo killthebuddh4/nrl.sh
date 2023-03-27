@@ -1,0 +1,9 @@
+{
+	"id": "BLi71LB7jFodQyA",
+	"json": "{\"id\":\"BLi71LB7jFodQyA\",\"url\":\"https://docs.uniswap.org/sdk/swap-widget/guides/examples\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/swap-widget/guides/examples\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/swap-widget/guides/examples\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:12.972Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/swap-widget/guides/examples",
+	"url": "https://docs.uniswap.org/sdk/swap-widget/guides/examples"
+}

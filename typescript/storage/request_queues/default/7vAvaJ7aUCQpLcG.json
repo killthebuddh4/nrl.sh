@@ -1,0 +1,9 @@
+{
+	"id": "7vAvaJ7aUCQpLcG",
+	"json": "{\"id\":\"7vAvaJ7aUCQpLcG\",\"url\":\"https://docs.uniswap.org/concepts/protocol/oracle\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/protocol/oracle\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/protocol/oracle\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:14.461Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/concepts/protocol/oracle",
+	"url": "https://docs.uniswap.org/concepts/protocol/oracle"
+}

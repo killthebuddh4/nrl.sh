@@ -44,8 +44,10 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@dqbd/tiktoken": "^1.0.2",
     "@elastic/elasticsearch": "^8.6.0",
     "@ethersproject/wallet": "^5.7.0",
+    "@prisma/client": "^4.11.0",
     "@supabase/supabase-js": "^2.10.0",
     "@xmtp/xmtp-js": "^7.13.1",
     "crawlee": "^3.3.0",
@@ -54,6 +56,7 @@
     "gpt-3-encoder": "^1.1.4",
     "openai": "^3.2.1",
     "playwright": "^1.31.2",
+    "redis": "^4.6.5",
     "uuid": "^9.0.0",
     "winston": "^3.8.2",
     "winston-transport": "^4.5.0",

@@ -1,0 +1,9 @@
+{
+	"id": "50vwUKKjHqrZln6",
+	"json": "{\"id\":\"50vwUKKjHqrZln6\",\"url\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/trading-from-a-smart-contract\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/trading-from-a-smart-contract\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/trading-from-a-smart-contract\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.533Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/trading-from-a-smart-contract",
+	"url": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/trading-from-a-smart-contract"
+}

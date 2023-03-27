@@ -1,0 +1,9 @@
+{
+	"id": "fDXngkNMzMSnwgw",
+	"json": "{\"id\":\"fDXngkNMzMSnwgw\",\"url\":\"https://docs.uniswap.org/contracts/v2/reference/smart-contracts/common-errors\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/reference/smart-contracts/common-errors\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/reference/smart-contracts/common-errors\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.494Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/common-errors",
+	"url": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/common-errors"
+}

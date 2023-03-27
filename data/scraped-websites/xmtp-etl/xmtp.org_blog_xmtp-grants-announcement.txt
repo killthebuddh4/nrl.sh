@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+XMTP Grants: Every big idea starts small    
+
+
+
+
+!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()Skip to main contentDocumentation
+                 JavaScript XMTP client SDK
+                 Tutorials and reference for building apps in JavaScript
+                 Kotlin XMTP client SDK
+                 Tutorial for building apps in Kotlin
+                 Swift XMTP client SDK
+                 Tutorial for building apps in Swift
+                 Dart XMTP client SDK
+                 Tutorial and reference for building apps in Dart
+                 Development concepts
+                 Learn about XMTP architecture, security, FAQ, and moreSDKs and toolsCommunity
+                Join in and contribute
+                Join in and contribute to the XMTP community
+                Grants
+                Apply for a grant for a project that fosters ecosystem growth
+                Built with XMTP
+                Explore a showcase of apps built with XMTP
+                Code of conduct
+                 Foster a safe and positive XMTP community experienceVision
+                Litepaper
+                Read the public draft of the XMTP Litepaper
+                Roadmap
+                 Learn about what's in store for XMTP in the months aheadBlog⚡️ Start building ⚡️Search⌘KAll postsSome new content typesSecure web3 customer service and support with XMTP and ENSTuned In: Developers show the power of video + messaging with XMTP and LivepeerXMTP Grants: Every big idea starts smallXMTP mobile SDKs now available in Developer PreviewXMTP v2 is heremeTokens integrates with XMTPETHSanFrancisco wrap-upXMTP / Lens Twitter Spaces replayHow insights from Linkin Park's Mike Shinoda helped inspire the creation of XMTPXMTP is delivering secure direct messages with the Lens APIETHOnline Wrap Up: De-Chat, GameJutsu, and Dehitas Take Top HonorsSecure web3 messaging for wallet apps with XMTPIntroducing the XMTP Litepaper public draftProject Spotlight: Relay Receiver, a no-code wallet chat for websitesTruths not spoofsHackFS x XMTP awards wrap-up: Decentralized Ticketing Platform, Optik for video conferencing, and GhostShare for file sharingOTC Swap: Building a message-based bartering system with OpenSea's Seaport and XMTPETH NYC awards wrap: OTC Swap for OpenSea, E2EE Chat via Intercom widget, and a kill switch “Burn My Wallet” for hacked walletsWhy can't I leave a message for any wallet address in web3? Introducing "You've Got Mail"XMTP Grants: Every big idea starts smallJanuary 25, 2023 · 2 min readYash LunagariaProduct Manager at XMTP LabsAnnouncing XMTP Grants! A program to nurture web3 messaging projects, support public good creation, and foster ecosystem growth.With XMTP, we are constantly pushing the boundaries of what’s possible with web3 messaging technology. We believe that innovation and ecosystem growth go hand in hand, and that is why we are excited to announce the launch of XMTP Grants.The XMTP Grants program is designed to foster ecosystem growth by supporting developers who share our vision of bringing secure and interoperable messaging to web3. Every big idea starts small, and that’s why we’re encouraging developers to dream big and be ambitious with their projects, to unlock unique messaging experiences.While we’re open to any and all proposals, some ideas we’re especially excited about are new content types, multi-chain support, developer tools, and other unique integrations. Building something great takes more than just an idea, that's why we are offering financial support, mentorship, and resources to help bring your ideas to life.The future of web3 messaging is in the hands of developers like you, and we want to do our part in supporting you in your efforts to build something great. Apply for the XMTP Grants program today and join the community of developers building on XMTP.Apply today at grants.xmtp.org! Let’s build the future of messaging together 🤝Tags:AnnouncementsDevelopersGrantsNewer PostTuned In: Developers show the power of video + messaging with XMTP and LivepeerOlder PostXMTP mobile SDKs now available in Developer PreviewClient SDKsJavaScriptKotlinSwiftDartDevelopment conceptsIntro to XMTPStart buildingArchitectural overviewFAQInteroperable inboxContent typesUX best practicesKey generation and usageInvitation and message encryptionWallet app and chain supportAccount signaturesContribute to XMTPReleasesXMTP Improvement ProposalsSDKs and toolsSDKsExample appsXMTP status pageCommunityBuilt with XMTPDiscussionsDiscordTwitterContribute to XMTPXMTP Improvement ProposalsXMTP code of conductCareers at XMTP LabsVisionLitepaperRoadmapCC BY 4.0Privacy policyTerm of service
+
+
+

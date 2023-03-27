@@ -1,0 +1,9 @@
+{
+	"id": "LilGJEetw6Ot7T5",
+	"json": "{\"id\":\"LilGJEetw6Ot7T5\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/core/libraries/Oracle\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/core/libraries/Oracle\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/core/libraries/Oracle\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:05.658Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/core/libraries/Oracle",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/core/libraries/Oracle"
+}

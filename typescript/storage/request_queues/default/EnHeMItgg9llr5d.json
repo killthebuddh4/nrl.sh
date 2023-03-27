@@ -1,0 +1,9 @@
+{
+	"id": "EnHeMItgg9llr5d",
+	"json": "{\"id\":\"EnHeMItgg9llr5d\",\"url\":\"https://docs.uniswap.org/contracts/V2/concepts/advanced-topics/pricing#pricing-trades\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/concepts/advanced-topics/pricing#pricing-trades\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/concepts/advanced-topics/pricing\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:49.670Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/V2/concepts/advanced-topics/pricing",
+	"url": "https://docs.uniswap.org/contracts/V2/concepts/advanced-topics/pricing#pricing-trades"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "6CCX0EFQ5Um8uqd",
+	"json": "{\"id\":\"6CCX0EFQ5Um8uqd\",\"url\":\"https://docs.ens.domains\",\"loadedUrl\":\"https://docs.ens.domains/\",\"uniqueKey\":\"https://docs.ens.domains\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:20.933Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.ens.domains",
+	"url": "https://docs.ens.domains"
+}

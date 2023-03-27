@@ -1,0 +1,9 @@
+{
+	"id": "xCp9RMSOtVX3GDC",
+	"json": "{\"id\":\"xCp9RMSOtVX3GDC\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/collect-fees\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/collect-fees\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/collect-fees\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:57.688Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/collect-fees",
+	"url": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/collect-fees"
+}

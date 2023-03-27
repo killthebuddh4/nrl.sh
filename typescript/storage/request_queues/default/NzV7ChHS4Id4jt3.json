@@ -1,0 +1,9 @@
+{
+	"id": "NzV7ChHS4Id4jt3",
+	"json": "{\"id\":\"NzV7ChHS4Id4jt3\",\"url\":\"https://docs.uniswap.org/concepts/protocol/fees\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/protocol/fees\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/protocol/fees\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:14.583Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/concepts/protocol/fees",
+	"url": "https://docs.uniswap.org/concepts/protocol/fees"
+}

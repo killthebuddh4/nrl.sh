@@ -1,0 +1,9 @@
+{
+	"id": "cQ88CHUHMVQpxfZ",
+	"json": "{\"id\":\"cQ88CHUHMVQpxfZ\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/core/interfaces/IUniswapV3Factory#getpool\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/core/interfaces/IUniswapV3Factory#getpool\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/core/interfaces/IUniswapV3Factory\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:15.153Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/core/interfaces/IUniswapV3Factory",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/core/interfaces/IUniswapV3Factory#getpool"
+}

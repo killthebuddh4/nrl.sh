@@ -1,0 +1,9 @@
+{
+	"id": "ZfU9WgLRSk9Ua0H",
+	"json": "{\"id\":\"ZfU9WgLRSk9Ua0H\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/INonfungiblePositionManager\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/INonfungiblePositionManager\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/INonfungiblePositionManager\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:05.648Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/INonfungiblePositionManager",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/INonfungiblePositionManager"
+}

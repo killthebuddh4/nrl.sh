@@ -1,0 +1,9 @@
+{
+	"id": "yvc4vlTno0SMVVP",
+	"json": "{\"id\":\"yvc4vlTno0SMVVP\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IERC20Metadata\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IERC20Metadata\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IERC20Metadata\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:11.199Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IERC20Metadata",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IERC20Metadata"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "Dt4JdOzUn0OEBdR",
+	"json": "{\"id\":\"Dt4JdOzUn0OEBdR\",\"url\":\"https://docs.uniswap.org/contracts/permit2/overview\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/permit2/overview\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/permit2/overview\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:26.837Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/permit2/overview",
+	"url": "https://docs.uniswap.org/contracts/permit2/overview"
+}

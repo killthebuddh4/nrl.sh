@@ -1,0 +1,9 @@
+{
+	"id": "zSdXRWTSBzVl3Gu",
+	"json": "{\"id\":\"zSdXRWTSBzVl3Gu\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/ClaimOptions\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/ClaimOptions\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/ClaimOptions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:08.805Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/interfaces/ClaimOptions",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/interfaces/ClaimOptions"
+}

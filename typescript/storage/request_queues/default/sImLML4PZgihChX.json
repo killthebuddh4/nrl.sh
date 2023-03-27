@@ -1,0 +1,9 @@
+{
+	"id": "sImLML4PZgihChX",
+	"json": "{\"id\":\"sImLML4PZgihChX\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Multicall\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Multicall\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Multicall\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:06.817Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/classes/Multicall",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/classes/Multicall"
+}

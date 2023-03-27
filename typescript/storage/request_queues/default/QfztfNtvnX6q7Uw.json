@@ -1,0 +1,9 @@
+{
+	"id": "QfztfNtvnX6q7Uw",
+	"json": "{\"id\":\"QfztfNtvnX6q7Uw\",\"url\":\"https://docs.uniswap.org/concepts/protocol/swaps\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/protocol/swaps\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/protocol/swaps\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:14.651Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/concepts/protocol/swaps",
+	"url": "https://docs.uniswap.org/concepts/protocol/swaps"
+}

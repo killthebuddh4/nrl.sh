@@ -1,0 +1,9 @@
+{
+	"id": "NpTgZkI7Y49nC6n",
+	"json": "{\"id\":\"NpTgZkI7Y49nC6n\",\"url\":\"https://docs.ens.domains/contract-api-reference/ens\",\"loadedUrl\":\"https://docs.ens.domains/contract-api-reference/ens\",\"uniqueKey\":\"https://docs.ens.domains/contract-api-reference/ens\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:40.682Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.ens.domains/contract-api-reference/ens",
+	"url": "https://docs.ens.domains/contract-api-reference/ens"
+}

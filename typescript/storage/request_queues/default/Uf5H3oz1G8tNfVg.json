@@ -1,0 +1,9 @@
+{
+	"id": "Uf5H3oz1G8tNfVg",
+	"json": "{\"id\":\"Uf5H3oz1G8tNfVg\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/MockTimeNonfungiblePositionManager\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/MockTimeNonfungiblePositionManager\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/MockTimeNonfungiblePositionManager\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:18.091Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/test/MockTimeNonfungiblePositionManager",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/test/MockTimeNonfungiblePositionManager"
+}

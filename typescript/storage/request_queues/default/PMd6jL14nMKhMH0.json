@@ -1,0 +1,9 @@
+{
+	"id": "PMd6jL14nMKhMH0",
+	"json": "{\"id\":\"PMd6jL14nMKhMH0\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/README.md\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/README.md\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/README.md\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:10.918Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/README.md",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/README.md"
+}

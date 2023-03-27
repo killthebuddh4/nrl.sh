@@ -1,0 +1,9 @@
+{
+	"id": "lp5pIePTL08EeKB",
+	"json": "{\"id\":\"lp5pIePTL08EeKB\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/OracleLibrary\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/OracleLibrary\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/OracleLibrary\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:15.889Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/OracleLibrary",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/OracleLibrary"
+}

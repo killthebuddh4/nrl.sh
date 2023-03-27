@@ -1,5 +1,22 @@
 version: "3.9"
 services:
+  robot-server:
+    image: "robot"
+    build:
+      context: ".."
+      dockerfile: "./docker/app.robot.Dockerfile"
+    expose:
+      - 9000:9000
+    environment:
+      OPENAI_API_KEY: ${OPEN_AI_API_KEY}
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning
+    volumes: 
+      - redis:/data
   express:
     image: "ghcr.io/relaycc/robot/express:${GITHUB_SHA}"
     build:

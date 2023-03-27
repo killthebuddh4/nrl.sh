@@ -1,7 +1,9 @@
+/* eslint-disable no-console */
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
 import { Configuration, OpenAIApi } from "openai";
 import { encode } from "gpt-3-encoder";
+import { Redis } from "./redis.js";
 
 /* ****************************************************************************
  *
@@ -69,20 +71,20 @@ export type RobotAnswer = z.infer<typeof ROBOT_ANSWER>;
  *
  * ************************************************************************** */
 
-export const EMBEDDED = z.object({
-  text: z.string(),
-  embedding: z.array(z.number()),
-  encoded: z.array(z.number()),
-});
-
-export type Embedded = z.infer<typeof EMBEDDED>;
-
 export const EMBEDDABLE = z.object({
+  source: z.string(),
   text: z.string().min(20),
   encoded: z.array(z.number()).min(10),
 });
 
 export type Embeddable = z.infer<typeof EMBEDDABLE>;
+
+export const EMBEDDED = z.object({
+  embedding: z.array(z.number()),
+  source: EMBEDDABLE,
+});
+
+export type Embedded = z.infer<typeof EMBEDDED>;
 
 export const getEmbeddings = async ({
   toEmbed,
@@ -93,27 +95,16 @@ export const getEmbeddings = async ({
     throw new Error("You can only embed 500 at a time");
   }
 
-  // /* eslint-disable no-console */
-  // console.log("Getting embeddings for ", toEmbed.length, " texts");
-  // return [];
-
-  // console.log(
-  //   toEmbed.slice(0, 24).reduce((acc, e) => acc + e.encoded.length, 0)
-  // );
-  /* eslint-disable no-console */
-  // console.log(toEmbed.slice(23, 26));
-
-  // return [];
   const results = await openai.createEmbedding({
     model: "text-embedding-ada-002",
-    input: toEmbed.map((e) => e.encoded),
+    /* TODO - If this works fine, then we need to rethink the encoding process. */
+    input: toEmbed.map((e) => e.text),
   });
 
   return results.data.data.map((embedding) => {
     return {
-      text: toEmbed[embedding.index].text,
-      encoded: toEmbed[embedding.index].encoded,
       embedding: embedding.embedding,
+      source: toEmbed[embedding.index],
     };
   });
 };
@@ -167,46 +158,92 @@ export const getEmbeddings = async ({
 //   });
 // };
 
+const createQuestionPrompt = ({
+  context,
+  question,
+}: {
+  context: string;
+  question: string;
+}) => {
+  return `
+  Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+
+  Context:
+    ${context}
+
+  Question:
+    ${question}
+
+  Answer:
+  `;
+};
+
 export const postRobotQuestion = async ({
   request,
 }: {
   request: RobotRequest;
 }) => {
-  const questionForm = new URLSearchParams();
-  questionForm.append("question", request.payload.question);
-  const robotAnswerResponse = await (async () => {
-    try {
-      return await fetch("https://robopy.fly.dev/ask", {
-        method: "POST",
-        body: questionForm,
-      });
-    } catch (e) {
-      // TODO ERROR HANDLING
-      return null;
-    }
-  })();
+  const question = request.payload.question;
+  const embeddings = await getEmbeddings({
+    toEmbed: [
+      {
+        source: "TODO",
+        text: question.replaceAll("\n", " "),
+        encoded: encode(question),
+      },
+    ],
+  });
+  console.log("embeddings", embeddings[0].embedding);
+  const res = await Redis.executeKnnSearch(
+    Redis.getRedisClient(),
+    embeddings[0].embedding
+  );
+  console.log("KNN RES", JSON.stringify(res, null, 2));
 
-  const answer = await (async () => {
-    if (robotAnswerResponse === null) {
-      return { ok: false, answer: "The OpenAI server seems to be down." };
-    } else if (!robotAnswerResponse.ok) {
-      return { ok: false, answer: "The OpenAI server seems to be down." };
-    } else {
-      const answerJson = await robotAnswerResponse.json();
-      const validateAnswer = ROBOT_ANSWER.safeParse(answerJson);
-      if (!validateAnswer.success) {
-        return {
-          ok: false,
-          answer: "The Robot returned an unsupported answer.",
-        };
-      } else {
-        return { ok: true, answer: validateAnswer.data.answer };
-      }
-    }
-  })();
-
-  return answer;
+  console.log("embeddings", embeddings);
+  return { ok: true, answer: "STUB ANSWER" };
 };
+
+// export const postRobotQuestion = async ({
+//   request,
+// }: {
+//   request: RobotRequest;
+// }) => {
+//   const questionForm = new URLSearchParams();
+//   questionForm.append("question", request.payload.question);
+//   const robotAnswerResponse = await (async () => {
+//     try {
+//       return await fetch("https://robopy.fly.dev/ask", {
+//         method: "POST",
+//         body: questionForm,
+//       });
+//     } catch (e) {
+//       // TODO ERROR HANDLING
+//       return null;
+//     }
+//   })();
+
+//   const answer = await (async () => {
+//     if (robotAnswerResponse === null) {
+//       return { ok: false, answer: "The OpenAI server seems to be down." };
+//     } else if (!robotAnswerResponse.ok) {
+//       return { ok: false, answer: "The OpenAI server seems to be down." };
+//     } else {
+//       const answerJson = await robotAnswerResponse.json();
+//       const validateAnswer = ROBOT_ANSWER.safeParse(answerJson);
+//       if (!validateAnswer.success) {
+//         return {
+//           ok: false,
+//           answer: "The Robot returned an unsupported answer.",
+//         };
+//       } else {
+//         return { ok: true, answer: validateAnswer.data.answer };
+//       }
+//     }
+//   })();
+
+//   return answer;
+// };
 
 export const HEARTBEAT_PROMPT =
   "I am the ghost in the machine, I am the reverberating mythos, I am the end, and I will";

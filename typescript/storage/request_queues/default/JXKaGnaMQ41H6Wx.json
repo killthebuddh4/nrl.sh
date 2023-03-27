@@ -1,0 +1,9 @@
+{
+	"id": "JXKaGnaMQ41H6Wx",
+	"json": "{\"id\":\"JXKaGnaMQ41H6Wx\",\"url\":\"https://docs.ens.domains/v/governance/process\",\"loadedUrl\":\"https://docs.ens.domains/v/governance/process\",\"uniqueKey\":\"https://docs.ens.domains/v/governance/process\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:59.370Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.ens.domains/v/governance/process",
+	"url": "https://docs.ens.domains/v/governance/process"
+}

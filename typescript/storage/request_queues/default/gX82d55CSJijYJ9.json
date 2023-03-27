@@ -1,0 +1,9 @@
+{
+	"id": "gX82d55CSJijYJ9",
+	"json": "{\"id\":\"gX82d55CSJijYJ9\",\"url\":\"https://docs.uniswap.org/sdk/v3/guides/liquidity/liquidity-fees\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/guides/liquidity/liquidity-fees\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/guides/liquidity/liquidity-fees\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:56.655Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/guides/liquidity/liquidity-fees",
+	"url": "https://docs.uniswap.org/sdk/v3/guides/liquidity/liquidity-fees"
+}

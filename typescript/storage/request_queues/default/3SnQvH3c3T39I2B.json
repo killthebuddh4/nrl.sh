@@ -1,0 +1,9 @@
+{
+	"id": "3SnQvH3c3T39I2B",
+	"json": "{\"id\":\"3SnQvH3c3T39I2B\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/flash-integrations/final-contract\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/flash-integrations/final-contract\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/flash-integrations/final-contract\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:58.462Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/flash-integrations/final-contract",
+	"url": "https://docs.uniswap.org/contracts/v3/guides/flash-integrations/final-contract"
+}

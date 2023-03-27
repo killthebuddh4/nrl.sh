@@ -1,0 +1,9 @@
+{
+	"id": "6wW8J6tMdWkPMhD",
+	"json": "{\"id\":\"6wW8J6tMdWkPMhD\",\"url\":\"https://docs.uniswap.org/sdk/v2/guides/quick-start\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v2/guides/quick-start\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v2/guides/quick-start\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:13.715Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v2/guides/quick-start",
+	"url": "https://docs.uniswap.org/sdk/v2/guides/quick-start"
+}

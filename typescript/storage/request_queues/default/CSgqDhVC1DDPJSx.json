@@ -1,0 +1,9 @@
+{
+	"id": "CSgqDhVC1DDPJSx",
+	"json": "{\"id\":\"CSgqDhVC1DDPJSx\",\"url\":\"https://docs.uniswap.org/contracts/v2/reference/API/queries\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/reference/API/queries\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/reference/API/queries\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:23.358Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/reference/API/queries",
+	"url": "https://docs.uniswap.org/contracts/v2/reference/API/queries"
+}

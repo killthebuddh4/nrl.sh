@@ -1,0 +1,9 @@
+{
+	"id": "6rbmRpL2QPSc0Ef",
+	"json": "{\"id\":\"6rbmRpL2QPSc0Ef\",\"url\":\"https://docs.uniswap.org/concepts/glossary\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/glossary\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/glossary\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:55.938Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/concepts/glossary",
+	"url": "https://docs.uniswap.org/concepts/glossary"
+}

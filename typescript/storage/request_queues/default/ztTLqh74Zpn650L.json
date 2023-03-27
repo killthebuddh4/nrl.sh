@@ -1,0 +1,9 @@
+{
+	"id": "ztTLqh74Zpn650L",
+	"json": "{\"id\":\"ztTLqh74Zpn650L\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/V3Migrator\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/V3Migrator\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/V3Migrator\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:13.207Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/V3Migrator",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/V3Migrator"
+}

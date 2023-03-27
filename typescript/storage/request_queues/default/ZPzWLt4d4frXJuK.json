@@ -1,0 +1,9 @@
+{
+	"id": "ZPzWLt4d4frXJuK",
+	"json": "{\"id\":\"ZPzWLt4d4frXJuK\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/liquidity-mining/overview\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/liquidity-mining/overview\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/liquidity-mining/overview\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:32.965Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/liquidity-mining/overview",
+	"url": "https://docs.uniswap.org/contracts/v3/guides/liquidity-mining/overview"
+}

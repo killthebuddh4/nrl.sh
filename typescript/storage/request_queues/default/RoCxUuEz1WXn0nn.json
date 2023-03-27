@@ -1,0 +1,9 @@
+{
+	"id": "RoCxUuEz1WXn0nn",
+	"json": "{\"id\":\"RoCxUuEz1WXn0nn\",\"url\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/library#quote\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/library#quote\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/library\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:50.628Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/library",
+	"url": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/library#quote"
+}

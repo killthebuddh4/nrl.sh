@@ -1,0 +1,9 @@
+{
+	"id": "0Uc9a3d8DUpWcwH",
+	"json": "{\"id\":\"0Uc9a3d8DUpWcwH\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Payments\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Payments\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Payments\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:07.149Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/classes/Payments",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/classes/Payments"
+}

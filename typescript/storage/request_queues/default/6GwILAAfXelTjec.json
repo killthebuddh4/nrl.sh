@@ -1,0 +1,9 @@
+{
+	"id": "6GwILAAfXelTjec",
+	"json": "{\"id\":\"6GwILAAfXelTjec\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/classes/SwapQuoter\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/classes/SwapQuoter\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/classes/SwapQuoter\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:07.956Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/classes/SwapQuoter",
+	"url": "https://docs.uniswap.org/sdk/v3/reference/classes/SwapQuoter"
+}

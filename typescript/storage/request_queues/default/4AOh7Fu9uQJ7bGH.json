@@ -1,0 +1,9 @@
+{
+	"id": "4AOh7Fu9uQJ7bGH",
+	"json": "{\"id\":\"4AOh7Fu9uQJ7bGH\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/Base64Test\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/Base64Test\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/Base64Test\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:17.849Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/test/Base64Test",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/test/Base64Test"
+}

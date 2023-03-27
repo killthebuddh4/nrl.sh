@@ -1,0 +1,9 @@
+{
+	"id": "VVkBqjYfp6pKW6S",
+	"json": "{\"id\":\"VVkBqjYfp6pKW6S\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPayments#pay\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPayments#pay\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPayments\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:12.889Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPayments",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPayments#pay"
+}

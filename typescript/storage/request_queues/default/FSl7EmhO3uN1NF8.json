@@ -1,0 +1,9 @@
+{
+	"id": "FSl7EmhO3uN1NF8",
+	"json": "{\"id\":\"FSl7EmhO3uN1NF8\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/external/IERC1271\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/external/IERC1271\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/external/IERC1271\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:17.101Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/external/IERC1271",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/external/IERC1271"
+}

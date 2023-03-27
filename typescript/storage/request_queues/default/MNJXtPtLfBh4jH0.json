@@ -1,0 +1,9 @@
+{
+	"id": "MNJXtPtLfBh4jH0",
+	"json": "{\"id\":\"MNJXtPtLfBh4jH0\",\"url\":\"https://docs.uniswap.org/concepts/protocol/concentrated-liquidity\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/protocol/concentrated-liquidity\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/protocol/concentrated-liquidity\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:05.023Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/concepts/protocol/concentrated-liquidity",
+	"url": "https://docs.uniswap.org/concepts/protocol/concentrated-liquidity"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "d7XlI3oCSVwoYqm",
+	"json": "{\"id\":\"d7XlI3oCSVwoYqm\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:19.652Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps",
+	"url": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps"
+}

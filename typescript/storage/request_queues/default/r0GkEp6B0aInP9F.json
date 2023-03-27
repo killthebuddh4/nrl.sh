@@ -1,0 +1,9 @@
+{
+	"id": "r0GkEp6B0aInP9F",
+	"json": "{\"id\":\"r0GkEp6B0aInP9F\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/math\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/math\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/math\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:22.814Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/math",
+	"url": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/math"
+}

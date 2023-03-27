@@ -1,0 +1,9 @@
+{
+	"id": "dNHbPhk97kltYax",
+	"json": "{\"id\":\"dNHbPhk97kltYax\",\"url\":\"https://docs.uniswap.org/concepts/governance/glossary\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/governance/glossary\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/governance/glossary\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:14.624Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/concepts/governance/glossary",
+	"url": "https://docs.uniswap.org/concepts/governance/glossary"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "iC9bv12YiqZW1qh",
+	"json": "{\"id\":\"iC9bv12YiqZW1qh\",\"url\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/providing-liquidity\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/providing-liquidity\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/providing-liquidity\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.536Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/providing-liquidity",
+	"url": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/providing-liquidity"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "TQIdbuSQh6X21mz",
+	"json": "{\"id\":\"TQIdbuSQh6X21mz\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPaymentsWithFee\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPaymentsWithFee\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPaymentsWithFee\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:17.620Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPaymentsWithFee",
+	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/base/PeripheryPaymentsWithFee"
+}

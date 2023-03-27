@@ -1,0 +1,9 @@
+{
+	"id": "6HNwRMUkGANXLVP",
+	"json": "{\"id\":\"6HNwRMUkGANXLVP\",\"url\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair-erc-20#permit\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair-erc-20#permit\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair-erc-20\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:51.706Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair-erc-20",
+	"url": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair-erc-20#permit"
+}
