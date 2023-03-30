@@ -4,19 +4,23 @@ import {
   postMessageToFront,
   getRecipientHandle,
   FRONT_MESSAGE,
-} from "../apis/front.js";
-import { escalate, isEscalated, deescalate } from "../apis/escalation.js";
+} from "../apis/icebox/front.js";
+import {
+  escalate,
+  isEscalated,
+  deescalate,
+} from "../apis/icebox/escalation.js";
 import {
   createRobotRequest,
   postRobotQuestion,
   RobotRequest,
 } from "../apis/question-answering.js";
 import {
-  logger,
   RobotRequestEvent,
   UserRequestEvent,
   UserResponseEvent,
-} from "../apis/logging.js";
+} from "../apis/supabase/logging.js";
+import { logger } from "../apis/logging.js";
 import {
   createResponseToXmtp,
   RequestFromXmtp,
@@ -24,6 +28,7 @@ import {
   ResponseToXmtp,
 } from "../apis/express.js";
 import { readUserRequest } from "../apis/cache.js";
+import { semanticSearch } from "../features/semantic-search.js";
 
 const server = express();
 
@@ -128,6 +133,15 @@ server.post("/from/front", async (req, res) => {
       return { error: error.message };
     }
   }
+});
+
+server.get("/get-similar", async (req, res) => {
+  const query = req.query.query;
+  if (typeof query !== "string") {
+    return res.status(400).send("Missing question parameter");
+  }
+  await semanticSearch({ query });
+  res.send("Not dead yet!");
 });
 
 const authenticateRequest = ({ req }: { req: Request }) => {

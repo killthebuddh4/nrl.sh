@@ -6,7 +6,8 @@ import {
   HEARTBEAT_PROMPT,
   getHeartbeat as getOpenAiHeartbeat,
 } from "../apis/question-answering.js";
-import { craeteHeartbeatEvent, getLog, logger } from "../apis/logging.js";
+import { logger } from "../apis/logging.js";
+import { craeteHeartbeatEvent, readLog } from "../apis/supabase/logging.js";
 
 /* ****************************************************************************
  *
@@ -210,7 +211,7 @@ setInterval(() => {
     setTimeout(async () => {
       const logWasWritten = await (async () => {
         try {
-          const { data, error } = await getLog(heartbeat.id);
+          const { data, error } = await readLog(heartbeat.id);
           if (error !== null) {
             return false;
           }

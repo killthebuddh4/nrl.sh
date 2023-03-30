@@ -223,3 +223,12 @@ export class MarkdownTextSplitter
     super(fields);
   }
 }
+
+export const getSentences = (text: string): string[] => {
+  const sentences = text.match(/[^.!?]+[.!?]+/g);
+  if (sentences) {
+    return sentences.map((s) => s.trim());
+  } else {
+    return [];
+  }
+};
