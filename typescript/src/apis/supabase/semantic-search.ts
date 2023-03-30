@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { clients } from "./clients.js";
-import { typeToFlattenedError, z } from "zod";
+import { z } from "zod";
+import { UnknownError } from "./errors.js";
 
 /* ****************************************************************************
  *
@@ -26,18 +27,29 @@ export const createSourceDoc = ({
   pipelineId: string;
   textFromHtml: string;
   pageUrl: string;
-}): SourceDoc => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    pipeline_id: pipelineId,
-    text_from_html: textFromHtml,
-    page_url: pageUrl,
-  };
+}) => {
+  try {
+    return SOURCE_DOC.parse({
+      id: uuidv4(),
+      created_at: new Date(),
+      pipeline_id: pipelineId,
+      text_from_html: textFromHtml,
+      page_url: pageUrl,
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const writeSourceDoc = async ({ toWrite }: { toWrite: SourceDoc }) => {
-  return await clients.etl.from("source_docs").insert(toWrite);
+  try {
+    const { error } = await clients.etl.from("source_docs").insert(toWrite);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readSourceDoc = async ({
@@ -45,16 +57,18 @@ export const readSourceDoc = async ({
 }: {
   sourceDocId: string;
 }) => {
-  const { error, data } = await clients.etl
-    .from("source_docs")
-    .select("*")
-    .eq("id", sourceDocId)
-    .single();
-  const validatedSourceDoc = SOURCE_DOC.safeParse(data);
-  if (!validatedSourceDoc.success) {
-    throw new Error("Invalid source doc");
-  } else {
-    return { data: validatedSourceDoc.data, error };
+  try {
+    const { error, data } = await clients.etl
+      .from("source_docs")
+      .select("*")
+      .eq("id", sourceDocId)
+      .single();
+    if (error !== null) {
+      throw new UnknownError();
+    }
+    return SOURCE_DOC.parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -81,13 +95,17 @@ export const createTopicCompletion = ({
 }: {
   sourceDocId: string;
   completion: string;
-}): TopicCompletion => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    source_doc_id: sourceDocId,
-    completion,
-  };
+}) => {
+  try {
+    return TOPIC_COMPLETION.parse({
+      id: uuidv4(),
+      created_at: new Date(),
+      source_doc_id: sourceDocId,
+      completion,
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const writeTopicCompletions = async ({
@@ -95,34 +113,45 @@ export const writeTopicCompletions = async ({
 }: {
   toWrite: TopicCompletion[];
 }) => {
-  return await clients.etl.from("topic_completions").insert(toWrite);
+  try {
+    const { error } = await clients.etl
+      .from("topic_completions")
+      .insert(toWrite);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readAllTopicCompletions = async () => {
-  const { error, data } = await clients.etl
-    .from("topic_completions")
-    .select("*");
-  const validatedTopicCompletions = z.array(TOPIC_COMPLETION).safeParse(data);
-  if (!validatedTopicCompletions.success) {
-    throw new Error("Invalid topic completions");
-  } else {
-    return { data: validatedTopicCompletions.data, error };
+  try {
+    const { error, data } = await clients.etl
+      .from("topic_completions")
+      .select("*");
+    if (error !== null) {
+      throw new UnknownError();
+    }
+    return z.array(TOPIC_COMPLETION).parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
 export const readTopicCompletion = async ({ id }: { id: string }) => {
-  const { error, data } = await clients.etl
-    .from("topic_completions")
-    .select("*")
-    .eq("id", id)
-    .single();
-  const validatedTopicCompletion = TOPIC_COMPLETION.safeParse(data);
-  if (!validatedTopicCompletion.success) {
-    /* eslint-disable-next-line no-console */
-    console.error(validatedTopicCompletion.error);
-    throw new Error("Invalid topic completion");
-  } else {
-    return { data: validatedTopicCompletion.data, error };
+  try {
+    const { error, data } = await clients.etl
+      .from("topic_completions")
+      .select("*")
+      .eq("id", id)
+      .single();
+    if (error !== null) {
+      throw new UnknownError();
+    }
+    return TOPIC_COMPLETION.parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -131,17 +160,17 @@ export const readTopicCompletions = async ({
 }: {
   forSourceDocId: string;
 }) => {
-  const { error, data } = await clients.etl
-    .from("topic_completions")
-    .select("*")
-    .eq("source_doc_id", forSourceDocId);
-  const validatedTopicCompletions = z.array(TOPIC_COMPLETION).safeParse(data);
-  if (!validatedTopicCompletions.success) {
-    /* eslint-disable-next-line no-console */
-    console.log(data);
-    throw new Error("Invalid topic completion");
-  } else {
-    return { data: validatedTopicCompletions.data, error };
+  try {
+    const { error, data } = await clients.etl
+      .from("topic_completions")
+      .select("*")
+      .eq("source_doc_id", forSourceDocId);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+    return z.array(TOPIC_COMPLETION).parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -150,20 +179,15 @@ export const readSourceDocForTopicCompletion = async ({
 }: {
   forTopicCompletionId: string;
 }) => {
-  const { data: readTopicCompletionData, error } = await readTopicCompletion({
-    id: forTopicCompletionId,
-  });
-  if (error) {
-    throw new Error("Invalid topic completion");
-  } else {
-    const { data: readSourceDocData, error } = await readSourceDoc({
-      sourceDocId: readTopicCompletionData.source_doc_id,
+  try {
+    const topicCompletion = await readTopicCompletion({
+      id: forTopicCompletionId,
     });
-    if (error) {
-      throw new Error("Invalid source doc");
-    } else {
-      return { data: readSourceDocData, error };
-    }
+    return await readSourceDoc({
+      sourceDocId: topicCompletion.source_doc_id,
+    });
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -187,12 +211,16 @@ export const createTopicCompletionParseError = ({
   topicCompletionId,
 }: {
   topicCompletionId: string;
-}): TopicCompletionParseError => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    topic_completion_id: topicCompletionId,
-  };
+}) => {
+  try {
+    return TOPIC_COMPLETION_PARSE_ERROR.parse({
+      id: uuidv4(),
+      created_at: new Date(),
+      topic_completion_id: topicCompletionId,
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const writeTopicCompletionParseError = async ({
@@ -200,9 +228,16 @@ export const writeTopicCompletionParseError = async ({
 }: {
   toWrite: TopicCompletionParseError;
 }) => {
-  return await clients.etl
-    .from("topic_completion_parse_errors")
-    .insert(toWrite);
+  try {
+    const { error } = await clients.etl
+      .from("topic_completion_parse_errors")
+      .insert(toWrite);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 /* ****************************************************************************
@@ -233,16 +268,20 @@ export const createQuestionCompletion = ({
   model: string;
   prompt: string;
   completion: string;
-}): QuestionCompletion => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    topic_completion_id: topicCompletionId,
-    model,
-    prompt,
-    completion,
-    embedding: null,
-  };
+}) => {
+  try {
+    return QUESTION_COMPLETION.parse({
+      id: uuidv4(),
+      created_at: new Date(),
+      topic_completion_id: topicCompletionId,
+      model,
+      prompt,
+      completion,
+      embedding: null,
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const writeQuestionCompletions = async ({
@@ -250,59 +289,32 @@ export const writeQuestionCompletions = async ({
 }: {
   toWrite: QuestionCompletion[];
 }) => {
-  return await clients.etl.from("question_completions").insert(toWrite);
+  try {
+    const { error } = await clients.etl
+      .from("question_completions")
+      .insert(toWrite);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readQuestionCompletions = async () => {
-  const { data, error } = await clients.etl
-    .from("question_completions")
-    .select("*");
+  try {
+    const { data, error } = await clients.etl
+      .from("question_completions")
+      .select("*");
 
-  const validatedQuestionCompletions = z
-    .array(QUESTION_COMPLETION)
-    .safeParse(data);
-  if (!validatedQuestionCompletions.success) {
-    throw new Error("Invalid question completions");
+    if (error !== null) {
+      throw new UnknownError();
+    }
+
+    return z.array(QUESTION_COMPLETION).parse(data);
+  } catch {
+    throw new UnknownError();
   }
-  return { data: validatedQuestionCompletions.data, error };
-};
-
-/* ****************************************************************************
- *
- * TOPIC_SUMMARY
- *
- * ****************************************************************************/
-
-const TOPIC_SUMMARY = z.object({
-  id: z.string().uuid(),
-  created_at: z.coerce.date(),
-  topic_id: z.string().uuid(),
-  summary: z.string(),
-});
-
-export type TopicSummary = z.infer<typeof TOPIC_SUMMARY>;
-
-export const createTopicSummary = ({
-  topicId,
-  summary,
-}: {
-  topicId: string;
-  summary: string;
-}): TopicSummary => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    topic_id: topicId,
-    summary,
-  };
-};
-
-export const writeTopicSummaries = async ({
-  toWrite,
-}: {
-  toWrite: TopicSummary[];
-}) => {
-  return await clients.etl.from("topic_summaries").insert(toWrite);
 };
 
 /* ****************************************************************************
@@ -327,28 +339,35 @@ export const createTopicTask = ({
 }: {
   batchId: string;
   sourceDocId: string;
-}): TopicTask => {
-  return {
-    id: uuidv4(),
-    batch_id: batchId,
-    created_at: new Date(),
-    source_doc_id: sourceDocId,
-    status: "idle",
-  };
+}) => {
+  try {
+    return TOPIC_TASK.parse({
+      id: uuidv4(),
+      batch_id: batchId,
+      created_at: new Date(),
+      source_doc_id: sourceDocId,
+      status: "idle",
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readTopicTask = async ({ id }: { id: string }) => {
-  const { data, error } = await clients.etl
-    .from("topic_tasks")
-    .select("*")
-    .eq("id", id)
-    .single();
+  try {
+    const { data, error } = await clients.etl
+      .from("topic_tasks")
+      .select("*")
+      .eq("id", id)
+      .single();
 
-  const validatedTopicTask = TOPIC_TASK.safeParse(data);
-  if (!validatedTopicTask.success) {
-    throw new Error("Invalid topic task");
-  } else {
-    return { data: validatedTopicTask.data, error };
+    if (error !== null) {
+      throw new UnknownError();
+    }
+
+    return TOPIC_TASK.parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -357,7 +376,14 @@ export const writeTopicTasks = async ({
 }: {
   toWrite: TopicTask[];
 }) => {
-  return await clients.etl.from("topic_tasks").insert(toWrite);
+  try {
+    const { error } = await clients.etl.from("topic_tasks").insert(toWrite);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readIdleTasks = async ({
@@ -365,17 +391,20 @@ export const readIdleTasks = async ({
 }: {
   forBatchId: string;
 }) => {
-  const { data, error } = await clients.etl
-    .from("topic_tasks")
-    .select("*")
-    .eq("batch_id", batchId)
-    .eq("status", "idle");
+  try {
+    const { data, error } = await clients.etl
+      .from("topic_tasks")
+      .select("*")
+      .eq("batch_id", batchId)
+      .eq("status", "idle");
 
-  const validatedTopicTasks = z.array(TOPIC_TASK).safeParse(data);
-  if (!validatedTopicTasks.success) {
-    throw new Error("Invalid topic task");
-  } else {
-    return { data: validatedTopicTasks.data, error };
+    if (error !== null) {
+      throw new UnknownError();
+    }
+
+    return z.array(TOPIC_TASK).parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -384,10 +413,18 @@ export const writeCompletedTask = async ({
 }: {
   forTaskId: string;
 }) => {
-  return await clients.etl
-    .from("topic_tasks")
-    .update({ status: "done" })
-    .eq("id", forTaskId);
+  try {
+    const { error } = await clients.etl
+      .from("topic_tasks")
+      .update({ status: "done" })
+      .eq("id", forTaskId);
+
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const writeCompletedTasks = async ({
@@ -395,10 +432,18 @@ export const writeCompletedTasks = async ({
 }: {
   forBatchId: string;
 }) => {
-  return await clients.etl
-    .from("topic_tasks")
-    .update({ status: "done" })
-    .eq("batch_id", batchId);
+  try {
+    const { error } = await clients.etl
+      .from("topic_tasks")
+      .update({ status: "done" })
+      .eq("batch_id", batchId);
+
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 /* ****************************************************************************
@@ -423,28 +468,35 @@ export const createQuestionTask = ({
 }: {
   topicCompletionId: string;
   topic: string;
-}): QuestionTask => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    topic_completion_id: topicCompletionId,
-    topic,
-    status: "idle",
-  };
+}) => {
+  try {
+    return QUESTION_TASK.parse({
+      id: uuidv4(),
+      created_at: new Date(),
+      topic_completion_id: topicCompletionId,
+      topic,
+      status: "idle",
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readQuestionTask = async ({ forId }: { forId: string }) => {
-  const { data, error } = await clients.etl
-    .from("question_tasks")
-    .select("*")
-    .eq("id", forId)
-    .single();
+  try {
+    const { data, error } = await clients.etl
+      .from("question_tasks")
+      .select("*")
+      .eq("id", forId)
+      .single();
 
-  const validatedQuestionTask = QUESTION_TASK.safeParse(data);
-  if (!validatedQuestionTask.success) {
-    throw new Error("Invalid question task");
-  } else {
-    return { data: validatedQuestionTask.data, error };
+    if (error !== null) {
+      throw new UnknownError();
+    }
+
+    return QUESTION_TASK.parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -453,7 +505,14 @@ export const writeQuestionTasks = async ({
 }: {
   toWrite: QuestionTask[];
 }) => {
-  return await clients.etl.from("question_tasks").insert(toWrite);
+  try {
+    const { error } = await clients.etl.from("question_tasks").insert(toWrite);
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readIdleQuestionTasks = async ({
@@ -461,17 +520,20 @@ export const readIdleQuestionTasks = async ({
 }: {
   forTopicCompletionId: string;
 }) => {
-  const { data, error } = await clients.etl
-    .from("question_tasks")
-    .select("*")
-    .eq("topic_completion_id", forTopicCompletionId)
-    .eq("status", "idle");
+  try {
+    const { data, error } = await clients.etl
+      .from("question_tasks")
+      .select("*")
+      .eq("topic_completion_id", forTopicCompletionId)
+      .eq("status", "idle");
 
-  const validatedQuestionTasks = z.array(QUESTION_TASK).safeParse(data);
-  if (!validatedQuestionTasks.success) {
-    throw new Error("Invalid question task");
-  } else {
-    return { data: validatedQuestionTasks.data, error };
+    if (error !== null) {
+      throw new UnknownError();
+    }
+
+    return z.array(QUESTION_TASK).parse(data);
+  } catch {
+    throw new UnknownError();
   }
 };
 
@@ -480,10 +542,18 @@ export const writeCompletedQuestionTasks = async ({
 }: {
   forTopicCompletionId: string;
 }) => {
-  return await clients.etl
-    .from("question_tasks")
-    .update({ status: "done" })
-    .eq("topic_completion_id", forTopicCompletionId);
+  try {
+    const { error } = await clients.etl
+      .from("question_tasks")
+      .update({ status: "done" })
+      .eq("topic_completion_id", forTopicCompletionId);
+
+    if (error !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 /* ****************************************************************************
@@ -502,22 +572,38 @@ const PIPELINE_WITHOUT_SOURCE_DOCS = PIPELINE.omit({ source_docs: true });
 
 export type Pipeline = z.infer<typeof PIPELINE>;
 
-export const createPipeline = (): Pipeline => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    source_docs: [],
-  };
+export const createPipeline = () => {
+  try {
+    return PIPELINE.parse({
+      id: uuidv4(),
+      created_at: new Date(),
+      source_docs: [],
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const writePipeline = async ({ toWrite }: { toWrite: Pipeline }) => {
-  const { error } = await clients.etl
-    .from("pipelines")
-    .insert([{ id: toWrite.id, created_at: toWrite.created_at }]);
-  if (error !== null) {
-    throw error;
+  try {
+    const { error: writePipelineError } = await clients.etl
+      .from("pipelines")
+      .insert([{ id: toWrite.id, created_at: toWrite.created_at }]);
+
+    if (writePipelineError !== null) {
+      throw new UnknownError();
+    }
+
+    const { error: writeSourceDocsError } = await clients.etl
+      .from("source_docs")
+      .insert(toWrite.source_docs);
+
+    if (writeSourceDocsError !== null) {
+      throw new UnknownError();
+    }
+  } catch {
+    throw new UnknownError();
   }
-  return await clients.etl.from("source_docs").insert(toWrite.source_docs);
 };
 
 export const readPipeline = async ({
@@ -525,209 +611,85 @@ export const readPipeline = async ({
 }: {
   pipelineId: string;
 }): Promise<Pipeline> => {
-  const { data: pipelineData, error: readPipelinError } = await clients.etl
-    .from("pipelines")
-    .select("*")
-    .eq("id", pipelineId)
-    .limit(1)
-    .single();
+  try {
+    const { data: pipelineData, error: readPipelinError } = await clients.etl
+      .from("pipelines")
+      .select("*")
+      .eq("id", pipelineId)
+      .limit(1)
+      .single();
 
-  const validatedPipeline =
-    PIPELINE_WITHOUT_SOURCE_DOCS.safeParse(pipelineData);
-  if (!validatedPipeline.success) {
-    /* eslint-disable no-console */
-    throw new Error(validatedPipeline.error.message);
-  }
-
-  if (readPipelinError !== null) {
-    throw readPipelinError;
-  }
-
-  const { data: sourceDocsData, error: readSourceDocsError } = await clients.etl
-    .from("source_docs")
-    .select("*")
-    .eq("pipeline_id", pipelineId);
-  if (readSourceDocsError !== null) {
-    throw readSourceDocsError;
-  }
-  if (sourceDocsData === null) {
-    throw new Error("sourceDocsData === null");
-  }
-  if (sourceDocsData.length === 0) {
-    throw new Error("sourceDocsData.length is 0");
-  }
-
-  const sourceDocs = sourceDocsData.map((d) => {
-    const validation = SOURCE_DOC.safeParse(d);
-    if (!validation.success) {
-      throw new Error(validation.error.message);
-    } else {
-      return validation.data;
+    if (readPipelinError !== null) {
+      throw readPipelinError;
     }
-  });
 
-  return {
-    ...validatedPipeline.data,
-    source_docs: sourceDocs,
-  };
+    const pipeline = PIPELINE.parse(pipelineData);
+
+    const { data: readSourceDocsData, error: readSourceDocsError } =
+      await clients.etl
+        .from("source_docs")
+        .select("*")
+        .eq("pipeline_id", pipelineId);
+
+    if (readSourceDocsError !== null || readSourceDocsData.length === 0) {
+      throw new UnknownError();
+    }
+
+    const sourceDocs = readSourceDocsData.map((d) => {
+      return SOURCE_DOC.parse(d);
+    });
+
+    return PIPELINE.parse({
+      ...pipeline,
+      source_docs: sourceDocs,
+    });
+  } catch {
+    throw new UnknownError();
+  }
 };
 
 export const readMostRecentPipeline = async (): Promise<Pipeline> => {
-  const { data, error } = await clients.etl
-    .from("pipelines")
-    .select("*")
-    .order("created_at", { ascending: false })
-    .limit(1)
-    .single();
+  try {
+    const { data, error } = await clients.etl
+      .from("pipelines")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .single();
 
-  if (error !== null) {
-    throw error;
-  }
-  if (data === null) {
-    throw new Error("data === null");
-  }
-  if (data.length === 0) {
-    throw new Error("data.length is 0");
-  }
+    if (error !== null || data === null || data.length === 0) {
+      throw new UnknownError();
+    }
 
-  const validatedPipeline = PIPELINE_WITHOUT_SOURCE_DOCS.safeParse(data);
-  if (!validatedPipeline.success) {
-    throw new Error(validatedPipeline.error.message);
-  } else {
-    return await readPipeline({
-      pipelineId: validatedPipeline.data.id,
+    const pipeline = await readPipeline({
+      pipelineId: PIPELINE.parse(data).id,
     });
+
+    return PIPELINE.parse(pipeline);
+  } catch {
+    throw new UnknownError();
   }
 };
 
-export type NonNullSourceDoc = Omit<SourceDoc, "text_from_html"> & {
-  text_from_html: string;
-};
+export const NON_NULL_SOURCE_DOC = SOURCE_DOC.omit({
+  text_from_html: true,
+}).merge(z.object({ text_from_html: z.string() }));
+
+export type NonNullSourceDoc = z.infer<typeof NON_NULL_SOURCE_DOC>;
 
 export const getOnlyNonNullSourceDocs = ({
   fromPipeline,
 }: {
   fromPipeline: Pipeline;
 }): NonNullSourceDoc[] => {
-  return fromPipeline.source_docs.filter(
-    (d): d is NonNullSourceDoc => d.text_from_html !== null
-  );
-};
-
-/* ****************************************************************************
- *
- * QUERY_EMBEDDING
- *
- * ****************************************************************************/
-
-export const QUERY_EMBEDDING = z.object({
-  id: z.string().uuid(),
-  created_at: z.coerce.date(),
-  embedding: z.array(z.number()).length(1536),
-  query_text: z.string(),
-});
-
-export type QueryEmbedding = z.infer<typeof QUERY_EMBEDDING>;
-
-export const createQueryEmbedding = ({
-  queryText,
-  embedding,
-}: {
-  queryText: string;
-  embedding: number[];
-}): QueryEmbedding => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    query_text: queryText,
-    embedding,
-  };
-};
-
-export const writeQueryEmbedding = async ({
-  queryEmbedding,
-}: {
-  queryEmbedding: QueryEmbedding;
-}) => {
-  return await clients.etl.from("query_embeddings").insert([queryEmbedding]);
-};
-
-/* ****************************************************************************
- *
- * KNOWLEDGE_EMBEDDING
- *
- * ****************************************************************************/
-
-export const KNOWLEDGE_EMBEDDING = z.object({
-  id: z.string().uuid(),
-  created_at: z.coerce.date(),
-  pipeline_id: z.string().uuid(),
-  embedding: z.array(z.number()).length(1536),
-  document: z.string(),
-  source: z.string(),
-});
-
-export type KnowledgeEmbedding = z.infer<typeof KNOWLEDGE_EMBEDDING>;
-
-export const createKnowledgeEmbedding = ({
-  pipelineId,
-  document,
-  source,
-  embedding,
-}: {
-  pipelineId: string;
-  document: string;
-  source: string;
-  embedding: number[];
-}): KnowledgeEmbedding => {
-  return {
-    id: uuidv4(),
-    created_at: new Date(),
-    pipeline_id: pipelineId,
-    document,
-    source,
-    embedding,
-  };
-};
-
-// TODO We need a standard way to return data and errors.
-export const readKnowledgeEmbeddings = async ({
-  pipelineId,
-}: {
-  pipelineId: string;
-}): Promise<KnowledgeEmbedding[]> => {
-  const { data, error } = await clients.etl
-    .from("knowledge_embeddings")
-    .select("*")
-    .eq("pipeline_id", pipelineId);
-  if (error !== null) {
-    throw error;
+  try {
+    const results = fromPipeline.source_docs.filter(
+      (d): d is NonNullSourceDoc => d.text_from_html !== null
+    );
+    return z.array(NON_NULL_SOURCE_DOC).parse(results);
+  } catch {
+    throw new UnknownError();
   }
-  if (data === null) {
-    throw new Error("data === null");
-  }
-  if (data.length === 0) {
-    throw new Error("data.length is 0");
-  }
-
-  const results = data.map((d) => {
-    const validation = KNOWLEDGE_EMBEDDING.safeParse(d);
-    if (!validation.success) {
-      throw new Error(validation.error.message);
-    } else {
-      return validation.data;
-    }
-  });
-
-  return results;
-};
-
-export const writeKnowledgeEmbeddings = async ({
-  toWrite,
-}: {
-  toWrite: KnowledgeEmbedding[];
-}) => {
-  return await clients.etl.from("knowledge_embeddings").insert(toWrite);
 };
 
 /* ****************************************************************************
@@ -743,7 +705,6 @@ export const SIMILARITY_RESULT = z.object({
 
 export type SimilarityResult = z.infer<typeof SIMILARITY_RESULT>;
 
-// TODO Validate this
 export const readSimilarityResults = async ({
   queryEmbeddingId,
   limit = 10,
@@ -751,16 +712,17 @@ export const readSimilarityResults = async ({
   queryEmbeddingId: string;
   limit: number;
 }) => {
-  const sql = (() => {
-    const validation = z.string().uuid().safeParse(queryEmbeddingId);
-    if (!validation.success) {
-      throw new Error(validation.error.message);
-    } else {
-      return `select knowledge_embeddings.embedding <=> query_embeddings.embedding as distance, knowledge_embeddings.document from knowledge_embeddings left outer join query_embeddings on query_embeddings.id = '${queryEmbeddingId}' order by distance limit ${limit}`;
-    }
-  })();
-  const results = await clients.prisma.$queryRawUnsafe(sql);
-  /* eslint-disable-next-line no-console */
-  console.log("SIM RESAULTS", results);
-  return results;
+  try {
+    const sql = (() => {
+      const validation = z.string().uuid().safeParse(queryEmbeddingId);
+      if (!validation.success) {
+        throw new Error(validation.error.message);
+      } else {
+        return `select knowledge_embeddings.embedding <=> query_embeddings.embedding as distance, knowledge_embeddings.document from knowledge_embeddings left outer join query_embeddings on query_embeddings.id = '${queryEmbeddingId}' order by distance limit ${limit}`;
+      }
+    })();
+    return await clients.prisma.$queryRawUnsafe(sql);
+  } catch {
+    throw new UnknownError();
+  }
 };
