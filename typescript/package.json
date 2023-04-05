@@ -13,6 +13,7 @@
     "dev:monitor": ". ../shell/env.sh monitor && nodemon build/apps/monitor.js",
     "dev:etl": ". ../shell/env.sh local && nodemon build/apps/etl.js",
     "dev:command": ". ../shell/env.sh local && node build/apps/command.js",
+    "dev:eval": ". ./env/discord.env && nodemon build/apps/eval.js",
     "build": "tsc",
     "lint": "eslint .",
     "prettier": "prettier --check .",
