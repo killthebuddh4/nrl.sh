@@ -117,6 +117,28 @@ export const ASK_RESPONSE = z.object({
   answer: z.string(),
 });
 
+export const REQUEST_FROM_DISCORD = z.object({
+  id: z.string(),
+  created_at: z.coerce.date(),
+  address: z.string(),
+  content: z.string(),
+});
+
+export const createRequestFromDiscord = ({
+  address,
+  content,
+}: {
+  address: string;
+  content: string;
+}) => {
+  return REQUEST_FROM_DISCORD.parse({
+    id: uuidv4(),
+    created_at: new Date(),
+    address,
+    content,
+  });
+};
+
 /* ****************************************************************************
  *
  * API
@@ -129,6 +151,18 @@ export const postFromXmtp = async ({
   request: RequestFromXmtp;
 }) => {
   return fetch(`http://${EXPRESS_HOST}:${EXPRESS_PORT}/from/xmtp`, {
+    method: "POST",
+    body: JSON.stringify(request),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
+
+export const postFromDiscord = async (
+  request: z.infer<typeof REQUEST_FROM_DISCORD>
+) => {
+  return fetch(`http://${EXPRESS_HOST}:${EXPRESS_PORT}/from/discord`, {
     method: "POST",
     body: JSON.stringify(request),
     headers: {

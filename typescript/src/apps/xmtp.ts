@@ -1,11 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { logger } from "../apis/supabase/logging.js";
 import { Xmtp } from "../apis/xmtp.js";
-import {
-  RESPONSE_TO_XMTP,
-  postFromXmtp,
-  createRequestFromXmtp,
-} from "../apis/express.js";
+import { postFromXmtp, createRequestFromXmtp } from "../apis/express.js";
 
 const XMTP_CLIENT_PK = (() => {
   if (process.env.XMTP_CLIENT_PK === undefined) {
@@ -50,33 +46,10 @@ xmtp.addListener(async (message) => {
           message: await response.text(),
         },
       });
-
-      // TODO ERROR HANDLING
-    } else {
-      const responseValidation = RESPONSE_TO_XMTP.safeParse(
-        await response.json()
-      );
-      if (!responseValidation.success) {
-        // TODO ERROR HANDLING
-      } else {
-        try {
-          logger.event({
-            id: uuidv4(),
-            created_at: new Date(),
-            type: "outbound_xmtp_message_event",
-            payload: {
-              id: message.id,
-              peerAddress: message.conversation.peerAddress,
-            },
-          });
-          xmtp.sendMessage({
-            peerAddress: message.conversation.peerAddress,
-            message: responseValidation.data.payload.response.message,
-          });
-        } catch {
-          // TODO ERROR HANDLING
-        }
-      }
+      xmtp.sendMessage({
+        peerAddress: message.conversation.peerAddress,
+        message: "Sorry, but something went wrong. Please try again later.",
+      });
     }
   }
 });

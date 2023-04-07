@@ -10,6 +10,22 @@ import { Wallet } from "@ethersproject/wallet";
  *
  * ************************************************************************** */
 
+export const XMTP_ADDRESS = z.string().superRefine((val, ctx) => {
+  if (val.length !== 42) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "XMTP address must be 42 characters long",
+    });
+  }
+
+  if (!val.startsWith("0x")) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "XMTP address must start with 0x",
+    });
+  }
+});
+
 export const XMTP_HEARTBEAT_RESPONSE = z.object({
   timeout_id: z.string(),
   ok: z.boolean(),
