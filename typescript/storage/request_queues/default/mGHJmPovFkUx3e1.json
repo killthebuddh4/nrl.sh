@@ -1,9 +1,0 @@
-{
-	"id": "mGHJmPovFkUx3e1",
-	"json": "{\"id\":\"mGHJmPovFkUx3e1\",\"url\":\"https://xmtp.org/grants\",\"loadedUrl\":\"https://xmtp.org/grants\",\"uniqueKey\":\"https://xmtp.org/grants\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:23.427Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://xmtp.org/grants",
-	"url": "https://xmtp.org/grants"
-}

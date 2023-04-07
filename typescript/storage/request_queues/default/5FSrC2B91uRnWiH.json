@@ -1,9 +1,0 @@
-{
-	"id": "5FSrC2B91uRnWiH",
-	"json": "{\"id\":\"5FSrC2B91uRnWiH\",\"url\":\"https://docs.ens.domains/contract-api-reference/publicresolver\",\"loadedUrl\":\"https://docs.ens.domains/contract-api-reference/publicresolver\",\"uniqueKey\":\"https://docs.ens.domains/contract-api-reference/publicresolver\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:41.545Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/contract-api-reference/publicresolver",
-	"url": "https://docs.ens.domains/contract-api-reference/publicresolver"
-}

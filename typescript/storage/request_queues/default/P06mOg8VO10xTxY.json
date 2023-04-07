@@ -1,9 +1,0 @@
-{
-	"id": "P06mOg8VO10xTxY",
-	"json": "{\"id\":\"P06mOg8VO10xTxY\",\"url\":\"https://docs.ens.domains/v/governance/the-ens-foundation\",\"loadedUrl\":\"https://docs.ens.domains/v/governance/the-ens-foundation\",\"uniqueKey\":\"https://docs.ens.domains/v/governance/the-ens-foundation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:00.757Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/v/governance/the-ens-foundation",
-	"url": "https://docs.ens.domains/v/governance/the-ens-foundation"
-}

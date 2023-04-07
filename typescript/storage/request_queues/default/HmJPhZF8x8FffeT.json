@@ -1,9 +1,0 @@
-{
-	"id": "HmJPhZF8x8FffeT",
-	"json": "{\"id\":\"HmJPhZF8x8FffeT\",\"url\":\"https://docs.uniswap.org/contracts/v2/reference/smart-contracts/pair\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/reference/smart-contracts/pair\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/reference/smart-contracts/pair\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:19.655Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/pair",
-	"url": "https://docs.uniswap.org/contracts/v2/reference/smart-contracts/pair"
-}

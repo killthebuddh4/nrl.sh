@@ -1,9 +1,0 @@
-{
-	"id": "VYy6KiapYls7S3I",
-	"json": "{\"id\":\"VYy6KiapYls7S3I\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IPoolInitializer\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IPoolInitializer\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IPoolInitializer\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:11.678Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IPoolInitializer",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IPoolInitializer"
-}

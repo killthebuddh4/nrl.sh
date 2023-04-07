@@ -1,9 +1,0 @@
-{
-	"id": "dcjiWVQOO9YLuyA",
-	"json": "{\"id\":\"dcjiWVQOO9YLuyA\",\"url\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair#getreserves\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair#getreserves\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:52.660Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair",
-	"url": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/pair#getreserves"
-}

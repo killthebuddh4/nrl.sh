@@ -1,9 +1,0 @@
-{
-	"id": "7zJ7NRqCpYCyyRU",
-	"json": "{\"id\":\"7zJ7NRqCpYCyyRU\",\"url\":\"https://docs.uniswap.org/concepts/overview\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/overview\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/overview\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:31.143Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/concepts/overview",
-	"url": "https://docs.uniswap.org/concepts/overview"
-}

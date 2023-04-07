@@ -1,9 +1,0 @@
-{
-	"id": "tE4QELkWfPaGvlK",
-	"json": "{\"id\":\"tE4QELkWfPaGvlK\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/ecosystem-participants\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/ecosystem-participants\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/ecosystem-participants\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:18.700Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/ecosystem-participants",
-	"url": "https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/ecosystem-participants"
-}

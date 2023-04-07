@@ -1,9 +1,0 @@
-{
-	"id": "rMEsyZ1rX34YNcO",
-	"json": "{\"id\":\"rMEsyZ1rX34YNcO\",\"url\":\"https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/smart-contracts#minimum-liquidity\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/smart-contracts#minimum-liquidity\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/smart-contracts\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:54.052Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/smart-contracts",
-	"url": "https://docs.uniswap.org/contracts/V2/concepts/protocol-overview/smart-contracts#minimum-liquidity"
-}

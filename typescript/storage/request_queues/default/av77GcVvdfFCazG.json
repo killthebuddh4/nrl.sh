@@ -1,9 +1,0 @@
-{
-	"id": "av77GcVvdfFCazG",
-	"json": "{\"id\":\"av77GcVvdfFCazG\",\"url\":\"https://docs.uniswap.org/contracts/v2/reference/Governance/governance-reference\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/reference/Governance/governance-reference\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/reference/Governance/governance-reference\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.177Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/reference/Governance/governance-reference",
-	"url": "https://docs.uniswap.org/contracts/v2/reference/Governance/governance-reference"
-}

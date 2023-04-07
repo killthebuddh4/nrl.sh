@@ -2,12 +2,9 @@ import { v4 as uuidv4 } from "uuid";
 import { Client as DiscordClient, TextChannel } from "discord.js";
 import { Xmtp } from "../apis/xmtp.js";
 import { getHeartbeat } from "../apis/express.js";
-import {
-  HEARTBEAT_PROMPT,
-  getHeartbeat as getOpenAiHeartbeat,
-} from "../apis/question-answering.js";
-import { logger } from "../apis/logging.js";
-import { craeteHeartbeatEvent, readLog } from "../apis/supabase/logging.js";
+import { craeteHeartbeatEvent, Log, logger } from "../apis/supabase/logging.js";
+import { Heartbeat } from "../features/prompts-and-completions.js";
+import { TextCompletion } from "../apis/openai/api.js";
 
 /* ****************************************************************************
  *
@@ -211,13 +208,7 @@ setInterval(() => {
     setTimeout(async () => {
       const logWasWritten = await (async () => {
         try {
-          const { data, error } = await readLog(heartbeat.id);
-          if (error !== null) {
-            return false;
-          }
-          if (data === null) {
-            return false;
-          }
+          await Log.read.one.byId({ id: heartbeat.id });
           return true;
         } catch {
           return false;
@@ -241,11 +232,15 @@ setInterval(() => {
 setInterval(() => {
   (async () => {
     try {
-      const heartbeat = await getOpenAiHeartbeat({ opts: { timeout: 7000 } });
+      const response = await TextCompletion.read.one.forPrompt({
+        prompt: Heartbeat.getPrompt(),
+        maxTokens: 100,
+        model: "gpt-3.5-turbo",
+      });
       alertInfo({
-        content: `**OpenAI HeartBeat Success**\n\n${
-          HEARTBEAT_PROMPT + " " + heartbeat.data.choices.shift()?.text
-        }`,
+        content: `**OpenAI HeartBeat Success**\n\n${TextCompletion.util.getCompletedText(
+          { fromPrompt: Heartbeat.getPrompt(), withResponse: response }
+        )}`,
       });
     } catch {
       alertFailedHeartbeat({ type: "OpenAI" });

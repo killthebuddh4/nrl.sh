@@ -8,6 +8,7 @@
   },
   "ignorePatterns": ["node_modules/", "dist/", "build/"],
   "rules": {
-    "no-console": "error"
+    "no-console": "error",
+    "no-useless-catch": "off"
   }
 }

@@ -1,12 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-import { logger } from "../apis/logging.js";
+import { logger } from "../apis/supabase/logging.js";
 import { Xmtp } from "../apis/xmtp.js";
 import {
   RESPONSE_TO_XMTP,
   postFromXmtp,
   createRequestFromXmtp,
 } from "../apis/express.js";
-import { ENS_ROBOT_ID } from "../apis/question-answering.js";
 
 const XMTP_CLIENT_PK = (() => {
   if (process.env.XMTP_CLIENT_PK === undefined) {
@@ -39,7 +38,6 @@ xmtp.addListener(async (message) => {
         clientId: "xmtp.chat",
         protocolId: "xmtp",
         userId: message.senderAddress,
-        robotId: ENS_ROBOT_ID,
         request: message.content,
       }),
     });

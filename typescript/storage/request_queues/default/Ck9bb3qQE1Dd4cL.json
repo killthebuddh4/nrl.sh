@@ -1,9 +1,0 @@
-{
-	"id": "Ck9bb3qQE1Dd4cL",
-	"json": "{\"id\":\"Ck9bb3qQE1Dd4cL\",\"url\":\"https://docs.uniswap.org/sdk/web3-react/guides/connectors.md\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/web3-react/guides/connectors.md\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/web3-react/guides/connectors.md\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:53:17.578Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/web3-react/guides/connectors.md",
-	"url": "https://docs.uniswap.org/sdk/web3-react/guides/connectors.md"
-}

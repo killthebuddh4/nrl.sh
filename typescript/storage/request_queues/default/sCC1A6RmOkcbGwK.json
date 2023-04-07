@@ -1,9 +1,0 @@
-{
-	"id": "sCC1A6RmOkcbGwK",
-	"json": "{\"id\":\"sCC1A6RmOkcbGwK\",\"url\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/router-02\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/router-02\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/reference/smart-contracts/router-02\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:49.032Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/router-02",
-	"url": "https://docs.uniswap.org/contracts/V2/reference/smart-contracts/router-02"
-}

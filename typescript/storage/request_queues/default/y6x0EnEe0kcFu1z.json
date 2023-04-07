@@ -1,9 +1,0 @@
-{
-	"id": "y6x0EnEe0kcFu1z",
-	"json": "{\"id\":\"y6x0EnEe0kcFu1z\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/error-codes\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/error-codes\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/error-codes\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:05.127Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/error-codes",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/error-codes"
-}

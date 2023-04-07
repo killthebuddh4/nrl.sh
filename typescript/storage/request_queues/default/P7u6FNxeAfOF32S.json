@@ -1,9 +1,0 @@
-{
-	"id": "P7u6FNxeAfOF32S",
-	"json": "{\"id\":\"P7u6FNxeAfOF32S\",\"url\":\"https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/getting-pair-addresses\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/getting-pair-addresses\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/getting-pair-addresses\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:55:53.586Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/getting-pair-addresses",
-	"url": "https://docs.uniswap.org/contracts/V2/guides/smart-contract-integration/getting-pair-addresses"
-}

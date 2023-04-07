@@ -1,9 +1,0 @@
-{
-	"id": "7lGVkM1vbdQbMAH",
-	"json": "{\"id\":\"7lGVkM1vbdQbMAH\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/local-environment\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/local-environment\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/local-environment\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:32.525Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/local-environment",
-	"url": "https://docs.uniswap.org/contracts/v3/guides/local-environment"
-}

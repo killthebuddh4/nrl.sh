@@ -1,9 +1,0 @@
-{
-	"id": "yQD10IuK68L0k8l",
-	"json": "{\"id\":\"yQD10IuK68L0k8l\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IQuoterV2\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IQuoterV2\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IQuoterV2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:11.796Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IQuoterV2",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/IQuoterV2"
-}

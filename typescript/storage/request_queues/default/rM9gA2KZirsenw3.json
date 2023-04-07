@@ -1,9 +1,0 @@
-{
-	"id": "rM9gA2KZirsenw3",
-	"json": "{\"id\":\"rM9gA2KZirsenw3\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/the-full-contract\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/the-full-contract\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/the-full-contract\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:58.054Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/the-full-contract",
-	"url": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/the-full-contract"
-}

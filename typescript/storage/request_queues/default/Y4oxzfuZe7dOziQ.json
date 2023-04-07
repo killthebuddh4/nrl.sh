@@ -1,9 +1,0 @@
-{
-	"id": "Y4oxzfuZe7dOziQ",
-	"json": "{\"id\":\"Y4oxzfuZe7dOziQ\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/core/interfaces/pool/IUniswapV3PoolActions\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/core/interfaces/pool/IUniswapV3PoolActions\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/core/interfaces/pool/IUniswapV3PoolActions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":1,\"errorMessages\":[\"Error: Navigation timed out after 60 seconds.\\n    at handleRequestTimeout (/Users/achillesschmelzer/projects/robot/typescript/node_modules/@crawlee/core/crawlers/crawler_utils.js:13:11)\\n    at PlaywrightCrawler._handleNavigationTimeout (/Users/achillesschmelzer/projects/robot/typescript/node_modules/@crawlee/browser/internals/browser-crawler.js:314:46)\\n    at PlaywrightCrawler._handleNavigation (/Users/achillesschmelzer/projects/robot/typescript/node_modules/@crawlee/browser/internals/browser-crawler.js:288:24)\\n    at async PlaywrightCrawler._runRequestHandler (/Users/achillesschmelzer/projects/robot/typescript/node_modules/@crawlee/browser/internals/browser-crawler.js:227:13)\\n    at async PlaywrightCrawler._runRequestHandler (/Users/achillesschmelzer/projects/robot/typescript/node_modules/@crawlee/playwright/internals/playwright-crawler.js:110:9)\\n    at async wrap (/Users/achillesschmelzer/projects/robot/typescript/node_modules/@apify/timeout/index.js:52:21)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:01.851Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 1,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/core/interfaces/pool/IUniswapV3PoolActions",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/core/interfaces/pool/IUniswapV3PoolActions"
-}

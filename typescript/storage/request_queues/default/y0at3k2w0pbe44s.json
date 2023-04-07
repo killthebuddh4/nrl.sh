@@ -1,9 +1,0 @@
-{
-	"id": "y0at3k2w0pbe44s",
-	"json": "{\"id\":\"y0at3k2w0pbe44s\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/SelfPermitTest\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/SelfPermitTest\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/test/SelfPermitTest\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:18.510Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/test/SelfPermitTest",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/test/SelfPermitTest"
-}

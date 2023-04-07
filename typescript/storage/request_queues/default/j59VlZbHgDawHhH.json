@@ -1,9 +1,0 @@
-{
-	"id": "j59VlZbHgDawHhH",
-	"json": "{\"id\":\"j59VlZbHgDawHhH\",\"url\":\"https://docs.ens.domains/contract-api-reference/subgraphdata\",\"loadedUrl\":\"https://docs.ens.domains/contract-api-reference/subgraphdata\",\"uniqueKey\":\"https://docs.ens.domains/contract-api-reference/subgraphdata\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:41.989Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/contract-api-reference/subgraphdata",
-	"url": "https://docs.ens.domains/contract-api-reference/subgraphdata"
-}

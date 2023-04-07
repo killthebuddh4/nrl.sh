@@ -1,6 +1,14 @@
 import { z } from "zod";
 import { v4 as uuidv4 } from "uuid";
 import { clients } from "./clients.js";
+import winston from "winston";
+import Transport, { TransportStreamOptions } from "winston-transport";
+
+/* ****************************************************************************
+ *
+ * TYPES
+ *
+ * ****************************************************************************/
 
 export const WARNING_LOG = z.object({
   id: z.string(),
@@ -145,12 +153,125 @@ export type EventLog = z.infer<typeof EVENT_LOG>;
 
 export const LOG = z.union([WARNING_LOG, ERROR_LOG, EVENT_LOG]);
 
-export type Log = z.infer<typeof LOG>;
+/* ****************************************************************************
+ *
+ * Supabase API
+ *
+ * ****************************************************************************/
 
-export const writeLog = async (log: Log) => {
-  return await clients.app.from("robot_events").insert([log]);
+export const Log = {
+  write: {
+    one: async ({ data }: { data: z.infer<typeof LOG> }) => {
+      try {
+        return await clients.app
+          .from("robot_events")
+          .insert([data])
+          .throwOnError();
+      } catch (error) {
+        throw error;
+      }
+    },
+  },
+
+  read: {
+    one: {
+      byId: async ({ id }: { id: string }) => {
+        try {
+          const { data } = await clients.app
+            .from("robot_events")
+            .select("*")
+            .eq("id", id)
+            .single()
+            .throwOnError();
+
+          return LOG.parse(data);
+        } catch (error) {
+          throw error;
+        }
+      },
+    },
+  },
 };
 
-export const readLog = async (id: string) => {
-  return await clients.app.from("robot_events").select("*").eq("id", id);
+/* ****************************************************************************
+ *
+ * Winston Transport
+ *
+ * ****************************************************************************/
+
+class SupabaseTransport extends Transport {
+  constructor(opts: TransportStreamOptions | undefined) {
+    super(opts);
+  }
+
+  log(info: { log: z.infer<typeof LOG> }, callback: () => void) {
+    setImmediate(() => {
+      this.emit("logged", info);
+    });
+
+    (async () => {
+      Log.write.one({ data: info.log });
+    })();
+
+    callback();
+  }
+}
+
+const transports = [
+  new SupabaseTransport({ level: "event" }),
+  new winston.transports.Console(),
+];
+if (process.env.NODE_ENV !== "production") {
+  transports.push(
+    new winston.transports.Console({
+      format: winston.format.simple(),
+    })
+  );
+}
+
+const internal = winston.createLogger({
+  levels: {
+    error: 0,
+    warn: 1,
+    event: 2,
+    info: 3,
+  },
+  format: winston.format.json(),
+  transports,
+});
+
+/* ****************************************************************************
+ *
+ * API
+ *
+ * ************************************************************************** */
+
+const info = (info: unknown) => {
+  internal.log("info", info);
+};
+
+const warn = (log: WarningLog) => {
+  internal.log("warn", { log });
+};
+
+const error = (log: ErrorLog) => {
+  internal.log("error", { log });
+};
+
+const event = (log: EventLog) => {
+  internal.log("event", { log });
+};
+
+export const logger = {
+  info,
+  warn,
+  error,
+  event,
+};
+
+export const debug = (err: unknown) => {
+  if (process.env.NODE_ENV !== "production") {
+    /* eslint-disable-next-line no-console */
+    console.error(JSON.stringify(err, null, 2));
+  }
 };

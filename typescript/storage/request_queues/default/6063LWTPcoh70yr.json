@@ -1,9 +1,0 @@
-{
-	"id": "6063LWTPcoh70yr",
-	"json": "{\"id\":\"6063LWTPcoh70yr\",\"url\":\"https://docs.uniswap.org/sdk/1.0.0/reference/computation\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/1.0.0/reference/computation\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/1.0.0/reference/computation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:23.642Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/1.0.0/reference/computation",
-	"url": "https://docs.uniswap.org/sdk/1.0.0/reference/computation"
-}

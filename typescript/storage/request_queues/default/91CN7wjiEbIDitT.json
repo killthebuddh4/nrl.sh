@@ -1,9 +1,0 @@
-{
-	"id": "91CN7wjiEbIDitT",
-	"json": "{\"id\":\"91CN7wjiEbIDitT\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/NFTSVG\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/NFTSVG\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/NFTSVG\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:15.803Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/NFTSVG",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/libraries/NFTSVG"
-}

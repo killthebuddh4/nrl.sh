@@ -1,9 +1,0 @@
-{
-	"id": "1ZlLizG5t1kmJF8",
-	"json": "{\"id\":\"1ZlLizG5t1kmJF8\",\"url\":\"https://docs.uniswap.org/sdk/v2/reference/fractions\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v2/reference/fractions\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v2/reference/fractions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:18.535Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/v2/reference/fractions",
-	"url": "https://docs.uniswap.org/sdk/v2/reference/fractions"
-}

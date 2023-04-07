@@ -1,29 +1,18 @@
 import { PrismaClient } from "@prisma/client";
 import { createClient } from "@supabase/supabase-js";
+import { z } from "zod";
 
 const prisma = new PrismaClient();
 
 const etl = (() => {
-  const SU = process.env.SUPABASE_URL_ETL;
-  if (SU === undefined) {
-    throw new Error("SUPABASE_URL_ETL is not defined");
-  }
-  const SK = process.env.SUPABASE_KEY_ETL;
-  if (SK === undefined) {
-    throw new Error("SUPABASE_KEY_ETL is not defined");
-  }
+  const SU = z.string().parse(process.env.SUPABASE_URL_ETL);
+  const SK = z.string().parse(process.env.SUPABASE_KEY_ETL);
   return createClient(SU, SK);
 })();
 
 const app = (() => {
-  const SU = process.env.SUPABASE_URL;
-  if (SU === undefined) {
-    throw new Error("SUPABASE_URL is not defined");
-  }
-  const SK = process.env.SUPABASE_KEY;
-  if (SK === undefined) {
-    throw new Error("SUPABASE_KEY is not defined");
-  }
+  const SU = z.string().parse(process.env.SUPABASE_URL);
+  const SK = z.string().parse(process.env.SUPABASE_KEY);
   return createClient(SU, SK);
 })();
 

@@ -1,9 +1,0 @@
-{
-	"id": "GOEARTCqmVO52dO",
-	"json": "{\"id\":\"GOEARTCqmVO52dO\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Staker\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Staker\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/classes/Staker\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:07.854Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/classes/Staker",
-	"url": "https://docs.uniswap.org/sdk/v3/reference/classes/Staker"
-}

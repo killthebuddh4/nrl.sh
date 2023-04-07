@@ -1,9 +1,0 @@
-{
-	"id": "0iwQN0lzBPefZua",
-	"json": "{\"id\":\"0iwQN0lzBPefZua\",\"url\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/quick-start\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/quick-start\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/quick-start\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.610Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/quick-start",
-	"url": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/quick-start"
-}

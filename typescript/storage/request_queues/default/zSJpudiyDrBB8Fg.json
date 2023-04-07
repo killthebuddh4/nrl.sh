@@ -1,9 +1,0 @@
-{
-	"id": "zSJpudiyDrBB8Fg",
-	"json": "{\"id\":\"zSJpudiyDrBB8Fg\",\"url\":\"https://docs.ens.domains/terminology\",\"loadedUrl\":\"https://docs.ens.domains/terminology\",\"uniqueKey\":\"https://docs.ens.domains/terminology\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:34.936Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/terminology",
-	"url": "https://docs.ens.domains/terminology"
-}

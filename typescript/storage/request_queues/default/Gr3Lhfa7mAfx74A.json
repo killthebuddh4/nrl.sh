@@ -1,9 +1,0 @@
-{
-	"id": "Gr3Lhfa7mAfx74A",
-	"json": "{\"id\":\"Gr3Lhfa7mAfx74A\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/mint-a-position\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/mint-a-position\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/mint-a-position\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:57.546Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/mint-a-position",
-	"url": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/mint-a-position"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "Hftz5DKFFHQUNBF",
-	"json": "{\"id\":\"Hftz5DKFFHQUNBF\",\"url\":\"https://docs.uniswap.org/concepts/protocol/integration-issues\",\"loadedUrl\":\"https://docs.uniswap.org/concepts/protocol/integration-issues\",\"uniqueKey\":\"https://docs.uniswap.org/concepts/protocol/integration-issues\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:14.958Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/concepts/protocol/integration-issues",
-	"url": "https://docs.uniswap.org/concepts/protocol/integration-issues"
-}

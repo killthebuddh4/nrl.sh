@@ -1,9 +1,0 @@
-{
-	"id": "NeXnsTmFCuINnIX",
-	"json": "{\"id\":\"NeXnsTmFCuINnIX\",\"url\":\"https://docs.ens.domains/v/governance/governance-proposals/term-1/ep12-working-group-rules\",\"loadedUrl\":\"https://docs.ens.domains/v/governance/governance-proposals/term-1/ep12-working-group-rules\",\"uniqueKey\":\"https://docs.ens.domains/v/governance/governance-proposals/term-1/ep12-working-group-rules\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:52:22.904Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/v/governance/governance-proposals/term-1/ep12-working-group-rules",
-	"url": "https://docs.ens.domains/v/governance/governance-proposals/term-1/ep12-working-group-rules"
-}

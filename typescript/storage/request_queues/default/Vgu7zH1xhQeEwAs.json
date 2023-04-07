@@ -1,9 +1,0 @@
-{
-	"id": "Vgu7zH1xhQeEwAs",
-	"json": "{\"id\":\"Vgu7zH1xhQeEwAs\",\"url\":\"https://docs.uniswap.org/contracts/v2/guides/interface-integration/iframe-integration\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/guides/interface-integration/iframe-integration\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/guides/interface-integration/iframe-integration\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:23.663Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/guides/interface-integration/iframe-integration",
-	"url": "https://docs.uniswap.org/contracts/v2/guides/interface-integration/iframe-integration"
-}

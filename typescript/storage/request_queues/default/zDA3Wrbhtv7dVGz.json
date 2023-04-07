@@ -1,9 +1,0 @@
-{
-	"id": "zDA3Wrbhtv7dVGz",
-	"json": "{\"id\":\"zDA3Wrbhtv7dVGz\",\"url\":\"https://docs.uniswap.org/sdk/swap-widget/reference/v2#optional-parameters\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/swap-widget/reference/v2#optional-parameters\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/swap-widget/reference/v2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:13.207Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/swap-widget/reference/v2",
-	"url": "https://docs.uniswap.org/sdk/swap-widget/reference/v2#optional-parameters"
-}

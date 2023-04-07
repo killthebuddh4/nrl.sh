@@ -1,9 +1,0 @@
-{
-	"id": "6F6OGwEhAi1odb6",
-	"json": "{\"id\":\"6F6OGwEhAi1odb6\",\"url\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/building-an-oracle\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/building-an-oracle\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/building-an-oracle\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.538Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/building-an-oracle",
-	"url": "https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/building-an-oracle"
-}

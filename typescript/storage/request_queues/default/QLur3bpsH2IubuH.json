@@ -1,9 +1,0 @@
-{
-	"id": "QLur3bpsH2IubuH",
-	"json": "{\"id\":\"QLur3bpsH2IubuH\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/how-uniswap-works\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/how-uniswap-works\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/how-uniswap-works\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:13.292Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/how-uniswap-works",
-	"url": "https://docs.uniswap.org/contracts/v2/concepts/protocol-overview/how-uniswap-works"
-}

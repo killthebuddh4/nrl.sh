@@ -1,9 +1,0 @@
-{
-	"id": "pAYrMeWMgtalys3",
-	"json": "{\"id\":\"pAYrMeWMgtalys3\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/SafeTransferOptions\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/SafeTransferOptions\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/interfaces/SafeTransferOptions\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:09.964Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/interfaces/SafeTransferOptions",
-	"url": "https://docs.uniswap.org/sdk/v3/reference/interfaces/SafeTransferOptions"
-}

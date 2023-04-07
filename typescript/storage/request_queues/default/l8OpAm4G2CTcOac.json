@@ -1,9 +1,0 @@
-{
-	"id": "l8OpAm4G2CTcOac",
-	"json": "{\"id\":\"l8OpAm4G2CTcOac\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:19.714Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools",
-	"url": "https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools"
-}

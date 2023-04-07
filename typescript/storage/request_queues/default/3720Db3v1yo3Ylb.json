@@ -1,9 +1,0 @@
-{
-	"id": "3720Db3v1yo3Ylb",
-	"json": "{\"id\":\"3720Db3v1yo3Ylb\",\"url\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:21.527Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns",
-	"url": "https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns"
-}

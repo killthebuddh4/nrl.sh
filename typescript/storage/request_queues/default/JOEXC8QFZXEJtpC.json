@@ -1,9 +1,0 @@
-{
-	"id": "JOEXC8QFZXEJtpC",
-	"json": "{\"id\":\"JOEXC8QFZXEJtpC\",\"url\":\"https://docs.ens.domains/v/governance/governance-proposals/term-2\",\"loadedUrl\":\"https://docs.ens.domains/v/governance/governance-proposals/term-2\",\"uniqueKey\":\"https://docs.ens.domains/v/governance/governance-proposals/term-2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:51:01.080Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/v/governance/governance-proposals/term-2",
-	"url": "https://docs.ens.domains/v/governance/governance-proposals/term-2"
-}

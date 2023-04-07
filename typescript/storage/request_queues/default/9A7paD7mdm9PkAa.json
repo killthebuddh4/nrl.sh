@@ -1,9 +1,0 @@
-{
-	"id": "9A7paD7mdm9PkAa",
-	"json": "{\"id\":\"9A7paD7mdm9PkAa\",\"url\":\"https://docs.uniswap.org/api/subgraph/guides/examples\",\"loadedUrl\":\"https://docs.uniswap.org/api/subgraph/guides/examples\",\"uniqueKey\":\"https://docs.uniswap.org/api/subgraph/guides/examples\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:56.445Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/api/subgraph/guides/examples",
-	"url": "https://docs.uniswap.org/api/subgraph/guides/examples"
-}

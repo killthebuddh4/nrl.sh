@@ -1,9 +1,0 @@
-{
-	"id": "ZmcRIjOt52xASK6",
-	"json": "{\"id\":\"ZmcRIjOt52xASK6\",\"url\":\"https://docs.uniswap.org/sdk/v3/reference/classes/TickMath\",\"loadedUrl\":\"https://docs.uniswap.org/sdk/v3/reference/classes/TickMath\",\"uniqueKey\":\"https://docs.uniswap.org/sdk/v3/reference/classes/TickMath\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:08.489Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/sdk/v3/reference/classes/TickMath",
-	"url": "https://docs.uniswap.org/sdk/v3/reference/classes/TickMath"
-}

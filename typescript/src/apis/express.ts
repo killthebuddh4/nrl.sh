@@ -45,7 +45,6 @@ export const REQUEST_FROM_XMTP = z.object({
     client_id: z.string(),
     protocol_id: z.string(),
     user_id: z.string(),
-    robot_id: z.string(),
     request: z.string(),
   }),
 });
@@ -56,13 +55,11 @@ export const createRequestFromXmtp = ({
   clientId,
   protocolId,
   userId,
-  robotId,
   request,
 }: {
   clientId: string;
   protocolId: string;
   userId: string;
-  robotId: string;
   request: string;
 }): RequestFromXmtp => {
   return {
@@ -73,7 +70,6 @@ export const createRequestFromXmtp = ({
       client_id: clientId,
       protocol_id: protocolId,
       user_id: userId,
-      robot_id: robotId,
       request,
     },
   };
@@ -112,6 +108,14 @@ export const createResponseToXmtp = ({
     },
   };
 };
+
+export const ASK_REQUEST = z.object({
+  question: z.string(),
+});
+
+export const ASK_RESPONSE = z.object({
+  answer: z.string(),
+});
 
 /* ****************************************************************************
  *

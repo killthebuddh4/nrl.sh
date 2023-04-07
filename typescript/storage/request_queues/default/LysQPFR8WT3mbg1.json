@@ -1,9 +1,0 @@
-{
-	"id": "LysQPFR8WT3mbg1",
-	"json": "{\"id\":\"LysQPFR8WT3mbg1\",\"url\":\"https://docs.uniswap.org/contracts/v2/reference/API/overview\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v2/reference/API/overview\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v2/reference/API/overview\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:54:23.825Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v2/reference/API/overview",
-	"url": "https://docs.uniswap.org/contracts/v2/reference/API/overview"
-}

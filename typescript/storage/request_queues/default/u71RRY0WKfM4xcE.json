@@ -1,9 +1,0 @@
-{
-	"id": "u71RRY0WKfM4xcE",
-	"json": "{\"id\":\"u71RRY0WKfM4xcE\",\"url\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/decrease-liquidity\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/decrease-liquidity\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/decrease-liquidity\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:57.793Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/decrease-liquidity",
-	"url": "https://docs.uniswap.org/contracts/v3/guides/providing-liquidity/decrease-liquidity"
-}

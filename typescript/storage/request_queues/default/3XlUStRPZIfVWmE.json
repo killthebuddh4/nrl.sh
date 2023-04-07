@@ -1,9 +1,0 @@
-{
-	"id": "3XlUStRPZIfVWmE",
-	"json": "{\"id\":\"3XlUStRPZIfVWmE\",\"url\":\"https://docs.ens.domains/contract-api-reference/subgraphdata/entities\",\"loadedUrl\":\"https://docs.ens.domains/contract-api-reference/subgraphdata/entities\",\"uniqueKey\":\"https://docs.ens.domains/contract-api-reference/subgraphdata/entities\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:50:04.309Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.ens.domains/contract-api-reference/subgraphdata/entities",
-	"url": "https://docs.ens.domains/contract-api-reference/subgraphdata/entities"
-}

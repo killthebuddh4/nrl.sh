@@ -1,9 +1,0 @@
-{
-	"id": "XJZA3rl1Jw1qW18",
-	"json": "{\"id\":\"XJZA3rl1Jw1qW18\",\"url\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/ISwapRouter\",\"loadedUrl\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/ISwapRouter\",\"uniqueKey\":\"https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/ISwapRouter\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-03-24T23:49:57.354Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/ISwapRouter",
-	"url": "https://docs.uniswap.org/contracts/v3/reference/periphery/interfaces/ISwapRouter"
-}
