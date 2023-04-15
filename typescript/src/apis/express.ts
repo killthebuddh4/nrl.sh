@@ -174,3 +174,17 @@ export const postFromDiscord = async (
 export const getHeartbeat = async () => {
   return fetch(`${ROBOT_DOMAIN}/heartbeat`);
 };
+
+export const Plato = {
+  get: async () => {
+    const response = await fetch(`${ROBOT_DOMAIN}/plato`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    // TODO zod here
+    return json;
+  },
+};

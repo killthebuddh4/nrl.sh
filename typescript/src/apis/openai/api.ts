@@ -49,7 +49,7 @@ export class Embeddings {
         textsToEmbed,
         model,
         options,
-      }: z.infer<typeof EMBEDDING_REQUEST>) => {
+      }: z.infer<typeof EMBEDDING_REQUEST>): Promise<EmbeddingResponse> => {
         try {
           // TODO create a zod object for this
           return await openai.createEmbedding(
@@ -83,7 +83,11 @@ const TEXT_COMPLETION_REQUEST = z.object({
 });
 
 // TODO: Refine this type.
-export type TextCompletionResponse = { data: CreateCompletionResponse };
+const TEXT_COMPLETION_RESPONSE = z.object({
+  data: z.object({
+    choices: z.array(z.object({ text: z.string() })),
+  }),
+});
 
 export class TextCompletion {
   public static read = {
@@ -94,11 +98,12 @@ export class TextCompletion {
         model,
       }: z.infer<typeof TEXT_COMPLETION_REQUEST>) => {
         try {
-          return await openai.createCompletion({
+          const response = await openai.createCompletion({
             prompt,
             max_tokens: maxTokens,
             model,
           });
+          return TEXT_COMPLETION_RESPONSE.parse(response);
         } catch (err) {
           throw err;
         }
@@ -112,7 +117,7 @@ export class TextCompletion {
       withResponse,
     }: {
       fromPrompt: string;
-      withResponse: TextCompletionResponse;
+      withResponse: z.infer<typeof TEXT_COMPLETION_RESPONSE>;
     }) => {
       return fromPrompt + " " + withResponse.data.choices[0].text;
     },
@@ -132,6 +137,9 @@ export const CHAT_COMPLETION_REQUEST = z.object({
   prompt: z.array(CHAT_COMPLETION_MESSAGE),
   maxTokens: z.number(),
   model: z.enum(["gpt-3.5-turbo", "gpt-4"]),
+  stop: z.array(z.string()).max(4).optional(),
+  n: z.number().optional(),
+  temperature: z.number().min(0).max(2).optional(),
   options: z
     .object({
       timeout: z.number().optional(),
@@ -159,6 +167,9 @@ export class ChatCompletion {
         prompt,
         maxTokens,
         model,
+        stop,
+        n,
+        temperature,
         options,
       }: z.infer<typeof CHAT_COMPLETION_REQUEST>) => {
         try {
@@ -167,6 +178,9 @@ export class ChatCompletion {
               messages: prompt,
               max_tokens: maxTokens,
               model,
+              stop,
+              n,
+              temperature,
             },
             options
           );
@@ -204,6 +218,20 @@ export class ChatCompletion {
     }) => {
       try {
         return z.string().parse(from.data.choices[0].message.content);
+      } catch (err) {
+        throw err;
+      }
+    },
+
+    getAllChoicesContent: ({
+      from,
+    }: {
+      from: z.infer<typeof CHAT_COMPLETION_RESPONSE>;
+    }) => {
+      try {
+        return from.data.choices.map((choice) =>
+          z.string().parse(choice.message.content)
+        );
       } catch (err) {
         throw err;
       }

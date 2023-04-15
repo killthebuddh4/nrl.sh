@@ -591,7 +591,9 @@ export const KNOWLEDGE_EMBEDDING = z.object({
   id: z.string().uuid(),
   created_at: z.coerce.date(),
   question_completion_id: z.string().uuid(),
-  embedding: z.array(z.number()).length(1536),
+  question_embedding: z.array(z.number()).length(1536),
+  question_text: z.string(),
+  answer_text: z.string(),
 });
 
 export class KnowledgeEmbedding {
@@ -649,7 +651,7 @@ export class KnowledgeEmbedding {
           if (!validation.success) {
             throw new Error(validation.error.message);
           } else {
-            return `select knowledge_embeddings.embedding <=> query_embeddings.embedding as distance, knowledge_embeddings.question_completion_id from knowledge_embeddings left outer join query_embeddings on query_embeddings.id = '${queryEmbeddingId}' order by distance limit 10`;
+            return `select knowledge_embeddings.question_embedding <=> query_embeddings.embedding as distance, knowledge_embeddings.question_completion_id, knowledge_embeddings.answer_text from knowledge_embeddings left outer join query_embeddings on query_embeddings.id = '${queryEmbeddingId}' order by distance limit 10`;
           }
         })();
         const results = await clients.prisma.$queryRawUnsafe(sql);
@@ -657,7 +659,8 @@ export class KnowledgeEmbedding {
           .array(
             z.object({
               distance: z.number(),
-              question_completion_id: z.string().uuid(),
+              question_completion_id: z.string(),
+              answer_text: z.string(),
             })
           )
           .parse(results);

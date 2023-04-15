@@ -1,8 +1,9 @@
 {
-  "name": "robot-ens",
+  "name": "@relaycc/robot",
   "version": "0.0.1",
   "description": "Relay Robot for ENS",
   "type": "module",
+  "main": "./build/src/apis/index.js",
   "engines": {
     "node": ">=18.15.0"
   },

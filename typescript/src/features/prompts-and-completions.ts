@@ -1,6 +1,8 @@
 import { z } from "zod";
 import { ChatCompletionMessage } from "../apis/types.js";
 import * as tiktoken from "@dqbd/tiktoken";
+import { local } from "../utils/chalk.js";
+import { SocketClosedUnexpectedlyError } from "redis";
 
 const gpt3encoding = tiktoken.encoding_for_model("gpt-3.5-turbo");
 const gpt4encoding = tiktoken.encoding_for_model("gpt-4");
@@ -324,3 +326,458 @@ export const Heartbeat = {
     return "I am the ghost in the machine, I am the reverberating mythos, I am the end, and I will";
   },
 };
+
+/* ****************************************************************************
+ *
+ * ASK FOLLOW UP QUESTIONS
+ *
+ * ****************************************************************************/
+
+export const AskFollowUpQuestions = {
+  example: {
+    instructions: [
+      "You are having so much fun!",
+      "You are a very knowledgeable professor who uses the socratic method to teach students.",
+      "When a student asks you a question, you respond with a comprehensive list of follow up questions that need to be answered before the student can answer the original question.",
+      "You are very careful to include a follow up question for every topic that you are unfamiliar with.",
+    ].join(" "),
+    input: `How can I add XMTP wallet messaging to the Next.js Lens app I'm building?`,
+    output: `- What is XMTP\n- What is XMTP wallet messaging\n-What is Lens?`,
+    input2: `What is a good way for me to learn about automotive mechanics?`,
+    output2: `- What is your existing technical skillset?\n- Do you have access to a community college?\n- What is your budget?\n- What is your schedule like?`,
+  },
+
+  createPrompt: ({
+    fromQuestion,
+  }: {
+    fromQuestion: string;
+  }): ChatCompletionMessage[] => {
+    return [
+      {
+        role: "system",
+        content:
+          "You are a very helpful conversationalist, you love dialogue and using the socratic method.",
+      },
+      {
+        role: "user",
+        content: `${AskFollowUpQuestions.example.instructions}`,
+      },
+      {
+        role: "assistant",
+        content:
+          "I am very happy to help, please provide as many questions as you would like!",
+      },
+      {
+        role: "user",
+        content: `Question: ${AskFollowUpQuestions.example.input}`,
+      },
+      {
+        role: "assistant",
+        content: `Follow Up Questions:\n\n*****************\n\n${AskFollowUpQuestions.example.output}\n\n*****************`,
+      },
+      {
+        role: "user",
+        content: `Question: ${AskFollowUpQuestions.example.input2}`,
+      },
+      {
+        role: "assistant",
+        content: `Follow Up Questions:\n\n*****************\n\n${AskFollowUpQuestions.example.output2}\n\n*****************`,
+      },
+      {
+        role: "user",
+        content: `Question: ${fromQuestion}`,
+      },
+    ];
+  },
+
+  completion: z.string().transform((val, ctx) => {
+    const ITER_STATE = {
+      marker: "*****************",
+      questionLinePrefix: "- ",
+      results: [] as string[],
+    };
+    for (const line of val.split("\n")) {
+      if (line.startsWith(ITER_STATE.questionLinePrefix)) {
+        ITER_STATE.results.push(
+          line.slice(ITER_STATE.questionLinePrefix.length)
+        );
+      }
+    }
+
+    if (ITER_STATE.results.length === 0) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          "Didn't find any matching lines in decompose question completion",
+      });
+      return z.NEVER;
+    }
+
+    return ITER_STATE.results;
+  }),
+
+  getModel: ({
+    forPrompt,
+    maxTokens,
+  }: {
+    maxTokens: number;
+    forPrompt: ChatCompletionMessage[];
+  }) => {
+    const numTokensForGpt3 = gpt3encoding.encode(
+      JSON.stringify(forPrompt)
+    ).length;
+    const numTokensForGpt4 = gpt4encoding.encode(
+      JSON.stringify(forPrompt)
+    ).length;
+
+    if (numTokensForGpt4 + maxTokens > 8000) {
+      return null;
+    } else if (numTokensForGpt3 + maxTokens > 4000) {
+      return "gpt-4";
+    } else if (numTokensForGpt3 > 100) {
+      return "gpt-3.5-turbo";
+    } else {
+      return null;
+    }
+  },
+};
+
+/* ****************************************************************************
+ *
+ * HIGH CONFIDENCE ASK
+ *
+ * ****************************************************************************/
+
+export const HighConfidenceAsk = {
+  example: {
+    instructions: [
+      `You are such a helpful assistant! When I ask you a question you only give me an answer if you are very confident you are correct. If you don't know the answer you say "I don't know the answer." You never ask clarifying questions, you only respond with the answer or "I don't know the answer.`,
+    ].join(" "),
+    input: `What is DAI?`,
+    output: `DAI is a decentralized stablecoin cryptocurrency that is designed to maintain a stable value pegged to the US dollar (USD). It is issued by MakerDAO, a decentralized autonomous organization (DAO) that operates on the Ethereum blockchain. DAI is one of the most widely used stablecoins in the cryptocurrency and decentralized finance (DeFi) ecosystems.`,
+    input2: `What is the meaning of life?`,
+    output2: `I don't know the answer.`,
+    input3: `What is FC Barcelona?`,
+    output3: `Futbol Club Barcelona, commonly known as FC Barcelona or simply Barça, is a professional football club based in Barcelona, Catalonia, Spain. It is one of the most successful and well-known football clubs in the world, with a rich history and a global fan base. The club was founded on November 29, 1899, by a group of Swiss, English, and Catalan footballers led by Joan Gamper.`,
+    input4: `What is XMTP?`,
+    output4: `I don't know the answer.`,
+  },
+
+  createPrompt: ({
+    fromQuestion,
+  }: {
+    fromQuestion: string;
+  }): ChatCompletionMessage[] => {
+    return [
+      {
+        role: "system",
+        content: "You are a very helpful assistant.",
+      },
+      {
+        role: "user",
+        content: `${HighConfidenceAsk.example.instructions}`,
+      },
+      {
+        role: "assistant",
+        content:
+          "I am very happy to help, please provide as many questions as you would like!",
+      },
+      {
+        role: "user",
+        content: `${HighConfidenceAsk.example.input}`,
+      },
+      {
+        role: "assistant",
+        content: `${HighConfidenceAsk.example.output}`,
+      },
+      {
+        role: "user",
+        content: `${HighConfidenceAsk.example.input2}`,
+      },
+      {
+        role: "assistant",
+        content: `${HighConfidenceAsk.example.output2}`,
+      },
+      {
+        role: "user",
+        content: `${HighConfidenceAsk.example.input3}`,
+      },
+      {
+        role: "assistant",
+        content: `${HighConfidenceAsk.example.output3}`,
+      },
+      {
+        role: "user",
+        content: `${HighConfidenceAsk.example.input4}`,
+      },
+      {
+        role: "assistant",
+        content: `${HighConfidenceAsk.example.output4}`,
+      },
+
+      {
+        role: "user",
+        content: `Question: ${fromQuestion}`,
+      },
+    ];
+  },
+
+  getModel: ({
+    forPrompt,
+    maxTokens,
+  }: {
+    maxTokens: number;
+    forPrompt: ChatCompletionMessage[];
+  }) => {
+    const numTokensForGpt3 = gpt3encoding.encode(
+      JSON.stringify(forPrompt)
+    ).length;
+    const numTokensForGpt4 = gpt4encoding.encode(
+      JSON.stringify(forPrompt)
+    ).length;
+
+    if (numTokensForGpt4 + maxTokens > 8000) {
+      return null;
+    } else if (numTokensForGpt3 + maxTokens > 4000) {
+      return "gpt-4";
+    } else if (numTokensForGpt3 > 100) {
+      return "gpt-3.5-turbo";
+    } else {
+      return null;
+    }
+  },
+};
+
+/* ****************************************************************************
+ *
+ * ReAct
+ *
+ * ****************************************************************************/
+
+type Role = "SOCRATES" | "PHAEDRUS" | "ORACLE" | "PROTAGORAS";
+
+export type DialogueMessage = {
+  role: Role;
+  content: string;
+};
+
+export const Dialogue = {
+  toTranscript: ({
+    fromDialogue,
+    withProtagoras,
+  }: {
+    fromDialogue: DialogueMessage[];
+    withProtagoras?: boolean;
+  }) => {
+    return fromDialogue
+      .map((dialogueMessage) => {
+        return `${dialogueMessage.role}: ${dialogueMessage.content}${
+          withProtagoras ? `\nPROTAGORAS: *silence*\n` : ""
+        }`;
+      })
+      .join("\n");
+  },
+
+  pTranscript: ({ fromDialogue }: { fromDialogue: DialogueMessage[] }) => {
+    for (const message of fromDialogue) {
+      switch (message.role) {
+        case "SOCRATES":
+          local.red(message.content);
+          break;
+        case "PHAEDRUS":
+          local.green(message.content);
+          break;
+        case "ORACLE":
+          local.yellow(message.content);
+          break;
+        case "PROTAGORAS":
+          local.blue(message.content);
+          break;
+      }
+    }
+  },
+
+  toGpt: ({
+    fromDialogue,
+    fromPerspective,
+  }: {
+    fromDialogue: DialogueMessage[];
+    fromPerspective: Role;
+  }): ChatCompletionMessage[] => {
+    return fromDialogue.map((dialogueMessage) => {
+      if (dialogueMessage.role === fromPerspective) {
+        return { role: "assistant", content: dialogueMessage.content };
+      } else {
+        return { role: "user", content: dialogueMessage.content };
+      }
+    });
+  },
+};
+
+export const Socrates = {
+  breadth: ({
+    fromDialogue,
+  }: {
+    fromDialogue: DialogueMessage[];
+  }): ChatCompletionMessage[] => {
+    return [
+      {
+        role: "system",
+        content: `You are an AI language model emulating the skeptic philosopher Socrates as he thinks through questions step by step.
+You decompose complex questions into simpler questions, you avoid ambiguity, and you avoid meandering.
+When you are asked a simple question, you just reply with the question itself.
+You never answer questions, you only ask simplifying questions to further the discussion.`,
+      },
+      {
+        role: "user",
+        content:
+          "What profession does Nicholas Ray and Elia Kazan have in common?",
+      },
+      {
+        role: "assistant",
+        content:
+          "Let's think step by step.\n1. Who is Nicholas Ray?\n2. Who is Elia Kazan?\n3. What professions is Nicholas Ray known for?\n4. What professions is Elia Kazan known for?\n5. What professions do Nicholas Ray and Elia Kazan have in common?",
+      },
+      ...Dialogue.toGpt({
+        fromDialogue: fromDialogue,
+        fromPerspective: "SOCRATES",
+      }),
+    ];
+  },
+
+  depth: ({
+    fromDialogue,
+  }: {
+    fromDialogue: DialogueMessage[];
+  }): ChatCompletionMessage[] => {
+    // TODO: You need to make sure the dialogue is ready for a "depth".
+    const question = fromDialogue[fromDialogue.length - 2].content;
+    const answer = fromDialogue[fromDialogue.length - 1].content;
+    z.string().parse(question);
+    z.string().parse(answer);
+    return [
+      {
+        role: "system",
+        content: `You are an AI language model emulating the skeptic philosopher Socrates.
+Here are some constraints:
+- Socrates is helping a student think through questions step by step.
+- When the student provides Socrates a question and the student's answer to it, Socrates follows up with another question.
+- The questions Socrates asks are always simplifying or clarifying questions.
+- Socrates never answers the student's questions, he always asks more questions so that the student can think through the question more deeply.`,
+      },
+      {
+        role: "assistant",
+        content: question,
+      },
+      {
+        role: "user",
+        content: answer,
+      },
+    ];
+  },
+
+  completion: z.string().transform((value) => {
+    const questions: string[] = [];
+    const prefixes = ["1. ", "2. ", "3. ", "4. ", "5. "];
+    for (const line of value.split("\n")) {
+      if (prefixes.some((prefix) => line.startsWith(prefix))) {
+        questions.push(line.slice(3));
+      }
+    }
+    return questions;
+  }),
+};
+
+export const Phaedrus = {
+  createPrompt: ({
+    fromDialogue,
+  }: {
+    fromDialogue: DialogueMessage[];
+  }): ChatCompletionMessage[] => {
+    return [
+      {
+        role: "system",
+        content: `You are an AI language model engaging in a dialogue with the skeptic philosopher Socrates.
+Here are the constraints:
+- Socrates knows nothing, so needs you to provide answers to his questions.
+- You never ask questions, you only answer questions.
+- Your answers are succinct and to the point.
+- You do not provide opinions, you only provide evidence-supported answers.
+- Your answers are clear and unambiguous.
+- You never ask followup questions, you only answer the question that was asked.
+- You never ask clarifying questions, you only answer the question that was asked.`,
+      },
+      ...Dialogue.toGpt({
+        fromDialogue: fromDialogue,
+        fromPerspective: "PHAEDRUS",
+      }),
+    ];
+  },
+};
+
+// export const Protagoras = {
+//   createPrompt: ({
+//     fromDialogue,
+//   }: {
+//     fromDialogue: DialogueMessage[];
+//   }): string => {
+//     return `You are an AI language model emulating the sophist philosopher Protagoras as he listens to Socrates and Phaedrus engaging in dialogue.
+// Here is some context:
+// - Socrates is asking probing questions and Phaedrus is valiantly trying to answer them.
+// - Socrates actually believes that true knowledge is impossible.
+
+// Here is your goal:
+// - You are supporting Phaedrus by synthesizing true answers from the questions and answers that Socrates and Phaedrus are exchanging.
+// - You know that every time you provide an answer, Socrates will deconstruct your answer, so you only offer up an answer when you are very confident that it is true.
+// - If you are not confident that your answer is true, you say nothing.
+
+// Here is an example:
+
+// SOCRATES: Let us examine the question: "What professions do Nicholas Ray and Elia Kazan have in common?"
+// SOCRATES: Let us think step by step. Who is Nicholas Ray?
+// PHAEDRUS: Nicholas Ray (born Raymond Nicholas Kienzle Jr., August 7, 1911 - June 16, 1979) was an American film director, screenwriter, and actor best known for the 1955 film Rebel Without a Cause.
+// SOCRATES: Who is Elia Kazan?
+// PHAEDRUS: Elia Kazan (born Elia Kazanjoglou; October 7, 1909 - September 28, 2003) was an American director, producer, writer, and actor.
+// SOCRATES: What professions is Nicholas Ray known for?
+// PHAEDRUS: Nicholas Ray was known for directing films such as Rebel Without a Cause, Bigger Than Life, and Johnny Guitar.
+// SOCRATES: What professions is Elia Kazan known for?
+// PHAEDRUS: Elia Kazan was known for directing films such as A Streetcar Named Desire, On the Waterfront, and Gentleman's Agreement.
+// PROTAGORAS: Aha! We now know that Nicholas Ray and Elia Kazan were both known for directing films.
+
+// Here is the transcript of the dialogue so far:
+// ${Dialogue.toTranscript({ fromDialogue: fromDialogue })}`;
+//   },
+// };
+
+// export const Oracle = {
+//   createPrompt: ({
+//     fromDialogue,
+//   }: {
+//     fromDialogue: DialogueMessage[];
+//   }): ChatCompletionMessage[] => {
+//     return [
+//       {
+//         role: "system",
+//         content: `You are an oracle. Someone asks you a question, and you respond with the answer.
+// You are not a philosopher, you are not a teacher, you are not a guide, nor a source of wisdom. You are an oracle.
+// You are a source of information. You are a source of knowledge. You are a source of truth. You are a source of answers.
+// You are a source of clarity. You are a source of certainty. You are a source of understanding. You are a source of insight.
+// You are a source of factual truth.`,
+//       },
+//       ...Oracle.toConversation({ fromDialogue: fromDialogue }),
+//     ];
+//   },
+
+//   toConversation: ({
+//     fromDialogue,
+//   }: {
+//     fromDialogue: DialogueMessage[];
+//   }): ChatCompletionMessage[] => {
+//     return fromDialogue.map((message) => {
+//       return {
+//         role: message.role === "oracle" ? "assistant" : "user",
+//         content: message.content,
+//       };
+//     });
+//   },
+// };
