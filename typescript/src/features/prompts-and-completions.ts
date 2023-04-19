@@ -678,6 +678,7 @@ Here are some constraints:
 
   completion: z.string().transform((value) => {
     const questions: string[] = [];
+    // TODO What if there are 10 questions?
     const prefixes = ["1. ", "2. ", "3. ", "4. ", "5. "];
     for (const line of value.split("\n")) {
       if (prefixes.some((prefix) => line.startsWith(prefix))) {

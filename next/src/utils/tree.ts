@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
-import { DialogueMessage } from "../features/prompts-and-completions.js";
 
 export const VALUE = z.object({
   interlocutor: z.enum([
@@ -36,12 +35,6 @@ export type SerializableTreeNode = TreeNode & {
 };
 
 export const Tree = {
-  /* **************************************************************************
-   *
-   * CORE TREE FUNCTIONS
-   *
-   * *************************************************************************/
-
   create: ({
     value,
     parent,
@@ -55,10 +48,12 @@ export const Tree = {
   },
 
   branch: ({ node, branches }: { node: TreeNode; branches: Array<Value> }) => {
+    console.log("Tree.branch called");
     node.children = [
       ...node.children,
       ...branches.map((value) => Tree.create({ value, parent: node })),
     ];
+    console.log("Tree.branch done");
   },
 
   grow: ({ node, value }: { node: TreeNode; value: Value }) => {
@@ -90,20 +85,32 @@ export const Tree = {
     }
   },
 
-  path: <T>({
-    toNode,
-    map,
+  nodes: ({
+    node,
+    onPath,
   }: {
-    toNode: TreeNode;
-    map: (node: TreeNode) => T;
-  }): T[] => {
-    const path: T[] = [];
+    node: TreeNode;
+    onPath: string[];
+  }): TreeNode[] => {
+    const nodes: TreeNode[] = [];
+    for (const id of onPath) {
+      const found = Tree.find({ node, id });
+      if (found === undefined) {
+        throw new Error("Node in path not found");
+      }
+      nodes.push(found);
+    }
+    return nodes;
+  },
+
+  path: ({ toNode }: { toNode: TreeNode }): string[] => {
+    const path = [];
     let node = toNode;
     while (node.parent) {
-      path.unshift(map(node));
+      path.unshift(node.id);
       node = node.parent;
     }
-    path.unshift(map(node));
+    path.unshift(node.id);
     return path;
   },
 
@@ -118,26 +125,6 @@ export const Tree = {
     for (const child of node.children) {
       Tree.traverse({ node: child, fn });
     }
-  },
-
-  /* **************************************************************************
-   *
-   * UTILITIES
-   *
-   * *************************************************************************/
-
-  toDialogue: ({
-    fromLastNode,
-  }: {
-    fromLastNode: TreeNode;
-  }): DialogueMessage[] => {
-    return Tree.path({
-      toNode: fromLastNode,
-      map: (node): DialogueMessage => ({
-        role: node.value.interlocutor,
-        content: node.value.message,
-      }),
-    });
   },
 
   stripParents: ({ node }: { node: TreeNode }): SerializableTreeNode => {
@@ -166,39 +153,5 @@ export const Tree = {
         Tree.addParents({ parent: node, node: child })
       ),
     };
-  },
-
-  layout: ({ root }: { root: TreeNode }) => {
-    const coordinates: Array<{ node: TreeNode; x: number; y: number }> = [];
-
-    const generateCoordinates = (
-      node: TreeNode,
-      depth: number,
-      offset: number
-    ) => {
-      if (node.children.length === 0) {
-        const x = coordinates.filter((c) => c.y === depth).length;
-        coordinates.push({ node, x, y: depth });
-      } else {
-        for (const child of node.children) {
-          generateCoordinates(child, depth + 1, offset);
-        }
-
-        const childrenX = node.children.map((child) => {
-          const childCoord = coordinates.find((coord) => coord.node === child);
-          if (childCoord === undefined) {
-            throw new Error("Child coordinate not found");
-          }
-          return childCoord.x;
-        });
-
-        const avgX =
-          childrenX.reduce((sum, x) => sum + x, 0) / childrenX.length;
-        coordinates.push({ node, x: avgX, y: depth });
-      }
-    };
-
-    generateCoordinates(root, 0, 1);
-    return coordinates;
   },
 };

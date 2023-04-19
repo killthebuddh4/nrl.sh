@@ -13,8 +13,9 @@
     "isolatedModules": true,
     "incremental": true,
     "outDir": "build",
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "data"]
 }
