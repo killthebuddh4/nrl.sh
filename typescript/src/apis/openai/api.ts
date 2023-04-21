@@ -80,6 +80,8 @@ const TEXT_COMPLETION_REQUEST = z.object({
   prompt: z.string(),
   maxTokens: z.number(),
   model: z.string(),
+  temperature: z.number().min(0).max(1).optional(),
+  stop: z.array(z.string()).max(4).optional(),
 });
 
 // TODO: Refine this type.
@@ -96,12 +98,16 @@ export class TextCompletion {
         prompt,
         maxTokens,
         model,
+        temperature,
+        stop,
       }: z.infer<typeof TEXT_COMPLETION_REQUEST>) => {
         try {
           const response = await openai.createCompletion({
             prompt,
             max_tokens: maxTokens,
             model,
+            temperature,
+            stop,
           });
           return TEXT_COMPLETION_RESPONSE.parse(response);
         } catch (err) {

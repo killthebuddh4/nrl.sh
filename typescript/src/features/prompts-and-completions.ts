@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { ChatCompletionMessage } from "../apis/types.js";
 import * as tiktoken from "@dqbd/tiktoken";
+
 import { local } from "../utils/chalk.js";
-import { SocketClosedUnexpectedlyError } from "redis";
 
 const gpt3encoding = tiktoken.encoding_for_model("gpt-3.5-turbo");
 const gpt4encoding = tiktoken.encoding_for_model("gpt-4");
