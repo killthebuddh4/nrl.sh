@@ -1,10 +1,5 @@
 import { z } from "zod";
-import {
-  Configuration,
-  CreateCompletionResponse,
-  CreateEmbeddingResponse,
-  OpenAIApi,
-} from "openai";
+import { Configuration, CreateEmbeddingResponse, OpenAIApi } from "openai";
 import { encoding_for_model } from "@dqbd/tiktoken";
 
 const gpt4encoding = encoding_for_model("gpt-4");
@@ -125,7 +120,7 @@ export class TextCompletion {
       fromPrompt: string;
       withResponse: z.infer<typeof TEXT_COMPLETION_RESPONSE>;
     }) => {
-      return fromPrompt + " " + withResponse.data.choices[0].text;
+      return fromPrompt + withResponse.data.choices[0].text;
     },
   };
 }

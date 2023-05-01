@@ -5,9 +5,6 @@ import {
   ASK_REQUEST,
   REQUEST_FROM_DISCORD,
   REQUEST_FROM_XMTP,
-  Plato,
-  Socrates,
-  Phaedrus,
 } from "../apis/express.js";
 import { XMTP_ADDRESS, Xmtp } from "../apis/xmtp.js";
 import { sendToDiscord } from "../apis/discord.js";
@@ -90,23 +87,23 @@ server.post("/from/discord", async (req, res) => {
 });
 
 server.get("/plato", async (req, res) => {
-  return Plato.get.handle(req, res);
+  res.status(200).send("ok");
 });
 
 server.post("/plato", async (req, res) => {
-  return Plato.init.handle(req, res);
+  res.status(200).send("ok");
 });
 
 server.post("/socrates/breadth", async (req, res) => {
-  return Socrates.breadth.handle(req, res);
+  res.status(200).send("ok");
 });
 
 server.post("/socrates/depth", async (req, res) => {
-  return Socrates.depth.handle(req, res);
+  res.status(200).send("ok");
 });
 
 server.post("/phaedrus", async (req, res) => {
-  return Phaedrus.answer.handle(req, res);
+  res.status(200).send("ok");
 });
 
 server.post("/protagoras", async (req, res) => {

@@ -8,7 +8,7 @@ To run the app locally:
 
 - `npm run dev:tsc` (starts tsc in watch mode)
 - `npm run dev:express` (starts the express server)
-- `npm run dev:xmtp` (starts the xmtp server)
+- `npm run dev:xmtp` (starts the xmtp server
 
 To understand what's going on, here's a suggested reading order:
 
@@ -36,7 +36,6 @@ To run in a docker compose cluster:
 
 - `npm run docker:up`
 
-Scripts and configuration for deploying the app. Deployed to Digital Ocean
 droplet instance.
 
 ## Deploying to Production
