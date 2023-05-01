@@ -108,3 +108,14 @@ prompt -> is analytic? -> synthesize -> repeat
 
 
 if synthesis results in a context that's too big, the way to respond is by generating a higher-level plan and then prompting the user that we will need to do things one at a time
+
+
+# First Machine
+
+The machine will answer users' questions. It will have the ability to look up answers on a single website.
+
+1. list the details in the prompt
+2. what details are not in the prompt
+3. for each missing detail, synthesize
+4. combine the details into a prompt
+5. reduce the prompt into an answer
