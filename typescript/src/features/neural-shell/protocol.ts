@@ -1,13 +1,20 @@
 export type Machine = {
+  bastion?: Bastion;
   ghost?: Ghost;
   daemons: Daemon[];
-  connect: ({ fromShell }: { fromShell?: Shell }) => Promise<{ shell: Shell }>;
+  connect: ({
+    fromShell,
+  }: {
+    fromShell?: Shell;
+  }) => Promise<{ shell: Shell } | null>;
 };
+
+export type Bastion = ({ shell }: { shell: Shell }) => Log[] | null;
 
 export type Ghost = {
   name: string;
   function: string;
-  exec: ({ shell }: { shell: Shell }) => Promise<void>;
+  exec: Exec;
 };
 
 export type Daemon = {
@@ -21,19 +28,24 @@ export type Daemon = {
     key: string;
     description: string;
   }[];
-  exec: ({ shell }: { shell: Shell }) => Promise<void>;
+  exec: Exec;
 };
 
 export type Shell = {
   parent?: Shell;
   children: Shell[];
 
-  machine: Machine;
+  ghost?: Ghost;
+  daemons: Daemon[];
 
   session: Log[];
+
+  exec: Exec;
 };
 
 export type Log = {
   daemon: string;
   outputs: { key: string; value: string }[];
 };
+
+export type Exec = ({ shell }: { shell: Shell }) => Promise<unknown>;

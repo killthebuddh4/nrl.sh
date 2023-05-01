@@ -21,6 +21,15 @@ You can find the implmementation of this process in [exec.ts](exec.ts).
 You can think of a machine as a bucket for ghosts, demons, and memory. You
 interact with a machine via a shell.
 
+### Bastion
+
+When you connect to a machine, the machine calls its bastion and passes the
+bastion your current shell. If the bastion returns null, the connection fails.
+Otherwise, the connection returns a shell and the value of the bastion is used
+to initialize the shell's session.
+
+You can think of the machine's bastion kind of like middleware.
+
 # Ghost
 
 You can think of a ghost as an automator. Ghosts are concerned with iterating,

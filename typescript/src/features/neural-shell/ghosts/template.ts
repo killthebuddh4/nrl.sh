@@ -1,8 +1,31 @@
-import { Shell } from "../protocol";
+import { Shell, Ghost } from "../protocol";
 import * as utils from "../session";
 
-export const exec = async ({ root }: { root: Shell }) => {
-  let shell = root;
+/* ****************************************************************************
+ *
+ * NAME
+ *
+ * ***************************************************************************/
+
+const NAME = "template";
+
+/* ****************************************************************************
+ *
+ * FUNCTION
+ *
+ * ***************************************************************************/
+
+const FUNCTION = `
+This is the ghost's function.
+`.trim();
+
+/* ****************************************************************************
+ *
+ * EXEC
+ *
+ * ***************************************************************************/
+
+const EXEC = async ({ shell }: { shell: Shell }) => {
   let session = utils.sessionToString({ shell });
 
   utils.printSession({ session });
@@ -25,7 +48,7 @@ export const exec = async ({ root }: { root: Shell }) => {
 
   const command = utils.peekCommand({ fromBase: session });
 
-  const daemon = shell.machine.daemons.find((d) => d.name === command);
+  const daemon = shell.daemons.find((d) => d.name === command);
 
   if (daemon === undefined) {
     throw new Error(`Daemon ${command} not found`);
@@ -47,12 +70,7 @@ export const exec = async ({ root }: { root: Shell }) => {
     utils.printSession({ session });
   }
 
-  shell = {
-    parent: shell.parent,
-    children: shell.children,
-    machine: shell.machine,
-    session: utils.sessionFromString({ fromString: session }),
-  };
+  shell.session = utils.sessionFromString({ fromString: session });
 
   /* ************************************************************************
    * EXECUTE DAEMON
@@ -66,3 +84,11 @@ export const exec = async ({ root }: { root: Shell }) => {
 
   // TODO:
 };
+
+/* ****************************************************************************
+ *
+ * GHOST
+ *
+ * ***************************************************************************/
+
+export const ghost: Ghost = { name: NAME, function: FUNCTION, exec: EXEC };

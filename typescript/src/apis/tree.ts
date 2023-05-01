@@ -1,5 +1,5 @@
 export const Tree = {
-  dfs: <T>({
+  dfs: <T = unknown>({
     tree,
     children,
     predicate,
