@@ -8,7 +8,6 @@ import {
 } from "../apis/express.js";
 import { XMTP_ADDRESS, Xmtp } from "../apis/xmtp.js";
 import { sendToDiscord } from "../apis/discord.js";
-import { askReAct } from "../features/react.js";
 import { local } from "../utils/chalk.js";
 import cors from "cors";
 
@@ -36,7 +35,6 @@ server.post("/ask", async (req, res) => {
   } else {
     try {
       const { question } = ASK_REQUEST.parse(req.body);
-      await askReAct({ question });
       res.status(200).send("ok");
     } catch (error) {
       local.red(JSON.stringify(error, null, 2));

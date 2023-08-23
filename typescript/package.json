@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev:tsc": "tsc --watch",
-    "dev:express": ". ../shell/env.sh local && nodemon build/apps/express.js",
+    "dev:express": ". ../shell/env.sh local && nodemon build/bridge.js",
     "dev:xmtp": ". ../shell/env.sh local && nodemon build/apps/xmtp.js",
     "dev:monitor": ". ../shell/env.sh monitor && nodemon build/apps/monitor.js",
     "dev:etl": ". ../shell/env.sh local && nodemon --enable-source-maps build/apps/etl.js",
