@@ -1,9 +1,0 @@
-bs4==0.0.1
-tiktoken==0.2.0
-openai==0.26.1
-pandas==1.5.2
-urllib3==1.26.13
-html==1.13
-requests==2.28.1
-pinecone-client
-python-dotenv==1.0.0

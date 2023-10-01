@@ -1,3 +1,0 @@
-{
-  "ignore": ["./storage/**", "./build/apps/command.js", ".debug"]
-}
